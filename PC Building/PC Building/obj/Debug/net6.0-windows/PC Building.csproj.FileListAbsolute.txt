@@ -1,0 +1,19 @@
+D:\Github\PC_Building\PC Building\PC Building\bin\Debug\net6.0-windows\PC Building.exe
+D:\Github\PC_Building\PC Building\PC Building\bin\Debug\net6.0-windows\PC Building.deps.json
+D:\Github\PC_Building\PC Building\PC Building\bin\Debug\net6.0-windows\PC Building.runtimeconfig.json
+D:\Github\PC_Building\PC Building\PC Building\bin\Debug\net6.0-windows\PC Building.dll
+D:\Github\PC_Building\PC Building\PC Building\bin\Debug\net6.0-windows\PC Building.pdb
+D:\Github\PC_Building\PC Building\PC Building\obj\Debug\net6.0-windows\PC Building.csproj.AssemblyReference.cache
+D:\Github\PC_Building\PC Building\PC Building\obj\Debug\net6.0-windows\PC_Building.MainForm.resources
+D:\Github\PC_Building\PC Building\PC Building\obj\Debug\net6.0-windows\PC_Building.PC_Building.resources
+D:\Github\PC_Building\PC Building\PC Building\obj\Debug\net6.0-windows\PC_Building.Saving.resources
+D:\Github\PC_Building\PC Building\PC Building\obj\Debug\net6.0-windows\PC Building.csproj.GenerateResource.cache
+D:\Github\PC_Building\PC Building\PC Building\obj\Debug\net6.0-windows\PC Building.GeneratedMSBuildEditorConfig.editorconfig
+D:\Github\PC_Building\PC Building\PC Building\obj\Debug\net6.0-windows\PC Building.AssemblyInfoInputs.cache
+D:\Github\PC_Building\PC Building\PC Building\obj\Debug\net6.0-windows\PC Building.AssemblyInfo.cs
+D:\Github\PC_Building\PC Building\PC Building\obj\Debug\net6.0-windows\PC Building.csproj.CoreCompileInputs.cache
+D:\Github\PC_Building\PC Building\PC Building\obj\Debug\net6.0-windows\PC Building.dll
+D:\Github\PC_Building\PC Building\PC Building\obj\Debug\net6.0-windows\refint\PC Building.dll
+D:\Github\PC_Building\PC Building\PC Building\obj\Debug\net6.0-windows\PC Building.pdb
+D:\Github\PC_Building\PC Building\PC Building\obj\Debug\net6.0-windows\PC Building.genruntimeconfig.cache
+D:\Github\PC_Building\PC Building\PC Building\obj\Debug\net6.0-windows\ref\PC Building.dll
