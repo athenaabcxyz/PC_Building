@@ -17,3 +17,11 @@ D:\Github\PC_Building\PC Building\PC Building\obj\Debug\net6.0-windows\refint\PC
 D:\Github\PC_Building\PC Building\PC Building\obj\Debug\net6.0-windows\PC Building.pdb
 D:\Github\PC_Building\PC Building\PC Building\obj\Debug\net6.0-windows\PC Building.genruntimeconfig.cache
 D:\Github\PC_Building\PC Building\PC Building\obj\Debug\net6.0-windows\ref\PC Building.dll
+D:\Github\PC_Building\PC Building\PC Building\bin\Debug\net6.0-windows\PC Building.dll.config
+D:\Github\PC_Building\PC Building\PC Building\bin\Debug\net6.0-windows\System.Data.SqlClient.dll
+D:\Github\PC_Building\PC Building\PC Building\bin\Debug\net6.0-windows\runtimes\win-arm64\native\sni.dll
+D:\Github\PC_Building\PC Building\PC Building\bin\Debug\net6.0-windows\runtimes\win-x64\native\sni.dll
+D:\Github\PC_Building\PC Building\PC Building\bin\Debug\net6.0-windows\runtimes\win-x86\native\sni.dll
+D:\Github\PC_Building\PC Building\PC Building\bin\Debug\net6.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+D:\Github\PC_Building\PC Building\PC Building\bin\Debug\net6.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+D:\Github\PC_Building\PC Building\PC Building\obj\Debug\net6.0-windows\PC Building.csproj.CopyComplete

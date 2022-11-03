@@ -61,6 +61,7 @@ create table [Case]
 	constraint PK_Case primary key(Model)
 );
 go
+select * from Processor where Model = 'Ryzen Threadripper 3990X'
 create table [Graphic Card]
 (
 	[Model] varchar(200),
@@ -123,6 +124,20 @@ create table [Power Supply]
 	constraint PK_PowerSupply primary key(Model)
 );
 go
+create table [Build List]
+(
+    [ID] int,
+    [Processor] varchar(200),
+    [Case] varchar(200),
+    [Motherboard] varchar(200),
+    [Case Cooler] varchar(200),
+    [CPU Cooler] varchar(200),
+    [Graphic Card] varchar(200),
+    [RAM] varchar(200),
+    [Storage] varchar(200),
+    [Power Supply] varchar(200),
+    constraint PK_Build primary key(ID)
+); 
 
 Insert into Processor values ('Ryzen Threadripper 3990X','AMD',64,128,'sTRX4','DDR4', '3200','2.9','4.3','280',8078)
 Insert into Processor values ('Ryzen 9 7950X','AMD',16,32,'AM5','DDR5','5200','4.5','5.7','170',699)
