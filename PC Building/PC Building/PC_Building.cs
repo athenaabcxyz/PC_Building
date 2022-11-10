@@ -12,6 +12,7 @@ namespace PC_Building
 {
     public partial class PC_Building : Form
     {
+        Building_Simulator Build = new Building_Simulator();
         public PC_Building()
         {
             InitializeComponent();

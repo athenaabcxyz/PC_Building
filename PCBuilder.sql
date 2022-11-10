@@ -61,7 +61,7 @@ create table [Case]
 	constraint PK_Case primary key(Model)
 );
 go
-select * from Processor where Model = 'Ryzen Threadripper 3990X'
+
 create table [Graphic Card]
 (
 	[Model] varchar(200),
@@ -126,7 +126,7 @@ create table [Power Supply]
 go
 create table [Build List]
 (
-    [ID] int,
+    [Name] varchar(200),
     [Processor] varchar(200),
     [Case] varchar(200),
     [Motherboard] varchar(200),
@@ -136,9 +136,10 @@ create table [Build List]
     [RAM] varchar(200),
     [Storage] varchar(200),
     [Power Supply] varchar(200),
-    constraint PK_Build primary key(ID)
+	[Date] datetime,
+    constraint PK_Build primary key(Name)
 ); 
-
+go
 Insert into Processor values ('Ryzen Threadripper 3990X','AMD',64,128,'sTRX4','DDR4', '3200','2.9','4.3','280',8078)
 Insert into Processor values ('Ryzen 9 7950X','AMD',16,32,'AM5','DDR5','5200','4.5','5.7','170',699)
 Insert into [Motherboard] values ('TRX40 CREATOR','ASRock','AMD X570','ATX','sTRX4','8','DDR4','2666','SATA III, PCIe 4.0 x4','Yes',1549)
@@ -147,8 +148,8 @@ Insert into [CPU Cooler] values ('Hyper 212 EVO','Cooler Master','600 to 2000 rp
 Insert into [CPU Cooler] values ('Hyper 212 RGB','Cooler Master','650 to 2000 rpm','8 to 30 dBA','RGB',95.99)
 Insert into [Case] values ('H510B-W1','NZXT','Tempered Glass, Steel','ATX Mid Tower','White','ATX, Micro-ATK, Mini-ITX','381','165','ATX',89.99)
 Insert into [Case] values ('H510B-B1','NZXT','Tempered Glass, Steel','ATX Full Tower','Black','ATX, Micro-ATX, Mini-ITX','381','165','ATX',83.13)
-Insert into [Graphic Card] values ('GeForce RTX 3080 Ti Gaming OC 12G','Gigabyte','12 GB','GDDR6X','320 mm','PCIe x16','GeForce RTX 3080 Ti','350',1233.86)
-Insert into [Graphic Card] values ('TUF Gaming GeForce RTX 3080 Ti OC Edition','ASUS','12 GB','GDDR6X','300 mm','PCIe x16','GeForce RTX 3080 Ti','350',1159)
+Insert into [Graphic Card] values ('GeForce RTX 3080 Ti Gaming OC 12G','Gigabyte','12 GB','GDDR6X','320','PCIe x16','GeForce RTX 3080 Ti','350',1233.86)
+Insert into [Graphic Card] values ('TUF Gaming GeForce RTX 3080 Ti OC Edition','ASUS','12 GB','GDDR6X','300','PCIe x16','GeForce RTX 3080 Ti','350',1159)
 Insert into RAM values ('Trident Z5 RGB','G.Skill','32 GB','2 x 16 GB','DDR5','6400',269.99)
 Insert into RAM values ('Fury Renegade RGB','Kingston','32 GB','2 x 16 GB','DDR5','6400',307.20)
 Insert into Storage values ('970 EVO','Samsung','1 TB','SSD','N/A','PCIe 3.0 x4','1024 MB','M.2-2280',219.99)
@@ -157,4 +158,5 @@ Insert into [Case Cooler] values ('MasterFan MF120R','Cooler Master','650 to 200
 Insert into [Case Cooler] values ('AER RGB','NZXT','500 to 1500 RPM','17.48 to 52.44 CFM','22 to 33 dBA',24.55)
 Insert into [Power Supply] values ('RM750','Corsair','750 W','80+ Gold','Black',169)
 Insert into [Power Supply] values ('RM850','Corsair','850 W','80+ Gold','Black',195)
+Insert into [Build List] values ('temporary-cache','','','','','','','','','','')
 go

@@ -9,7 +9,7 @@ using System.Text.RegularExpressions;
 namespace PC_Building
 {
     public partial class MainForm : Form
-    {
+    {       
         string strCon = @"Data Source=ATHENALAPTOP\SQLEXPRESS;Initial Catalog=CaseBuilder;Integrated Security=True";
         SqlConnection sqlCon = null;
         public MainForm()
@@ -179,7 +179,7 @@ namespace PC_Building
             if (listView_Main.FocusedItem == null)
                 return;
             richTextBox_Detail.Text = "";
-            spictureBox_Illu.Image = Image.FromFile(@"PC_Builder_Image\" + listView_Main.FocusedItem.Group.Header + @"\" + listView_Main.FocusedItem.Text + ".jpg");
+            pictureBox_Illu.Image = Image.FromFile(@"PC_Builder_Image\" + listView_Main.FocusedItem.Group.Header + @"\" + listView_Main.FocusedItem.Text + ".jpg");
             OpenConnection();
             SqlCommand sqlCmd;
             SqlDataAdapter Adapter = new SqlDataAdapter();
