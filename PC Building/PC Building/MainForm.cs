@@ -194,5 +194,11 @@ namespace PC_Building
 
             }
         }
+
+        private void button_Build_Click(object sender, EventArgs e)
+        {
+            PC_Building FormA = new PC_Building();
+            FormA.Show();
+        }
     }
 }

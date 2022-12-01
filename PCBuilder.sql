@@ -2,7 +2,8 @@ create database CaseBuilder
 go
 use CaseBuilder
 go
-
+set dateformat dmy
+go
 create table [Processor]
 (
 	[Model] varchar(200),
@@ -136,7 +137,7 @@ create table [Build List]
     [RAM] varchar(200),
     [Storage] varchar(200),
     [Power Supply] varchar(200),
-	[Date] datetime,
+	[Date] smalldatetime,
     constraint PK_Build primary key(Name)
 ); 
 go

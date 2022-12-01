@@ -5,6 +5,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Globalization;
 
 namespace PC_Building
 {
@@ -22,7 +23,7 @@ namespace PC_Building
         public string StorageExpansion = "";
         public bool MultiGPUSupport = false;
         public double Price;
-        public Motherboard(string ModelName)
+        public void LoadProduct(string ModelName)
         {
             Model = ModelName;
             string strCon = @"Data Source=ATHENALAPTOP\SQLEXPRESS;Initial Catalog=CaseBuilder;Integrated Security=True";
@@ -45,7 +46,7 @@ namespace PC_Building
             StorageExpansion = Table.Rows[0][8].ToString();
             if (Table.Rows[0][9].ToString() == "Yes")
                 MultiGPUSupport = true;
-            Price = Math.Round(Convert.ToDouble(Table.Rows[0][9].ToString()), 1, MidpointRounding.AwayFromZero);
+            Price = Convert.ToDouble(Table.Rows[0][10].ToString());
             sqlCon.Close();
         }
     }

@@ -5,6 +5,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Globalization;
 
 namespace PC_Building
 {
@@ -17,7 +18,7 @@ namespace PC_Building
         public string Efficiency = "";
         public string Color = "";
         public double Price;
-        public Power_Supply(string ModelName)
+        public void LoadProduct(string ModelName)
         {
             Model = ModelName;
             string strCon = @"Data Source=ATHENALAPTOP\SQLEXPRESS;Initial Catalog=CaseBuilder;Integrated Security=True";
@@ -34,7 +35,7 @@ namespace PC_Building
             Power = Table.Rows[0][2].ToString();
             Efficiency = Table.Rows[0][3].ToString();
             Color = Table.Rows[0][4].ToString();
-            Price = Math.Round(Convert.ToDouble(Table.Rows[0][5].ToString()), 1, MidpointRounding.AwayFromZero);
+            Price = Convert.ToDouble(Table.Rows[0][5].ToString());
             sqlCon.Close();
         }
     }

@@ -5,6 +5,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Globalization;
 
 namespace PC_Building
 {
@@ -18,7 +19,7 @@ namespace PC_Building
         public string RAMType = "";
         public int RAMSpeed;        
         public double Price;
-        public RAM(string ModelName)
+        public void LoadProduct(string ModelName)
         {
             Model = ModelName;
             string strCon = @"Data Source=ATHENALAPTOP\SQLEXPRESS;Initial Catalog=CaseBuilder;Integrated Security=True";
@@ -35,8 +36,8 @@ namespace PC_Building
             RAMSize = Table.Rows[0][2].ToString();
             Quantity = Table.Rows[0][3].ToString();
             RAMType = Table.Rows[0][4].ToString();
-            RAMSpeed = Convert.ToInt32(Table.Rows[0][5].ToString());           
-            Price = Math.Round(Convert.ToDouble(Table.Rows[0][6].ToString()), 1, MidpointRounding.AwayFromZero);
+            RAMSpeed = Convert.ToInt32(Table.Rows[0][5].ToString());
+            Price = Convert.ToDouble(Table.Rows[0][6].ToString());
             sqlCon.Close();
         }
     }

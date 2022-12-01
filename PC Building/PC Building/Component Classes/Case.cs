@@ -5,6 +5,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Globalization;
 
 namespace PC_Building
 {
@@ -21,7 +22,7 @@ namespace PC_Building
         public double CPUCoolerHeight;
         public string SupportPSUSize = "";
         public double Price;
-        public Case(string ModelName)
+        public void LoadProduct(string ModelName)
         {
             Model = ModelName;
             string strCon = @"Data Source=ATHENALAPTOP\SQLEXPRESS;Initial Catalog=CaseBuilder;Integrated Security=True";
@@ -31,7 +32,7 @@ namespace PC_Building
             SqlDataAdapter Adapter = new SqlDataAdapter();
             sqlCmd = sqlCon.CreateCommand();
             DataTable Table = new DataTable();
-            sqlCmd.CommandText = "Select * from Case where Model = '" + Model + "'";
+            sqlCmd.CommandText = "Select * from [Case] where Model = '" + Model + "'";
             Adapter.SelectCommand = sqlCmd;
             Adapter.Fill(Table);
             Brand = Table.Rows[0][1].ToString();
@@ -39,10 +40,10 @@ namespace PC_Building
             CarbinetType = Table.Rows[0][3].ToString();
             Color = Table.Rows[0][4].ToString();
             MotherboardSupport = Table.Rows[0][5].ToString();
-            MAXGPULength = Math.Round(Convert.ToDouble(Table.Rows[0][6].ToString()), 2, MidpointRounding.AwayFromZero);
-            CPUCoolerHeight = Math.Round(Convert.ToDouble(Table.Rows[0][7].ToString()), 1, MidpointRounding.AwayFromZero);
+            MAXGPULength =double.Parse(Table.Rows[0][6].ToString(), CultureInfo.InvariantCulture);
+            CPUCoolerHeight = double.Parse(Table.Rows[0][7].ToString(), CultureInfo.InvariantCulture);
             SupportPSUSize = Table.Rows[0][8].ToString();
-            Price = Math.Round(Convert.ToDouble(Table.Rows[0][9].ToString()), 1, MidpointRounding.AwayFromZero);
+            Price=Convert.ToDouble(Table.Rows[0][9].ToString());
             sqlCon.Close();
         }
     }

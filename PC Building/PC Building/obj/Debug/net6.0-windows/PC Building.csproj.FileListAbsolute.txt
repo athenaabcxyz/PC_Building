@@ -26,3 +26,6 @@ D:\Github\PC_Building\PC Building\PC Building\bin\Debug\net6.0-windows\runtimes\
 D:\Github\PC_Building\PC Building\PC Building\bin\Debug\net6.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
 D:\Github\PC_Building\PC Building\PC Building\obj\Debug\net6.0-windows\PC Building.csproj.CopyComplete
 D:\Github\PC_Building\PC Building\PC Building\obj\Debug\net6.0-windows\PC_Building.AddComponentForm.resources
+D:\Github\PC_Building\PC Building\PC Building\obj\Debug\net6.0-windows\PC_Building.PriceCalculator.resources
+D:\Github\PC_Building\PC Building\PC Building\obj\Debug\net6.0-windows\PC_Building.LoadBuild.resources
+D:\Github\PC_Building\PC Building\PC Building\obj\Debug\net6.0-windows\PC_Building.CompatibilityLog.resources

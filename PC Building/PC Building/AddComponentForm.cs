@@ -16,9 +16,12 @@ namespace PC_Building
         string strCon = @"Data Source=ATHENALAPTOP\SQLEXPRESS;Initial Catalog=CaseBuilder;Integrated Security=True";
         SqlConnection sqlCon = null;
         public AddComponentForm(string ComponentA)
-        {
-            label_component.Text = ComponentA;
+        {          
             InitializeComponent();
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            label_component.Text = ComponentA;
+            LoadComboBox();
         }
         public void LoadComboBox(string a = "")
         {
@@ -29,7 +32,7 @@ namespace PC_Building
             SqlDataAdapter Adapter = new SqlDataAdapter();
             sqlCmd = sqlCon.CreateCommand();
             DataTable Table = new DataTable();
-            sqlCmd.CommandText = "Select Model from " + label_component.Text+ " where Model like '%" + a + "%'";
+            sqlCmd.CommandText = "Select Model from [" + label_component.Text+ "] where Model like '%" + a + "%'";
             Adapter.SelectCommand = sqlCmd;
             Adapter.Fill(Table);
             for (int i = 0; i < Table.Rows.Count; i++)
@@ -39,9 +42,50 @@ namespace PC_Building
             sqlCon.Close();
         }
 
-        private void comboBox_component_TextChanged(object sender, EventArgs e)
+        public event EventHandler ReturnData;
+        private void button_confirm_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(comboBox_component.Text))
+                MessageBox.Show("Please choose the product you want to add.");
+            else
+            {
+                sqlCon = new SqlConnection(strCon);
+                sqlCon.Open();
+                SqlCommand sqlCmd;
+                SqlDataAdapter Adapter = new SqlDataAdapter();
+                sqlCmd = sqlCon.CreateCommand();
+                DataTable Table = new DataTable();
+                sqlCmd.CommandText = "Update [Build List] set [" + label_component.Text + "] = '" + comboBox_component.Text + "' where Name = 'temporary-cache'";
+                sqlCmd.ExecuteNonQuery();
+                ReturnData(this, new EventArgs());
+                this.Close();
+            }
+
+        }
+
+        private void comboBox_component_KeyPress(object sender, KeyPressEventArgs e)
         {
             LoadComboBox(comboBox_component.Text);
+        }
+
+        private void comboBox_component_SelectedValueChanged(object sender, EventArgs e)
+        {
+            richTextBox_Detail.Text = "";
+            pictureBox1.Image = Image.FromFile(@"PC_Builder_Image\" + label_component.Text + @"\" + comboBox_component.Text + ".jpg");
+            sqlCon = new SqlConnection(strCon);
+            sqlCon.Open();
+            SqlCommand sqlCmd;
+            SqlDataAdapter Adapter = new SqlDataAdapter();
+            sqlCmd = sqlCon.CreateCommand();
+            DataTable Table = new DataTable();
+            sqlCmd.CommandText = "Select * from [" + label_component.Text + "] where Model = '" + comboBox_component.Text + "'";
+            Adapter.SelectCommand = sqlCmd;
+            Adapter.Fill(Table);
+            for (int i = 0; i < Table.Columns.Count; i++)
+            {
+                richTextBox_Detail.Text += Table.Columns[i].ColumnName + ": " + Table.Rows[0][i].ToString() + "\n";
+
+            }
         }
     }
 }

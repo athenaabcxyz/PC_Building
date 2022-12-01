@@ -55,7 +55,6 @@
             this.button_addCPUCooler = new System.Windows.Forms.Button();
             this.button_addCPU = new System.Windows.Forms.Button();
             this.button_addCaseCooler = new System.Windows.Forms.Button();
-            this.comboBox_ramQuantity = new System.Windows.Forms.ComboBox();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
@@ -124,7 +123,6 @@
             this.splitContainer1.Panel1.Controls.Add(this.button_addCPUCooler);
             this.splitContainer1.Panel1.Controls.Add(this.button_addCPU);
             this.splitContainer1.Panel1.Controls.Add(this.button_addCaseCooler);
-            this.splitContainer1.Panel1.Controls.Add(this.comboBox_ramQuantity);
             this.splitContainer1.Panel1.Controls.Add(this.label12);
             this.splitContainer1.Panel1.Controls.Add(this.label11);
             this.splitContainer1.Panel1.Controls.Add(this.label10);
@@ -148,7 +146,7 @@
             this.splitContainer1.Panel2.Controls.Add(this.textBox_buildName);
             this.splitContainer1.Panel2.Controls.Add(this.label1);
             this.splitContainer1.Size = new System.Drawing.Size(1230, 656);
-            this.splitContainer1.SplitterDistance = 813;
+            this.splitContainer1.SplitterDistance = 770;
             this.splitContainer1.TabIndex = 0;
             // 
             // label_gpuName
@@ -156,9 +154,8 @@
             this.label_gpuName.AutoSize = true;
             this.label_gpuName.Location = new System.Drawing.Point(318, 616);
             this.label_gpuName.Name = "label_gpuName";
-            this.label_gpuName.Size = new System.Drawing.Size(39, 15);
+            this.label_gpuName.Size = new System.Drawing.Size(0, 15);
             this.label_gpuName.TabIndex = 47;
-            this.label_gpuName.Text = "Name";
             this.label_gpuName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label_ramName
@@ -166,9 +163,8 @@
             this.label_ramName.AutoSize = true;
             this.label_ramName.Location = new System.Drawing.Point(52, 616);
             this.label_ramName.Name = "label_ramName";
-            this.label_ramName.Size = new System.Drawing.Size(39, 15);
+            this.label_ramName.Size = new System.Drawing.Size(0, 15);
             this.label_ramName.TabIndex = 46;
-            this.label_ramName.Text = "Name";
             this.label_ramName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label_storageName
@@ -176,9 +172,8 @@
             this.label_storageName.AutoSize = true;
             this.label_storageName.Location = new System.Drawing.Point(585, 402);
             this.label_storageName.Name = "label_storageName";
-            this.label_storageName.Size = new System.Drawing.Size(39, 15);
+            this.label_storageName.Size = new System.Drawing.Size(0, 15);
             this.label_storageName.TabIndex = 45;
-            this.label_storageName.Text = "Name";
             this.label_storageName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label_caseName
@@ -186,9 +181,8 @@
             this.label_caseName.AutoSize = true;
             this.label_caseName.Location = new System.Drawing.Point(585, 616);
             this.label_caseName.Name = "label_caseName";
-            this.label_caseName.Size = new System.Drawing.Size(39, 15);
+            this.label_caseName.Size = new System.Drawing.Size(0, 15);
             this.label_caseName.TabIndex = 44;
-            this.label_caseName.Text = "Name";
             this.label_caseName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label_motherboardName
@@ -196,9 +190,8 @@
             this.label_motherboardName.AutoSize = true;
             this.label_motherboardName.Location = new System.Drawing.Point(318, 402);
             this.label_motherboardName.Name = "label_motherboardName";
-            this.label_motherboardName.Size = new System.Drawing.Size(39, 15);
+            this.label_motherboardName.Size = new System.Drawing.Size(0, 15);
             this.label_motherboardName.TabIndex = 43;
-            this.label_motherboardName.Text = "Name";
             this.label_motherboardName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label_psuName
@@ -206,9 +199,8 @@
             this.label_psuName.AutoSize = true;
             this.label_psuName.Location = new System.Drawing.Point(52, 402);
             this.label_psuName.Name = "label_psuName";
-            this.label_psuName.Size = new System.Drawing.Size(39, 15);
+            this.label_psuName.Size = new System.Drawing.Size(0, 15);
             this.label_psuName.TabIndex = 42;
-            this.label_psuName.Text = "Name";
             this.label_psuName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label_cpuCoolerName
@@ -216,9 +208,8 @@
             this.label_cpuCoolerName.AutoSize = true;
             this.label_cpuCoolerName.Location = new System.Drawing.Point(585, 185);
             this.label_cpuCoolerName.Name = "label_cpuCoolerName";
-            this.label_cpuCoolerName.Size = new System.Drawing.Size(39, 15);
+            this.label_cpuCoolerName.Size = new System.Drawing.Size(0, 15);
             this.label_cpuCoolerName.TabIndex = 41;
-            this.label_cpuCoolerName.Text = "Name";
             this.label_cpuCoolerName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label_cpuName
@@ -226,9 +217,8 @@
             this.label_cpuName.AutoSize = true;
             this.label_cpuName.Location = new System.Drawing.Point(318, 185);
             this.label_cpuName.Name = "label_cpuName";
-            this.label_cpuName.Size = new System.Drawing.Size(39, 15);
+            this.label_cpuName.Size = new System.Drawing.Size(0, 15);
             this.label_cpuName.TabIndex = 40;
-            this.label_cpuName.Text = "Name";
             this.label_cpuName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label_caseCoolerName
@@ -236,72 +226,87 @@
             this.label_caseCoolerName.AutoSize = true;
             this.label_caseCoolerName.Location = new System.Drawing.Point(52, 185);
             this.label_caseCoolerName.Name = "label_caseCoolerName";
-            this.label_caseCoolerName.Size = new System.Drawing.Size(39, 15);
+            this.label_caseCoolerName.Size = new System.Drawing.Size(0, 15);
             this.label_caseCoolerName.TabIndex = 39;
-            this.label_caseCoolerName.Text = "Name";
             this.label_caseCoolerName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pictureBox_case
             // 
+            this.pictureBox_case.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox_case.Location = new System.Drawing.Point(585, 483);
             this.pictureBox_case.Name = "pictureBox_case";
             this.pictureBox_case.Size = new System.Drawing.Size(130, 130);
+            this.pictureBox_case.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox_case.TabIndex = 38;
             this.pictureBox_case.TabStop = false;
             // 
             // pictureBox_gpu
             // 
+            this.pictureBox_gpu.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox_gpu.Location = new System.Drawing.Point(318, 483);
             this.pictureBox_gpu.Name = "pictureBox_gpu";
             this.pictureBox_gpu.Size = new System.Drawing.Size(130, 130);
+            this.pictureBox_gpu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox_gpu.TabIndex = 37;
             this.pictureBox_gpu.TabStop = false;
             // 
             // pictureBox_ram
             // 
+            this.pictureBox_ram.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox_ram.Location = new System.Drawing.Point(52, 483);
             this.pictureBox_ram.Name = "pictureBox_ram";
             this.pictureBox_ram.Size = new System.Drawing.Size(130, 130);
+            this.pictureBox_ram.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox_ram.TabIndex = 36;
             this.pictureBox_ram.TabStop = false;
             // 
             // pictureBox_storage
             // 
+            this.pictureBox_storage.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox_storage.Location = new System.Drawing.Point(585, 269);
             this.pictureBox_storage.Name = "pictureBox_storage";
             this.pictureBox_storage.Size = new System.Drawing.Size(130, 130);
+            this.pictureBox_storage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox_storage.TabIndex = 35;
             this.pictureBox_storage.TabStop = false;
             // 
             // pictureBox_motherboard
             // 
+            this.pictureBox_motherboard.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox_motherboard.Location = new System.Drawing.Point(318, 269);
             this.pictureBox_motherboard.Name = "pictureBox_motherboard";
             this.pictureBox_motherboard.Size = new System.Drawing.Size(130, 130);
+            this.pictureBox_motherboard.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox_motherboard.TabIndex = 34;
             this.pictureBox_motherboard.TabStop = false;
             // 
             // pictureBox_psu
             // 
+            this.pictureBox_psu.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox_psu.Location = new System.Drawing.Point(52, 269);
             this.pictureBox_psu.Name = "pictureBox_psu";
             this.pictureBox_psu.Size = new System.Drawing.Size(130, 130);
+            this.pictureBox_psu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox_psu.TabIndex = 33;
             this.pictureBox_psu.TabStop = false;
             // 
             // pictureBox_cpuCooler
             // 
+            this.pictureBox_cpuCooler.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox_cpuCooler.Location = new System.Drawing.Point(585, 52);
             this.pictureBox_cpuCooler.Name = "pictureBox_cpuCooler";
             this.pictureBox_cpuCooler.Size = new System.Drawing.Size(130, 130);
+            this.pictureBox_cpuCooler.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox_cpuCooler.TabIndex = 32;
             this.pictureBox_cpuCooler.TabStop = false;
             // 
             // pictureBox_cpu
             // 
+            this.pictureBox_cpu.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox_cpu.Location = new System.Drawing.Point(318, 52);
             this.pictureBox_cpu.Name = "pictureBox_cpu";
             this.pictureBox_cpu.Size = new System.Drawing.Size(130, 130);
+            this.pictureBox_cpu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox_cpu.TabIndex = 31;
             this.pictureBox_cpu.TabStop = false;
             // 
@@ -313,6 +318,7 @@
             this.button_addCase.TabIndex = 30;
             this.button_addCase.Text = "+";
             this.button_addCase.UseVisualStyleBackColor = true;
+            this.button_addCase.Click += new System.EventHandler(this.button_addCase_Click);
             // 
             // button_addGPU
             // 
@@ -322,6 +328,7 @@
             this.button_addGPU.TabIndex = 29;
             this.button_addGPU.Text = "+";
             this.button_addGPU.UseVisualStyleBackColor = true;
+            this.button_addGPU.Click += new System.EventHandler(this.button_addGPU_Click);
             // 
             // button_addRam
             // 
@@ -331,6 +338,7 @@
             this.button_addRam.TabIndex = 28;
             this.button_addRam.Text = "+";
             this.button_addRam.UseVisualStyleBackColor = true;
+            this.button_addRam.Click += new System.EventHandler(this.button_addRam_Click);
             // 
             // button_addStorage
             // 
@@ -340,6 +348,7 @@
             this.button_addStorage.TabIndex = 27;
             this.button_addStorage.Text = "+";
             this.button_addStorage.UseVisualStyleBackColor = true;
+            this.button_addStorage.Click += new System.EventHandler(this.button_addStorage_Click);
             // 
             // button_addMotherboard
             // 
@@ -349,6 +358,7 @@
             this.button_addMotherboard.TabIndex = 26;
             this.button_addMotherboard.Text = "+";
             this.button_addMotherboard.UseVisualStyleBackColor = true;
+            this.button_addMotherboard.Click += new System.EventHandler(this.button_addMotherboard_Click);
             // 
             // button_addPSU
             // 
@@ -358,6 +368,7 @@
             this.button_addPSU.TabIndex = 25;
             this.button_addPSU.Text = "+";
             this.button_addPSU.UseVisualStyleBackColor = true;
+            this.button_addPSU.Click += new System.EventHandler(this.button_addPSU_Click);
             // 
             // button_addCPUCooler
             // 
@@ -367,6 +378,7 @@
             this.button_addCPUCooler.TabIndex = 24;
             this.button_addCPUCooler.Text = "+";
             this.button_addCPUCooler.UseVisualStyleBackColor = true;
+            this.button_addCPUCooler.Click += new System.EventHandler(this.button_addCPUCooler_Click);
             // 
             // button_addCPU
             // 
@@ -376,6 +388,7 @@
             this.button_addCPU.TabIndex = 23;
             this.button_addCPU.Text = "+";
             this.button_addCPU.UseVisualStyleBackColor = true;
+            this.button_addCPU.Click += new System.EventHandler(this.button_addCPU_Click);
             // 
             // button_addCaseCooler
             // 
@@ -385,20 +398,7 @@
             this.button_addCaseCooler.TabIndex = 22;
             this.button_addCaseCooler.Text = "+";
             this.button_addCaseCooler.UseVisualStyleBackColor = true;
-            // 
-            // comboBox_ramQuantity
-            // 
-            this.comboBox_ramQuantity.FormattingEnabled = true;
-            this.comboBox_ramQuantity.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "4"});
-            this.comboBox_ramQuantity.Location = new System.Drawing.Point(137, 452);
-            this.comboBox_ramQuantity.Name = "comboBox_ramQuantity";
-            this.comboBox_ramQuantity.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.comboBox_ramQuantity.Size = new System.Drawing.Size(45, 23);
-            this.comboBox_ramQuantity.TabIndex = 20;
-            this.comboBox_ramQuantity.Text = "2";
+            this.button_addCaseCooler.Click += new System.EventHandler(this.button_addCaseCooler_Click);
             // 
             // label12
             // 
@@ -423,9 +423,9 @@
             this.label10.AutoSize = true;
             this.label10.Location = new System.Drawing.Point(52, 457);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(82, 15);
+            this.label10.Size = new System.Drawing.Size(52, 15);
             this.label10.TabIndex = 15;
-            this.label10.Text = "Memory/Qua.";
+            this.label10.Text = "Memory";
             // 
             // label9
             // 
@@ -483,65 +483,75 @@
             // 
             // pictureBox_caseCooler
             // 
+            this.pictureBox_caseCooler.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox_caseCooler.Location = new System.Drawing.Point(52, 52);
             this.pictureBox_caseCooler.Name = "pictureBox_caseCooler";
             this.pictureBox_caseCooler.Size = new System.Drawing.Size(130, 130);
+            this.pictureBox_caseCooler.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox_caseCooler.TabIndex = 0;
             this.pictureBox_caseCooler.TabStop = false;
             // 
             // button10
             // 
-            this.button10.Location = new System.Drawing.Point(252, 524);
+            this.button10.Location = new System.Drawing.Point(268, 524);
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(134, 44);
             this.button10.TabIndex = 8;
             this.button10.Text = "View Price";
             this.button10.UseVisualStyleBackColor = true;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label3.Location = new System.Drawing.Point(24, 119);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(64, 15);
+            this.label3.Size = new System.Drawing.Size(91, 23);
             this.label3.TabIndex = 7;
             this.label3.Text = "Your build:";
             // 
             // richTextBox_BuildDetail
             // 
+            this.richTextBox_BuildDetail.BackColor = System.Drawing.SystemColors.Window;
             this.richTextBox_BuildDetail.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTextBox_BuildDetail.Location = new System.Drawing.Point(24, 146);
+            this.richTextBox_BuildDetail.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.richTextBox_BuildDetail.Location = new System.Drawing.Point(14, 146);
             this.richTextBox_BuildDetail.Name = "richTextBox_BuildDetail";
-            this.richTextBox_BuildDetail.Size = new System.Drawing.Size(362, 372);
+            this.richTextBox_BuildDetail.ReadOnly = true;
+            this.richTextBox_BuildDetail.Size = new System.Drawing.Size(420, 372);
             this.richTextBox_BuildDetail.TabIndex = 6;
             this.richTextBox_BuildDetail.Text = "";
             // 
             // button_check
             // 
-            this.button_check.Location = new System.Drawing.Point(48, 524);
+            this.button_check.Location = new System.Drawing.Point(64, 524);
             this.button_check.Name = "button_check";
             this.button_check.Size = new System.Drawing.Size(134, 44);
             this.button_check.TabIndex = 5;
             this.button_check.Text = "Check Compatibility";
             this.button_check.UseVisualStyleBackColor = true;
+            this.button_check.Click += new System.EventHandler(this.button_check_Click);
             // 
             // button_load
             // 
-            this.button_load.Location = new System.Drawing.Point(252, 584);
+            this.button_load.Location = new System.Drawing.Point(268, 584);
             this.button_load.Name = "button_load";
             this.button_load.Size = new System.Drawing.Size(134, 44);
             this.button_load.TabIndex = 4;
             this.button_load.Text = "Load";
             this.button_load.UseVisualStyleBackColor = true;
+            this.button_load.Click += new System.EventHandler(this.button_load_Click);
             // 
             // button_save
             // 
-            this.button_save.Location = new System.Drawing.Point(48, 584);
+            this.button_save.Location = new System.Drawing.Point(64, 584);
             this.button_save.Name = "button_save";
             this.button_save.Size = new System.Drawing.Size(134, 44);
             this.button_save.TabIndex = 3;
             this.button_save.Text = "Save ";
             this.button_save.UseVisualStyleBackColor = true;
+            this.button_save.Click += new System.EventHandler(this.button_save_Click);
             // 
             // label2
             // 
@@ -559,6 +569,7 @@
             this.textBox_buildName.Name = "textBox_buildName";
             this.textBox_buildName.Size = new System.Drawing.Size(191, 16);
             this.textBox_buildName.TabIndex = 1;
+            this.textBox_buildName.Text = "No-Name";
             // 
             // label1
             // 
@@ -574,10 +585,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(1230, 656);
             this.Controls.Add(this.splitContainer1);
             this.Name = "PC_Building";
-            this.Text = "Form2";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Simulator";
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel1.PerformLayout();
             this.splitContainer1.Panel2.ResumeLayout(false);
@@ -618,7 +631,6 @@
         private Label label6;
         private Label label5;
         private Label label4;
-        private ComboBox comboBox_ramQuantity;
         private Label label_gpuName;
         private Label label_ramName;
         private Label label_storageName;

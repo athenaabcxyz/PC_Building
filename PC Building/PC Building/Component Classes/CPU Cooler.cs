@@ -6,6 +6,7 @@ using System.Linq;
 using System.Net.Sockets;
 using System.Text;
 using System.Threading.Tasks;
+using System.Globalization;
 
 namespace PC_Building
 {
@@ -18,7 +19,7 @@ namespace PC_Building
         public string NoiseLV = "";
         public string Color = "";
         public double Price;
-        public CPU_Cooler(string ModelName)
+        public void LoadProduct(string ModelName)
         {
             Model = ModelName;
             string strCon = @"Data Source=ATHENALAPTOP\SQLEXPRESS;Initial Catalog=CaseBuilder;Integrated Security=True";
@@ -35,7 +36,7 @@ namespace PC_Building
             FanRPM = Table.Rows[0][2].ToString();
             NoiseLV = Table.Rows[0][3].ToString();
             Color = Table.Rows[0][4].ToString();
-            Price = Math.Round(Convert.ToDouble(Table.Rows[0][5].ToString()), 1, MidpointRounding.AwayFromZero);
+            Price = Convert.ToDouble(Table.Rows[0][5].ToString());
             sqlCon.Close();
         }
     }

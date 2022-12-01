@@ -5,6 +5,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Globalization;
 
 namespace PC_Building
 {
@@ -20,7 +21,7 @@ namespace PC_Building
         public string CacheMemory = "";
         public string FormFactor = "";
         public double Price;
-        public Storage(string ModelName)
+        public void LoadProduct(string ModelName)
         {
             Model = ModelName;
             string strCon = @"Data Source=ATHENALAPTOP\SQLEXPRESS;Initial Catalog=CaseBuilder;Integrated Security=True";
@@ -40,7 +41,7 @@ namespace PC_Building
             Interface = Table.Rows[0][5].ToString();
             CacheMemory = Table.Rows[0][6].ToString();
             FormFactor = Table.Rows[0][7].ToString();
-            Price = Math.Round(Convert.ToDouble(Table.Rows[0][8].ToString()), 1, MidpointRounding.AwayFromZero);
+            Price = Convert.ToDouble(Table.Rows[0][8].ToString());
             sqlCon.Close();
         }
     }
