@@ -12,6 +12,7 @@ namespace PC_Building
     {       
         string strCon = @"Data Source=ATHENALAPTOP\SQLEXPRESS;Initial Catalog=CaseBuilder;Integrated Security=True";
         SqlConnection sqlCon = null;
+        string currentAmazonLink="";
         public MainForm()
         {
             InitializeComponent();
@@ -41,7 +42,10 @@ namespace PC_Building
         }
         public void FillDatabase(string a)
         {
-            listView_Main.Clear();          
+            listView_Main.Clear();
+            currentAmazonLink = "";
+            button_openAmazon.Visible = false;
+            button_openAmazon.Enabled = false;
             int ItemNumber = 0;           
             OpenConnection();
             SqlCommand sqlCmd;
@@ -188,10 +192,16 @@ namespace PC_Building
             sqlCmd.CommandText = "Select * from [" + listView_Main.FocusedItem.Group.Header + "] where Model = '" + listView_Main.FocusedItem.Text + "'";
             Adapter.SelectCommand = sqlCmd;
             Adapter.Fill(Table);
-            for (int i = 0; i < Table.Columns.Count; i++)
+            for (int i = 0; i < Table.Columns.Count-1; i++)
             {
                 richTextBox_Detail.Text += Table.Columns[i].ColumnName + ": " + Table.Rows[0][i].ToString() + "\n";
 
+            }
+            currentAmazonLink = Table.Rows[0][Table.Columns.Count - 1].ToString();
+            if (!string.IsNullOrEmpty(currentAmazonLink))
+            {
+                button_openAmazon.Visible = true;
+                button_openAmazon.Enabled = true;
             }
         }
 
@@ -199,6 +209,19 @@ namespace PC_Building
         {
             PC_Building FormA = new PC_Building();
             FormA.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if(listView_Main.SelectedItems.Count > 0)
+            {
+                var ps = new ProcessStartInfo(currentAmazonLink)
+                {
+                    UseShellExecute = true,
+                    Verb = "open"
+                };
+                Process.Start(ps);
+            }
         }
     }
 }

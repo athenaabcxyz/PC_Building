@@ -38,10 +38,10 @@ namespace PC_Building
             Brand = Table.Rows[0][1].ToString();
             Memory = Table.Rows[0][2].ToString();
             MemoryInterface = Table.Rows[0][3].ToString();
-            Length = double.Parse(Table.Rows[0][4].ToString(), CultureInfo.InvariantCulture);
+            Length = double.Parse(Table.Rows[0][4].ToString().Substring(0, Table.Rows[0][4].ToString().IndexOf(" mm")), CultureInfo.InvariantCulture);
             Interface = Table.Rows[0][5].ToString();
             Chipset = Table.Rows[0][6].ToString();
-            MaxPowerConsumption = double.Parse(Table.Rows[0][7].ToString(), CultureInfo.InvariantCulture);
+            MaxPowerConsumption = double.Parse(Table.Rows[0][7].ToString().Substring(0, Table.Rows[0][7].ToString().IndexOf(" W")), CultureInfo.InvariantCulture);
             Price = Convert.ToDouble(Table.Rows[0][8].ToString());
             sqlCon.Close();
         }

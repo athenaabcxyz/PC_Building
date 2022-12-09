@@ -29,16 +29,16 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.ListViewGroup listViewGroup10 = new System.Windows.Forms.ListViewGroup("Processor", System.Windows.Forms.HorizontalAlignment.Left);
-            System.Windows.Forms.ListViewGroup listViewGroup11 = new System.Windows.Forms.ListViewGroup("Motherboard", System.Windows.Forms.HorizontalAlignment.Left);
-            System.Windows.Forms.ListViewGroup listViewGroup12 = new System.Windows.Forms.ListViewGroup("CPU Cooler", System.Windows.Forms.HorizontalAlignment.Left);
-            System.Windows.Forms.ListViewGroup listViewGroup13 = new System.Windows.Forms.ListViewGroup("Case", System.Windows.Forms.HorizontalAlignment.Left);
-            System.Windows.Forms.ListViewGroup listViewGroup14 = new System.Windows.Forms.ListViewGroup("Graphic Card", System.Windows.Forms.HorizontalAlignment.Left);
-            System.Windows.Forms.ListViewGroup listViewGroup15 = new System.Windows.Forms.ListViewGroup("RAM", System.Windows.Forms.HorizontalAlignment.Left);
-            System.Windows.Forms.ListViewGroup listViewGroup16 = new System.Windows.Forms.ListViewGroup("Storage", System.Windows.Forms.HorizontalAlignment.Left);
-            System.Windows.Forms.ListViewGroup listViewGroup17 = new System.Windows.Forms.ListViewGroup("Case Cooler", System.Windows.Forms.HorizontalAlignment.Left);
-            System.Windows.Forms.ListViewGroup listViewGroup18 = new System.Windows.Forms.ListViewGroup("Power Supply", System.Windows.Forms.HorizontalAlignment.Left);
-            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem("970 EVO", "970 EVO.jpg");
+            System.Windows.Forms.ListViewGroup listViewGroup1 = new System.Windows.Forms.ListViewGroup("Processor", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup2 = new System.Windows.Forms.ListViewGroup("Motherboard", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup3 = new System.Windows.Forms.ListViewGroup("CPU Cooler", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup4 = new System.Windows.Forms.ListViewGroup("Case", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup5 = new System.Windows.Forms.ListViewGroup("Graphic Card", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup6 = new System.Windows.Forms.ListViewGroup("RAM", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup7 = new System.Windows.Forms.ListViewGroup("Storage", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup8 = new System.Windows.Forms.ListViewGroup("Case Cooler", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup9 = new System.Windows.Forms.ListViewGroup("Power Supply", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem("970 EVO", "970 EVO.jpg");
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.pictureBox_Illu = new System.Windows.Forms.PictureBox();
             this.textBox_Search = new System.Windows.Forms.TextBox();
@@ -51,7 +51,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.comboBox_Category = new System.Windows.Forms.ComboBox();
             this.richTextBox_Detail = new System.Windows.Forms.RichTextBox();
-            this.button_advanceSearch = new System.Windows.Forms.Button();
+            this.button_openAmazon = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Illu)).BeginInit();
             this.SuspendLayout();
             // 
@@ -109,48 +109,48 @@
             this.listView_Main.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.listView_Main.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.listView_Main.GroupImageList = this.imageList_Group;
-            listViewGroup10.CollapsedState = System.Windows.Forms.ListViewGroupCollapsedState.Expanded;
-            listViewGroup10.Header = "Processor";
-            listViewGroup10.Name = "listViewGroup_Processor";
-            listViewGroup11.CollapsedState = System.Windows.Forms.ListViewGroupCollapsedState.Expanded;
-            listViewGroup11.Header = "Motherboard";
-            listViewGroup11.Name = "listViewGroup_Motherboard";
-            listViewGroup12.CollapsedState = System.Windows.Forms.ListViewGroupCollapsedState.Expanded;
-            listViewGroup12.Header = "CPU Cooler";
-            listViewGroup12.Name = "listViewGroup_CPUCooler";
-            listViewGroup13.CollapsedState = System.Windows.Forms.ListViewGroupCollapsedState.Expanded;
-            listViewGroup13.Header = "Case";
-            listViewGroup13.Name = "listViewGroup_Case";
-            listViewGroup14.CollapsedState = System.Windows.Forms.ListViewGroupCollapsedState.Expanded;
-            listViewGroup14.Header = "Graphic Card";
-            listViewGroup14.Name = "listViewGroup_GPU";
-            listViewGroup15.CollapsedState = System.Windows.Forms.ListViewGroupCollapsedState.Expanded;
-            listViewGroup15.Header = "RAM";
-            listViewGroup15.Name = "listViewGroup_RAM";
-            listViewGroup16.CollapsedState = System.Windows.Forms.ListViewGroupCollapsedState.Expanded;
-            listViewGroup16.Header = "Storage";
-            listViewGroup16.Name = "listViewGroup_Disk";
-            listViewGroup17.CollapsedState = System.Windows.Forms.ListViewGroupCollapsedState.Expanded;
-            listViewGroup17.Header = "Case Cooler";
-            listViewGroup17.Name = "listViewGroup_CaseCooler";
-            listViewGroup18.CollapsedState = System.Windows.Forms.ListViewGroupCollapsedState.Expanded;
-            listViewGroup18.Header = "Power Supply";
-            listViewGroup18.Name = "listViewGroup_PSU";
+            listViewGroup1.CollapsedState = System.Windows.Forms.ListViewGroupCollapsedState.Expanded;
+            listViewGroup1.Header = "Processor";
+            listViewGroup1.Name = "listViewGroup_Processor";
+            listViewGroup2.CollapsedState = System.Windows.Forms.ListViewGroupCollapsedState.Expanded;
+            listViewGroup2.Header = "Motherboard";
+            listViewGroup2.Name = "listViewGroup_Motherboard";
+            listViewGroup3.CollapsedState = System.Windows.Forms.ListViewGroupCollapsedState.Expanded;
+            listViewGroup3.Header = "CPU Cooler";
+            listViewGroup3.Name = "listViewGroup_CPUCooler";
+            listViewGroup4.CollapsedState = System.Windows.Forms.ListViewGroupCollapsedState.Expanded;
+            listViewGroup4.Header = "Case";
+            listViewGroup4.Name = "listViewGroup_Case";
+            listViewGroup5.CollapsedState = System.Windows.Forms.ListViewGroupCollapsedState.Expanded;
+            listViewGroup5.Header = "Graphic Card";
+            listViewGroup5.Name = "listViewGroup_GPU";
+            listViewGroup6.CollapsedState = System.Windows.Forms.ListViewGroupCollapsedState.Expanded;
+            listViewGroup6.Header = "RAM";
+            listViewGroup6.Name = "listViewGroup_RAM";
+            listViewGroup7.CollapsedState = System.Windows.Forms.ListViewGroupCollapsedState.Expanded;
+            listViewGroup7.Header = "Storage";
+            listViewGroup7.Name = "listViewGroup_Disk";
+            listViewGroup8.CollapsedState = System.Windows.Forms.ListViewGroupCollapsedState.Expanded;
+            listViewGroup8.Header = "Case Cooler";
+            listViewGroup8.Name = "listViewGroup_CaseCooler";
+            listViewGroup9.CollapsedState = System.Windows.Forms.ListViewGroupCollapsedState.Expanded;
+            listViewGroup9.Header = "Power Supply";
+            listViewGroup9.Name = "listViewGroup_PSU";
             this.listView_Main.Groups.AddRange(new System.Windows.Forms.ListViewGroup[] {
-            listViewGroup10,
-            listViewGroup11,
-            listViewGroup12,
-            listViewGroup13,
-            listViewGroup14,
-            listViewGroup15,
-            listViewGroup16,
-            listViewGroup17,
-            listViewGroup18});
+            listViewGroup1,
+            listViewGroup2,
+            listViewGroup3,
+            listViewGroup4,
+            listViewGroup5,
+            listViewGroup6,
+            listViewGroup7,
+            listViewGroup8,
+            listViewGroup9});
             this.listView_Main.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
             this.listView_Main.HideSelection = true;
-            listViewItem2.Group = listViewGroup16;
+            listViewItem1.Group = listViewGroup7;
             this.listView_Main.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem2});
+            listViewItem1});
             this.listView_Main.LargeImageList = this.imageList_MainListView;
             this.listView_Main.Location = new System.Drawing.Point(12, 135);
             this.listView_Main.MultiSelect = false;
@@ -255,18 +255,22 @@
             this.richTextBox_Detail.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.richTextBox_Detail.Location = new System.Drawing.Point(615, 280);
             this.richTextBox_Detail.Name = "richTextBox_Detail";
-            this.richTextBox_Detail.Size = new System.Drawing.Size(355, 233);
+            this.richTextBox_Detail.Size = new System.Drawing.Size(382, 233);
             this.richTextBox_Detail.TabIndex = 15;
             this.richTextBox_Detail.Text = "";
             // 
-            // button_advanceSearch
+            // button_openAmazon
             // 
-            this.button_advanceSearch.Location = new System.Drawing.Point(423, 73);
-            this.button_advanceSearch.Name = "button_advanceSearch";
-            this.button_advanceSearch.Size = new System.Drawing.Size(111, 39);
-            this.button_advanceSearch.TabIndex = 16;
-            this.button_advanceSearch.Text = "Advance Search";
-            this.button_advanceSearch.UseVisualStyleBackColor = true;
+            this.button_openAmazon.BackColor = System.Drawing.SystemColors.Highlight;
+            this.button_openAmazon.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button_openAmazon.ForeColor = System.Drawing.SystemColors.Window;
+            this.button_openAmazon.Location = new System.Drawing.Point(733, 542);
+            this.button_openAmazon.Name = "button_openAmazon";
+            this.button_openAmazon.Size = new System.Drawing.Size(148, 47);
+            this.button_openAmazon.TabIndex = 16;
+            this.button_openAmazon.Text = "View on Amazon";
+            this.button_openAmazon.UseVisualStyleBackColor = false;
+            this.button_openAmazon.Click += new System.EventHandler(this.button1_Click);
             // 
             // MainForm
             // 
@@ -274,7 +278,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
             this.ClientSize = new System.Drawing.Size(1056, 642);
-            this.Controls.Add(this.button_advanceSearch);
+            this.Controls.Add(this.button_openAmazon);
             this.Controls.Add(this.richTextBox_Detail);
             this.Controls.Add(this.listView_Main);
             this.Controls.Add(this.label4);
@@ -305,6 +309,6 @@
         private Label label4;
         private ComboBox comboBox_Category;
         private RichTextBox richTextBox_Detail;
-        private Button button_advanceSearch;
+        private Button button_openAmazon;
     }
 }

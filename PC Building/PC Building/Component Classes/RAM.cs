@@ -36,7 +36,7 @@ namespace PC_Building
             RAMSize = Table.Rows[0][2].ToString();
             Quantity = Table.Rows[0][3].ToString();
             RAMType = Table.Rows[0][4].ToString();
-            RAMSpeed = Convert.ToInt32(Table.Rows[0][5].ToString());
+            RAMSpeed = Convert.ToInt32(Table.Rows[0][5].ToString().Substring(0, Table.Rows[0][5].ToString().IndexOf(" MHz")));
             Price = Convert.ToDouble(Table.Rows[0][6].ToString());
             sqlCon.Close();
         }

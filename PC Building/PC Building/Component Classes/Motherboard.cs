@@ -42,7 +42,7 @@ namespace PC_Building
             SockerType = Table.Rows[0][4].ToString();
             MemorySlot = Convert.ToInt32(Table.Rows[0][5].ToString());
             MemoryType = Table.Rows[0][6].ToString();
-            MemorySpeed = Convert.ToInt32(Table.Rows[0][7].ToString());
+            MemorySpeed = Convert.ToInt32(Table.Rows[0][7].ToString().Substring(0, Table.Rows[0][7].ToString().IndexOf(" MHz")));
             StorageExpansion = Table.Rows[0][8].ToString();
             if (Table.Rows[0][9].ToString() == "Yes")
                 MultiGPUSupport = true;

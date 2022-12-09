@@ -41,10 +41,10 @@ namespace PC_Building
             Thread = Convert.ToInt32(Table.Rows[0][3].ToString());
             SockerType = Table.Rows[0][4].ToString();
             MemoryType = Table.Rows[0][5].ToString();
-            MemorySpeed = Convert.ToInt32(Table.Rows[0][6].ToString());
-            BaseSpeed = double.Parse(Table.Rows[0][7].ToString(), CultureInfo.InvariantCulture);
-            TurboSpeed = double.Parse(Table.Rows[0][8].ToString(), CultureInfo.InvariantCulture);
-            MaxPowerConsumption = double.Parse(Table.Rows[0][9].ToString(), CultureInfo.InvariantCulture);
+            MemorySpeed = Convert.ToInt32(Table.Rows[0][6].ToString().Substring(0, Table.Rows[0][6].ToString().IndexOf(" MHz")));
+            BaseSpeed = double.Parse(Table.Rows[0][7].ToString().Substring(0, Table.Rows[0][7].ToString().IndexOf(" GHz")), CultureInfo.InvariantCulture);
+            TurboSpeed = double.Parse(Table.Rows[0][8].ToString().Substring(0, Table.Rows[0][8].ToString().IndexOf(" GHz")), CultureInfo.InvariantCulture);
+            MaxPowerConsumption = double.Parse(Table.Rows[0][9].ToString().Substring(0, Table.Rows[0][9].ToString().IndexOf(" W")), CultureInfo.InvariantCulture);
             Price = Convert.ToDouble(Table.Rows[0][10].ToString());
             sqlCon.Close();
         }
