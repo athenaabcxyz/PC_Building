@@ -20,6 +20,8 @@ namespace PC_Building
             InitializeComponent();
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
+            button_delete.Enabled = false;
+            button_load.Enabled = false;
             LoadAvailableBuild();
         }
         private void LoadAvailableBuild()
@@ -43,44 +45,57 @@ namespace PC_Building
         public event EventHandler returnLoader;
         public void button_load_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show("Do you want to load this build?", "Notification", MessageBoxButtons.YesNo);
-            if (result == DialogResult.Yes)
+            if (!string.IsNullOrEmpty(dataGridView1.SelectedRows[0].Cells[0].Value.ToString()))
             {
-                sqlCon = new SqlConnection(strCon);
-                sqlCon.Open();
-                SqlCommand sqlCmd;
-                SqlDataAdapter Adapter = new SqlDataAdapter();
-                sqlCmd = sqlCon.CreateCommand();
-                DataTable Table = new DataTable();
-                sqlCmd.CommandText = "Select * from [Build List] where Name = '" + dataGridView1.SelectedRows[0].Cells[0].Value.ToString() + "'";
-                Adapter.SelectCommand = sqlCmd;
-                Adapter.Fill(Table);
-                sqlCmd.CommandText = "update [Build List] set [Processor]='" + Table.Rows[0][1].ToString() + "', [Case] ='" + Table.Rows[0][2].ToString() +
-                    "', [Motherboard]='" + Table.Rows[0][3].ToString() + "', [Case Cooler]='" + Table.Rows[0][4].ToString() +
-                    "', [CPU Cooler]='" + Table.Rows[0][5].ToString() + "', [Graphic Card]='" + Table.Rows[0][6].ToString() + "', [RAM]='" + Table.Rows[0][7].ToString() +
-                    "', [Storage]='" + Table.Rows[0][8].ToString() + "',[Power Supply]='" + Table.Rows[0][9].ToString() + "' where Name = 'temporary-cache'";
-                sqlCmd.ExecuteNonQuery();
-                sqlCon.Close();
-                returnLoader(this, new EventArgs());
-                this.Close();
-            }
-                
+                DialogResult result = MessageBox.Show("Do you want to load this build?", "Notification", MessageBoxButtons.YesNo);
+                if (result == DialogResult.Yes)
+                {
+                    sqlCon = new SqlConnection(strCon);
+                    sqlCon.Open();
+                    SqlCommand sqlCmd;
+                    SqlDataAdapter Adapter = new SqlDataAdapter();
+                    sqlCmd = sqlCon.CreateCommand();
+                    DataTable Table = new DataTable();
+                    sqlCmd.CommandText = "Select * from [Build List] where Name = '" + dataGridView1.SelectedRows[0].Cells[0].Value.ToString() + "'";
+                    Adapter.SelectCommand = sqlCmd;
+                    Adapter.Fill(Table);
+                    sqlCmd.CommandText = "update [Build List] set [Processor]='" + Table.Rows[0][1].ToString() + "', [Case] ='" + Table.Rows[0][2].ToString() +
+                        "', [Motherboard]='" + Table.Rows[0][3].ToString() + "', [Case Cooler]='" + Table.Rows[0][4].ToString() +
+                        "', [CPU Cooler]='" + Table.Rows[0][5].ToString() + "', [Graphic Card]='" + Table.Rows[0][6].ToString() + "', [RAM]='" + Table.Rows[0][7].ToString() +
+                        "', [Storage]='" + Table.Rows[0][8].ToString() + "',[Power Supply]='" + Table.Rows[0][9].ToString() + "' where Name = 'temporary-cache'";
+                    sqlCmd.ExecuteNonQuery();
+                    sqlCon.Close();
+                    returnLoader(this, new EventArgs());
+                    this.Close();
+                }
+            }  
         }
 
         private void button_delete_Click(object sender, EventArgs e)
         {
-
-            DialogResult result = MessageBox.Show("Do you want to delete this build?", "Notification", MessageBoxButtons.YesNo);
-            if (result == DialogResult.Yes)
+            if (!string.IsNullOrEmpty(dataGridView1.SelectedRows[0].Cells[0].Value.ToString()))
             {
-                sqlCon = new SqlConnection(strCon);
-                sqlCon.Open();
-                SqlCommand sqlCmd;
-                sqlCmd = sqlCon.CreateCommand();
-                sqlCmd.CommandText = "delete from [Build List] where Name = '" + dataGridView1.SelectedRows[0].Cells[0].Value.ToString() + "'";
-                sqlCmd.ExecuteNonQuery();
-                sqlCon.Close();
-                LoadAvailableBuild();
+                DialogResult result = MessageBox.Show("Do you want to delete this build?", "Notification", MessageBoxButtons.YesNo);
+                if (result == DialogResult.Yes)
+                {
+                    sqlCon = new SqlConnection(strCon);
+                    sqlCon.Open();
+                    SqlCommand sqlCmd;
+                    sqlCmd = sqlCon.CreateCommand();
+                    sqlCmd.CommandText = "delete from [Build List] where Name = '" + dataGridView1.SelectedRows[0].Cells[0].Value.ToString() + "'";
+                    sqlCmd.ExecuteNonQuery();
+                    sqlCon.Close();
+                    LoadAvailableBuild();
+                }
+            }
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (!string.IsNullOrEmpty(dataGridView1.SelectedRows[0].Cells[0].Value.ToString()))
+            {
+                button_delete.Enabled = true;
+                button_load.Enabled = true;
             }
         }
     }

@@ -79,8 +79,14 @@ namespace PC_Building
                 this.dataGridView1.Rows.Add(i, simulator.powerSupply.Model, "Power Supply", simulator.powerSupply.Price);
                 i++;
                 TotalPrice = TotalPrice + simulator.powerSupply.Price;
-            }              
+            }
+            TotalPrice = Math.Round(TotalPrice, 2,MidpointRounding.AwayFromZero);
             label_totalPrice.Text = TotalPrice.ToString() + "$";
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

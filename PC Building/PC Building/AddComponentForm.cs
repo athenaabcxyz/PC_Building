@@ -43,12 +43,8 @@ namespace PC_Building
         }
 
         public event EventHandler ReturnData;
-        private void button_confirm_Click(object sender, EventArgs e)
+        public void button_confirm_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(comboBox_component.Text))
-                MessageBox.Show("Please choose the product you want to add.");
-            else
-            {
                 sqlCon = new SqlConnection(strCon);
                 sqlCon.Open();
                 SqlCommand sqlCmd;
@@ -59,7 +55,6 @@ namespace PC_Building
                 sqlCmd.ExecuteNonQuery();
                 ReturnData(this, new EventArgs());
                 this.Close();
-            }
 
         }
 

@@ -28,7 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.button_removeCase = new System.Windows.Forms.Button();
+            this.button_removeStorage = new System.Windows.Forms.Button();
+            this.button_removeCPUCooler = new System.Windows.Forms.Button();
+            this.button_removeGPU = new System.Windows.Forms.Button();
+            this.button_removeMotherboard = new System.Windows.Forms.Button();
+            this.button_removeProcessor = new System.Windows.Forms.Button();
+            this.button_removeMemory = new System.Windows.Forms.Button();
+            this.button_removePSU = new System.Windows.Forms.Button();
+            this.button_removeCaseCooler = new System.Windows.Forms.Button();
             this.label_gpuName = new System.Windows.Forms.Label();
             this.label_ramName = new System.Windows.Forms.Label();
             this.label_storageName = new System.Windows.Forms.Label();
@@ -74,6 +84,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.textBox_buildName = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -87,6 +98,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_cpuCooler)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_cpu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_caseCooler)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // splitContainer1
@@ -97,6 +109,15 @@
             // 
             // splitContainer1.Panel1
             // 
+            this.splitContainer1.Panel1.Controls.Add(this.button_removeCase);
+            this.splitContainer1.Panel1.Controls.Add(this.button_removeStorage);
+            this.splitContainer1.Panel1.Controls.Add(this.button_removeCPUCooler);
+            this.splitContainer1.Panel1.Controls.Add(this.button_removeGPU);
+            this.splitContainer1.Panel1.Controls.Add(this.button_removeMotherboard);
+            this.splitContainer1.Panel1.Controls.Add(this.button_removeProcessor);
+            this.splitContainer1.Panel1.Controls.Add(this.button_removeMemory);
+            this.splitContainer1.Panel1.Controls.Add(this.button_removePSU);
+            this.splitContainer1.Panel1.Controls.Add(this.button_removeCaseCooler);
             this.splitContainer1.Panel1.Controls.Add(this.label_gpuName);
             this.splitContainer1.Panel1.Controls.Add(this.label_ramName);
             this.splitContainer1.Panel1.Controls.Add(this.label_storageName);
@@ -133,6 +154,7 @@
             this.splitContainer1.Panel1.Controls.Add(this.label5);
             this.splitContainer1.Panel1.Controls.Add(this.label4);
             this.splitContainer1.Panel1.Controls.Add(this.pictureBox_caseCooler);
+            this.splitContainer1.Panel1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             // 
             // splitContainer1.Panel2
             // 
@@ -149,6 +171,105 @@
             this.splitContainer1.SplitterDistance = 770;
             this.splitContainer1.TabIndex = 0;
             // 
+            // button_removeCase
+            // 
+            this.button_removeCase.ForeColor = System.Drawing.Color.Red;
+            this.button_removeCase.Location = new System.Drawing.Point(721, 534);
+            this.button_removeCase.Name = "button_removeCase";
+            this.button_removeCase.Size = new System.Drawing.Size(24, 24);
+            this.button_removeCase.TabIndex = 56;
+            this.button_removeCase.Text = "X";
+            this.button_removeCase.UseVisualStyleBackColor = true;
+            this.button_removeCase.Click += new System.EventHandler(this.button_removeCase_Click);
+            // 
+            // button_removeStorage
+            // 
+            this.button_removeStorage.ForeColor = System.Drawing.Color.Red;
+            this.button_removeStorage.Location = new System.Drawing.Point(721, 319);
+            this.button_removeStorage.Name = "button_removeStorage";
+            this.button_removeStorage.Size = new System.Drawing.Size(24, 24);
+            this.button_removeStorage.TabIndex = 55;
+            this.button_removeStorage.Text = "X";
+            this.button_removeStorage.UseVisualStyleBackColor = true;
+            this.button_removeStorage.Click += new System.EventHandler(this.button_removeStorage_Click);
+            // 
+            // button_removeCPUCooler
+            // 
+            this.button_removeCPUCooler.ForeColor = System.Drawing.Color.Red;
+            this.button_removeCPUCooler.Location = new System.Drawing.Point(721, 104);
+            this.button_removeCPUCooler.Name = "button_removeCPUCooler";
+            this.button_removeCPUCooler.Size = new System.Drawing.Size(24, 24);
+            this.button_removeCPUCooler.TabIndex = 54;
+            this.button_removeCPUCooler.Text = "X";
+            this.button_removeCPUCooler.UseVisualStyleBackColor = true;
+            this.button_removeCPUCooler.Click += new System.EventHandler(this.button_removeCPUCooler_Click);
+            // 
+            // button_removeGPU
+            // 
+            this.button_removeGPU.ForeColor = System.Drawing.Color.Red;
+            this.button_removeGPU.Location = new System.Drawing.Point(454, 534);
+            this.button_removeGPU.Name = "button_removeGPU";
+            this.button_removeGPU.Size = new System.Drawing.Size(24, 24);
+            this.button_removeGPU.TabIndex = 53;
+            this.button_removeGPU.Text = "X";
+            this.button_removeGPU.UseVisualStyleBackColor = true;
+            this.button_removeGPU.Click += new System.EventHandler(this.button_removeGPU_Click);
+            // 
+            // button_removeMotherboard
+            // 
+            this.button_removeMotherboard.ForeColor = System.Drawing.Color.Red;
+            this.button_removeMotherboard.Location = new System.Drawing.Point(454, 319);
+            this.button_removeMotherboard.Name = "button_removeMotherboard";
+            this.button_removeMotherboard.Size = new System.Drawing.Size(24, 24);
+            this.button_removeMotherboard.TabIndex = 52;
+            this.button_removeMotherboard.Text = "X";
+            this.button_removeMotherboard.UseVisualStyleBackColor = true;
+            this.button_removeMotherboard.Click += new System.EventHandler(this.button_removeMotherboard_Click);
+            // 
+            // button_removeProcessor
+            // 
+            this.button_removeProcessor.ForeColor = System.Drawing.Color.Red;
+            this.button_removeProcessor.Location = new System.Drawing.Point(454, 104);
+            this.button_removeProcessor.Name = "button_removeProcessor";
+            this.button_removeProcessor.Size = new System.Drawing.Size(24, 24);
+            this.button_removeProcessor.TabIndex = 51;
+            this.button_removeProcessor.Text = "X";
+            this.button_removeProcessor.UseVisualStyleBackColor = true;
+            this.button_removeProcessor.Click += new System.EventHandler(this.button_removeProcessor_Click);
+            // 
+            // button_removeMemory
+            // 
+            this.button_removeMemory.ForeColor = System.Drawing.Color.Red;
+            this.button_removeMemory.Location = new System.Drawing.Point(188, 534);
+            this.button_removeMemory.Name = "button_removeMemory";
+            this.button_removeMemory.Size = new System.Drawing.Size(24, 24);
+            this.button_removeMemory.TabIndex = 50;
+            this.button_removeMemory.Text = "X";
+            this.button_removeMemory.UseVisualStyleBackColor = true;
+            this.button_removeMemory.Click += new System.EventHandler(this.button_removeMemory_Click);
+            // 
+            // button_removePSU
+            // 
+            this.button_removePSU.ForeColor = System.Drawing.Color.Red;
+            this.button_removePSU.Location = new System.Drawing.Point(188, 319);
+            this.button_removePSU.Name = "button_removePSU";
+            this.button_removePSU.Size = new System.Drawing.Size(24, 24);
+            this.button_removePSU.TabIndex = 49;
+            this.button_removePSU.Text = "X";
+            this.button_removePSU.UseVisualStyleBackColor = true;
+            this.button_removePSU.Click += new System.EventHandler(this.button_removePSU_Click);
+            // 
+            // button_removeCaseCooler
+            // 
+            this.button_removeCaseCooler.ForeColor = System.Drawing.Color.Red;
+            this.button_removeCaseCooler.Location = new System.Drawing.Point(188, 104);
+            this.button_removeCaseCooler.Name = "button_removeCaseCooler";
+            this.button_removeCaseCooler.Size = new System.Drawing.Size(24, 24);
+            this.button_removeCaseCooler.TabIndex = 48;
+            this.button_removeCaseCooler.Text = "X";
+            this.button_removeCaseCooler.UseVisualStyleBackColor = true;
+            this.button_removeCaseCooler.Click += new System.EventHandler(this.button_removeCaseCooler_Click);
+            // 
             // label_gpuName
             // 
             this.label_gpuName.AutoSize = true;
@@ -157,6 +278,7 @@
             this.label_gpuName.Size = new System.Drawing.Size(0, 15);
             this.label_gpuName.TabIndex = 47;
             this.label_gpuName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label_gpuName.TextChanged += new System.EventHandler(this.label_gpuName_TextChanged);
             // 
             // label_ramName
             // 
@@ -166,6 +288,7 @@
             this.label_ramName.Size = new System.Drawing.Size(0, 15);
             this.label_ramName.TabIndex = 46;
             this.label_ramName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label_ramName.TextChanged += new System.EventHandler(this.label_ramName_TextChanged);
             // 
             // label_storageName
             // 
@@ -175,6 +298,7 @@
             this.label_storageName.Size = new System.Drawing.Size(0, 15);
             this.label_storageName.TabIndex = 45;
             this.label_storageName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label_storageName.TextChanged += new System.EventHandler(this.label_storageName_TextChanged);
             // 
             // label_caseName
             // 
@@ -184,6 +308,7 @@
             this.label_caseName.Size = new System.Drawing.Size(0, 15);
             this.label_caseName.TabIndex = 44;
             this.label_caseName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label_caseName.TextChanged += new System.EventHandler(this.label_caseName_TextChanged);
             // 
             // label_motherboardName
             // 
@@ -193,6 +318,7 @@
             this.label_motherboardName.Size = new System.Drawing.Size(0, 15);
             this.label_motherboardName.TabIndex = 43;
             this.label_motherboardName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label_motherboardName.TextChanged += new System.EventHandler(this.label_motherboardName_TextChanged);
             // 
             // label_psuName
             // 
@@ -202,6 +328,7 @@
             this.label_psuName.Size = new System.Drawing.Size(0, 15);
             this.label_psuName.TabIndex = 42;
             this.label_psuName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label_psuName.TextChanged += new System.EventHandler(this.label_psuName_TextChanged);
             // 
             // label_cpuCoolerName
             // 
@@ -211,6 +338,7 @@
             this.label_cpuCoolerName.Size = new System.Drawing.Size(0, 15);
             this.label_cpuCoolerName.TabIndex = 41;
             this.label_cpuCoolerName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label_cpuCoolerName.TextChanged += new System.EventHandler(this.label_cpuCoolerName_TextChanged);
             // 
             // label_cpuName
             // 
@@ -220,6 +348,7 @@
             this.label_cpuName.Size = new System.Drawing.Size(0, 15);
             this.label_cpuName.TabIndex = 40;
             this.label_cpuName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label_cpuName.TextChanged += new System.EventHandler(this.label_cpuName_TextChanged);
             // 
             // label_caseCoolerName
             // 
@@ -229,6 +358,7 @@
             this.label_caseCoolerName.Size = new System.Drawing.Size(0, 15);
             this.label_caseCoolerName.TabIndex = 39;
             this.label_caseCoolerName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label_caseCoolerName.TextChanged += new System.EventHandler(this.label_caseCoolerName_TextChanged);
             // 
             // pictureBox_case
             // 
@@ -414,7 +544,7 @@
             this.label11.AutoSize = true;
             this.label11.Location = new System.Drawing.Point(318, 457);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(76, 15);
+            this.label11.Size = new System.Drawing.Size(78, 15);
             this.label11.TabIndex = 16;
             this.label11.Text = "Graphic Card";
             // 
@@ -423,7 +553,7 @@
             this.label10.AutoSize = true;
             this.label10.Location = new System.Drawing.Point(52, 457);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(52, 15);
+            this.label10.Size = new System.Drawing.Size(54, 15);
             this.label10.TabIndex = 15;
             this.label10.Text = "Memory";
             // 
@@ -432,7 +562,7 @@
             this.label9.AutoSize = true;
             this.label9.Location = new System.Drawing.Point(585, 239);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(47, 15);
+            this.label9.Size = new System.Drawing.Size(51, 15);
             this.label9.TabIndex = 14;
             this.label9.Text = "Storage";
             // 
@@ -441,7 +571,7 @@
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(318, 239);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(77, 15);
+            this.label8.Size = new System.Drawing.Size(81, 15);
             this.label8.TabIndex = 13;
             this.label8.Text = "Motherboard";
             // 
@@ -450,7 +580,7 @@
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(52, 239);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(79, 15);
+            this.label7.Size = new System.Drawing.Size(83, 15);
             this.label7.TabIndex = 12;
             this.label7.Text = "Power Supply";
             // 
@@ -459,7 +589,7 @@
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(585, 21);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(68, 15);
+            this.label6.Size = new System.Drawing.Size(69, 15);
             this.label6.TabIndex = 11;
             this.label6.Text = "CPU Cooler";
             // 
@@ -468,7 +598,7 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(318, 21);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(58, 15);
+            this.label5.Size = new System.Drawing.Size(61, 15);
             this.label5.TabIndex = 10;
             this.label5.Text = "Processor";
             // 
@@ -477,7 +607,7 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(52, 21);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(70, 15);
+            this.label4.Size = new System.Drawing.Size(71, 15);
             this.label4.TabIndex = 9;
             this.label4.Text = "Case Cooler";
             // 
@@ -606,6 +736,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_cpuCooler)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_cpu)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_caseCooler)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -658,5 +789,15 @@
         private Button button_addCPU;
         private Button button_addCaseCooler;
         private Button button10;
+        private Button button_removeCase;
+        private Button button_removeStorage;
+        private Button button_removeCPUCooler;
+        private Button button_removeGPU;
+        private Button button_removeMotherboard;
+        private Button button_removeProcessor;
+        private Button button_removeMemory;
+        private Button button_removePSU;
+        private Button button_removeCaseCooler;
+        private BindingSource bindingSource1;
     }
 }

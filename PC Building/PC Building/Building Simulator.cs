@@ -120,7 +120,7 @@ namespace PC_Building
             for (int i = 0; i < motherboardsize.Length; i++)
                 if (motherboardsize[i] == motherboard.FormFactor)
                     match = true;
-            if (match)
+            if (!match)
             {
                 status.CompatibilityName = "Motherboard form factor is not supported";
                 status.SeriousityLevel = "Serious";
@@ -148,9 +148,9 @@ namespace PC_Building
             string[] drive = motherboard.StorageExpansion.Split(", ");
             bool match = false;
             for (int i = 0; i < drive.Length; i++)
-                if (drive[i] == motherboard.StorageExpansion)
+                if (drive[i] == storage.Interface)
                     match = true;
-            if (match)
+            if (!match)
             {
                 status.CompatibilityName = "Storage driver interface is not supported";
                 status.SeriousityLevel = "Serious";
