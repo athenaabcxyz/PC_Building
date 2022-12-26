@@ -324,7 +324,7 @@ namespace PC_Building
                 string[] drive = motherboard.StorageExpansion.Split(", ");
                 bool match = false;
                 for (int i = 0; i < drive.Length; i++)
-                    if (drive[i] == storage.Interface)
+                    if (storage.Interface.IndexOf(drive[i])>=0)
                         match = true;
                 if (!match)
                 {

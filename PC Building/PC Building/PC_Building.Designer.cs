@@ -457,6 +457,7 @@
             this.label_motherboardStorage.AutoSize = true;
             this.label_motherboardStorage.Font = new System.Drawing.Font("Bahnschrift Condensed", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label_motherboardStorage.Location = new System.Drawing.Point(515, 425);
+            this.label_motherboardStorage.MaximumSize = new System.Drawing.Size(150, 0);
             this.label_motherboardStorage.MinimumSize = new System.Drawing.Size(150, 50);
             this.label_motherboardStorage.Name = "label_motherboardStorage";
             this.label_motherboardStorage.Size = new System.Drawing.Size(150, 50);
@@ -1479,6 +1480,7 @@
             this.pictureBox_case.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox_case.TabIndex = 38;
             this.pictureBox_case.TabStop = false;
+            this.pictureBox_case.Click += new System.EventHandler(this.pictureBox_case_Click);
             // 
             // tabPage_gpu
             // 
@@ -2468,11 +2470,11 @@
             // 
             // textBox_buildName
             // 
-            this.textBox_buildName.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox_buildName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox_buildName.Font = new System.Drawing.Font("Bahnschrift Condensed", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.textBox_buildName.Location = new System.Drawing.Point(152, 71);
             this.textBox_buildName.Name = "textBox_buildName";
-            this.textBox_buildName.Size = new System.Drawing.Size(191, 25);
+            this.textBox_buildName.Size = new System.Drawing.Size(191, 32);
             this.textBox_buildName.TabIndex = 1;
             this.textBox_buildName.Text = "No-Name";
             // 

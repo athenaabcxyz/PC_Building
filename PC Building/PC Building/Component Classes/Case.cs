@@ -40,10 +40,13 @@ namespace PC_Building
             CarbinetType = Table.Rows[0][3].ToString();
             Color = Table.Rows[0][4].ToString();
             MotherboardSupport = Table.Rows[0][5].ToString();
-            MAXGPULength =double.Parse(Table.Rows[0][6].ToString().Substring(0, Table.Rows[0][6].ToString().IndexOf(" mm")), CultureInfo.InvariantCulture);
-            CPUCoolerHeight = double.Parse(Table.Rows[0][7].ToString().Substring(0, Table.Rows[0][7].ToString().IndexOf(" mm")), CultureInfo.InvariantCulture);
+            MAXGPULength = double.Parse(Table.Rows[0][6].ToString().Substring(0, Table.Rows[0][6].ToString().IndexOf(" mm")), CultureInfo.InvariantCulture);
+            if (Table.Rows[0][7].ToString() == "N/A")
+                CPUCoolerHeight = 0;
+            else
+                CPUCoolerHeight = double.Parse(Table.Rows[0][7].ToString().Substring(0, Table.Rows[0][7].ToString().IndexOf(" mm")), CultureInfo.InvariantCulture);
             SupportPSUSize = Table.Rows[0][8].ToString();
-            Price=Convert.ToDouble(Table.Rows[0][9].ToString());
+            Price = Convert.ToDouble(Table.Rows[0][9].ToString());
             sqlCon.Close();
         }
     }

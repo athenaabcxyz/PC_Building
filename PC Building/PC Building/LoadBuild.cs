@@ -93,18 +93,10 @@ namespace PC_Building
             }
         }
 
-        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (listView1.SelectedItems.Count>0)
-            {
-                button_delete.Enabled = true;
-                button_load.Enabled = true;
-            }
-        }
-
         private void listView1_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            button_delete.Enabled = true;
+            button_load.Enabled = true;
         }
     }
 }

@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
             this.label_component = new System.Windows.Forms.Label();
             this.comboBox_component = new System.Windows.Forms.ComboBox();
             this.button_confirm = new System.Windows.Forms.Button();
@@ -37,36 +36,32 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(224, 28);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(49, 15);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Adding:";
-            // 
             // label_component
             // 
             this.label_component.AutoSize = true;
-            this.label_component.Location = new System.Drawing.Point(279, 28);
+            this.label_component.Font = new System.Drawing.Font("Bahnschrift", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label_component.Location = new System.Drawing.Point(180, 20);
+            this.label_component.MinimumSize = new System.Drawing.Size(196, 0);
             this.label_component.Name = "label_component";
-            this.label_component.Size = new System.Drawing.Size(55, 15);
+            this.label_component.Size = new System.Drawing.Size(196, 23);
             this.label_component.TabIndex = 1;
             this.label_component.Text = "Category";
+            this.label_component.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // comboBox_component
             // 
+            this.comboBox_component.Font = new System.Drawing.Font("Bahnschrift", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.comboBox_component.FormattingEnabled = true;
             this.comboBox_component.Location = new System.Drawing.Point(180, 243);
             this.comboBox_component.Name = "comboBox_component";
-            this.comboBox_component.Size = new System.Drawing.Size(196, 23);
+            this.comboBox_component.Size = new System.Drawing.Size(196, 22);
             this.comboBox_component.TabIndex = 2;
             this.comboBox_component.SelectedValueChanged += new System.EventHandler(this.comboBox_component_SelectedValueChanged);
             this.comboBox_component.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox_component_KeyPress);
             // 
             // button_confirm
             // 
+            this.button_confirm.Font = new System.Drawing.Font("Bahnschrift", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button_confirm.Location = new System.Drawing.Point(212, 544);
             this.button_confirm.Name = "button_confirm";
             this.button_confirm.Size = new System.Drawing.Size(138, 52);
@@ -88,7 +83,7 @@
             // richTextBox_Detail
             // 
             this.richTextBox_Detail.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTextBox_Detail.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.richTextBox_Detail.Font = new System.Drawing.Font("Bahnschrift", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.richTextBox_Detail.Location = new System.Drawing.Point(100, 287);
             this.richTextBox_Detail.Name = "richTextBox_Detail";
             this.richTextBox_Detail.Size = new System.Drawing.Size(355, 233);
@@ -105,7 +100,6 @@
             this.Controls.Add(this.button_confirm);
             this.Controls.Add(this.comboBox_component);
             this.Controls.Add(this.label_component);
-            this.Controls.Add(this.label1);
             this.Name = "AddComponentForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Add Component";
@@ -116,8 +110,6 @@
         }
 
         #endregion
-
-        private Label label1;
         private Label label_component;
         private ComboBox comboBox_component;
         private Button button_confirm;
