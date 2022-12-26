@@ -52,6 +52,7 @@
             this.comboBox_Category = new System.Windows.Forms.ComboBox();
             this.richTextBox_Detail = new System.Windows.Forms.RichTextBox();
             this.button_openAmazon = new System.Windows.Forms.Button();
+            this.toolTip = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Illu)).BeginInit();
             this.SuspendLayout();
             // 
@@ -67,9 +68,10 @@
             // textBox_Search
             // 
             this.textBox_Search.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_Search.Location = new System.Drawing.Point(12, 83);
+            this.textBox_Search.Font = new System.Drawing.Font("Bahnschrift Condensed", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBox_Search.Location = new System.Drawing.Point(12, 90);
             this.textBox_Search.Name = "textBox_Search";
-            this.textBox_Search.Size = new System.Drawing.Size(185, 23);
+            this.textBox_Search.Size = new System.Drawing.Size(185, 28);
             this.textBox_Search.TabIndex = 6;
             this.textBox_Search.TextChanged += new System.EventHandler(this.textBox_Search_TextChanged);
             // 
@@ -84,7 +86,7 @@
             // 
             // button_Build
             // 
-            this.button_Build.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.button_Build.Font = new System.Drawing.Font("Bahnschrift", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button_Build.Location = new System.Drawing.Point(799, 12);
             this.button_Build.Name = "button_Build";
             this.button_Build.Size = new System.Drawing.Size(245, 52);
@@ -96,9 +98,10 @@
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Bahnschrift Condensed", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label3.Location = new System.Drawing.Point(12, 65);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(131, 15);
+            this.label3.Size = new System.Drawing.Size(151, 22);
             this.label3.TabIndex = 11;
             this.label3.Text = "Search by model name:";
             // 
@@ -107,7 +110,7 @@
             this.listView_Main.Activation = System.Windows.Forms.ItemActivation.OneClick;
             this.listView_Main.BackColor = System.Drawing.SystemColors.Window;
             this.listView_Main.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.listView_Main.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.listView_Main.Font = new System.Drawing.Font("Bahnschrift", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.listView_Main.GroupImageList = this.imageList_Group;
             listViewGroup1.CollapsedState = System.Windows.Forms.ListViewGroupCollapsedState.Expanded;
             listViewGroup1.Header = "Processor";
@@ -223,14 +226,16 @@
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Bahnschrift Condensed", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label4.Location = new System.Drawing.Point(231, 64);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(58, 15);
+            this.label4.Size = new System.Drawing.Size(66, 22);
             this.label4.TabIndex = 12;
             this.label4.Text = "Category:";
             // 
             // comboBox_Category
             // 
+            this.comboBox_Category.Font = new System.Drawing.Font("Bahnschrift Condensed", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.comboBox_Category.FormattingEnabled = true;
             this.comboBox_Category.Items.AddRange(new object[] {
             "Processor",
@@ -243,16 +248,16 @@
             "Case Cooler",
             "Power Supply",
             "All"});
-            this.comboBox_Category.Location = new System.Drawing.Point(231, 82);
+            this.comboBox_Category.Location = new System.Drawing.Point(231, 90);
             this.comboBox_Category.Name = "comboBox_Category";
-            this.comboBox_Category.Size = new System.Drawing.Size(152, 23);
+            this.comboBox_Category.Size = new System.Drawing.Size(152, 29);
             this.comboBox_Category.TabIndex = 7;
             this.comboBox_Category.TextChanged += new System.EventHandler(this.comboBox_Category_TextChanged);
             // 
             // richTextBox_Detail
             // 
             this.richTextBox_Detail.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTextBox_Detail.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.richTextBox_Detail.Font = new System.Drawing.Font("Bahnschrift", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.richTextBox_Detail.Location = new System.Drawing.Point(615, 280);
             this.richTextBox_Detail.Name = "richTextBox_Detail";
             this.richTextBox_Detail.Size = new System.Drawing.Size(382, 233);
@@ -261,14 +266,16 @@
             // 
             // button_openAmazon
             // 
-            this.button_openAmazon.BackColor = System.Drawing.SystemColors.Highlight;
+            this.button_openAmazon.BackColor = System.Drawing.Color.Transparent;
+            this.button_openAmazon.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button_openAmazon.BackgroundImage")));
+            this.button_openAmazon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button_openAmazon.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button_openAmazon.ForeColor = System.Drawing.SystemColors.Window;
-            this.button_openAmazon.Location = new System.Drawing.Point(733, 542);
+            this.button_openAmazon.Location = new System.Drawing.Point(733, 540);
             this.button_openAmazon.Name = "button_openAmazon";
-            this.button_openAmazon.Size = new System.Drawing.Size(148, 47);
+            this.button_openAmazon.Size = new System.Drawing.Size(148, 49);
             this.button_openAmazon.TabIndex = 16;
-            this.button_openAmazon.Text = "View on Amazon";
+            this.toolTip.SetToolTip(this.button_openAmazon, "View on Amazon");
             this.button_openAmazon.UseVisualStyleBackColor = false;
             this.button_openAmazon.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -310,5 +317,6 @@
         private ComboBox comboBox_Category;
         private RichTextBox richTextBox_Detail;
         private Button button_openAmazon;
+        private ToolTip toolTip;
     }
 }

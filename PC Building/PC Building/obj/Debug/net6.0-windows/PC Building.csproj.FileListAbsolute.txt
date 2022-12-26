@@ -27,4 +27,4 @@ D:\Github\PC_Building\PC Building\PC Building\obj\Debug\net6.0-windows\PC Buildi
 D:\Github\PC_Building\PC Building\PC Building\obj\Debug\net6.0-windows\PC_Building.AddComponentForm.resources
 D:\Github\PC_Building\PC Building\PC Building\obj\Debug\net6.0-windows\PC_Building.PriceCalculator.resources
 D:\Github\PC_Building\PC Building\PC Building\obj\Debug\net6.0-windows\PC_Building.LoadBuild.resources
-D:\Github\PC_Building\PC Building\PC Building\obj\Debug\net6.0-windows\PC_Building.CompatibilityLog.resources
+D:\Github\PC_Building\PC Building\PC Building\obj\Debug\net6.0-windows\PC_Building.Properties.Resources.resources

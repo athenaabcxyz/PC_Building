@@ -108,7 +108,7 @@ namespace PC_Building
             }
             Table.Clear();
             //Update RAM
-            sqlCmd.CommandText = "Select Model from RAM";
+            sqlCmd.CommandText = "Select Model from RAM where Model like '%" + a + "%'";
             Adapter.SelectCommand = sqlCmd;
             Adapter.Fill(Table);
             for (int i = 0; i < Table.Rows.Count; i++)

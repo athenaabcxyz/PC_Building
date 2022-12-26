@@ -26,7 +26,7 @@ namespace PC_Building
         }
         private void LoadAvailableBuild()
         {
-            dataGridView1.Rows.Clear();
+            listView1.Items.Clear();
             sqlCon = new SqlConnection(strCon);
             sqlCon.Open();
             SqlCommand sqlCmd;
@@ -38,14 +38,17 @@ namespace PC_Building
             Adapter.Fill(Table);
             for (int i=0; i < Table.Rows.Count; i++)
             {
-                dataGridView1.Rows.Add(Table.Rows[i][0], Table.Rows[i][1]);
+                var Item = new ListViewItem();
+                Item.Text = Table.Rows[i][0].ToString();
+                Item.SubItems.Add(Table.Rows[i][1].ToString());
+                listView1.Items.Add(Item);
             }
             sqlCon.Close();
         }
         public event EventHandler returnLoader;
         public void button_load_Click(object sender, EventArgs e)
         {
-            if (!string.IsNullOrEmpty(dataGridView1.SelectedRows[0].Cells[0].Value.ToString()))
+            if (listView1.SelectedItems.Count>0)
             {
                 DialogResult result = MessageBox.Show("Do you want to load this build?", "Notification", MessageBoxButtons.YesNo);
                 if (result == DialogResult.Yes)
@@ -56,7 +59,7 @@ namespace PC_Building
                     SqlDataAdapter Adapter = new SqlDataAdapter();
                     sqlCmd = sqlCon.CreateCommand();
                     DataTable Table = new DataTable();
-                    sqlCmd.CommandText = "Select * from [Build List] where Name = '" + dataGridView1.SelectedRows[0].Cells[0].Value.ToString() + "'";
+                    sqlCmd.CommandText = "Select * from [Build List] where Name = '" + listView1.SelectedItems[0].Text + "'";
                     Adapter.SelectCommand = sqlCmd;
                     Adapter.Fill(Table);
                     sqlCmd.CommandText = "update [Build List] set [Processor]='" + Table.Rows[0][1].ToString() + "', [Case] ='" + Table.Rows[0][2].ToString() +
@@ -73,7 +76,7 @@ namespace PC_Building
 
         private void button_delete_Click(object sender, EventArgs e)
         {
-            if (!string.IsNullOrEmpty(dataGridView1.SelectedRows[0].Cells[0].Value.ToString()))
+            if (listView1.SelectedItems.Count > 0)
             {
                 DialogResult result = MessageBox.Show("Do you want to delete this build?", "Notification", MessageBoxButtons.YesNo);
                 if (result == DialogResult.Yes)
@@ -82,7 +85,7 @@ namespace PC_Building
                     sqlCon.Open();
                     SqlCommand sqlCmd;
                     sqlCmd = sqlCon.CreateCommand();
-                    sqlCmd.CommandText = "delete from [Build List] where Name = '" + dataGridView1.SelectedRows[0].Cells[0].Value.ToString() + "'";
+                    sqlCmd.CommandText = "delete from [Build List] where Name = '" + listView1.SelectedItems[0].Text + "'";
                     sqlCmd.ExecuteNonQuery();
                     sqlCon.Close();
                     LoadAvailableBuild();
@@ -92,11 +95,16 @@ namespace PC_Building
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (!string.IsNullOrEmpty(dataGridView1.SelectedRows[0].Cells[0].Value.ToString()))
+            if (listView1.SelectedItems.Count>0)
             {
                 button_delete.Enabled = true;
                 button_load.Enabled = true;
             }
+        }
+
+        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
