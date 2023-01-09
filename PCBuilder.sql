@@ -149,6 +149,33 @@ create table [Build List]
 	[Date] smalldatetime,
     constraint PK_Build primary key(Name)
 ); 
+create table [BuildShared]
+(
+	[ID] int primary key,
+	[Name] Nvarchar(200),
+	[Decription] Nvarchar(3000),
+	[Like] int,
+	[Processor] varchar(200),
+    [Case] varchar(200),
+    [Motherboard] varchar(200),
+    [Case Cooler] varchar(200),
+    [CPU Cooler] varchar(200),
+    [Graphic Card] varchar(200),
+    [RAM] varchar(200),
+    [Storage] varchar(200),
+    [Power Supply] varchar(200),
+)
+create table [SharedBuildInfo]
+(
+	[ID] int,
+	[Comment] Nvarchar(400),
+)
+create table [LiveChat]
+(
+	[ID] int,
+	[UserName] Nvarchar(40),
+	[Comment] Nvarchar(200),
+)
 go
 insert into [Processor] values ('Ryzen Threadripper 3990X','AMD',64,128,'sTRX4','DDR4', '3200 MHz','2.9 GHz','4.3 GHz','280 W',8078,'https://www.amazon.com/dp/B0815SBQ9W?tag=pcbuilder00-20')
 insert into [Processor] values ('Ryzen 9 7950X','AMD',16,32,'AM5','DDR5','5200 MHz','4.5 GHz','5.7 GHz','170 W',699,'https://amazon.com/dp/B0BBHD5D8Y?tag=pcbuilder00-20')

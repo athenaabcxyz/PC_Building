@@ -388,6 +388,7 @@
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PC Builder";
+            this.Load += new System.EventHandler(this.MainForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Illu)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

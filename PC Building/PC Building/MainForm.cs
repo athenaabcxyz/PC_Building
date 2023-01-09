@@ -223,5 +223,11 @@ namespace PC_Building
                 Process.Start(ps);
             }
         }
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+            LiveChat A = new LiveChat();
+            A.Show();
+        }
     }
 }

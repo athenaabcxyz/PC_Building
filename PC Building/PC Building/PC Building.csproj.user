@@ -4,6 +4,15 @@
     <Compile Update="AddComponentForm.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="AutoBuilder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="BuildSharing.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="LiveChat.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="LoadBuild.cs">
       <SubType>Form</SubType>
     </Compile>
