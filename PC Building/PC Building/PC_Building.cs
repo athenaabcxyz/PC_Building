@@ -11,37 +11,43 @@ using System.Windows.Forms;
 
 namespace PC_Building
 {
+
     public partial class PC_Building : Form
     {
         string strCon = @"Data Source=ATHENALAPTOP\SQLEXPRESS;Initial Catalog=CaseBuilder;Integrated Security=True";
         SqlConnection sqlCon = null;
         Building_Simulator Build = new Building_Simulator();
-        public PC_Building()
+        public PC_Building(string answer)
         {
             InitializeComponent();
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
-            DialogResult result = MessageBox.Show("Do you want to load the last build?", "Notification", MessageBoxButtons.YesNo);
-            if (result == DialogResult.No)
+            if (answer != "Yes")
             {
-                sqlCon = new SqlConnection(strCon);
-                sqlCon.Open();
-                SqlCommand sqlCmd;
-                SqlDataAdapter Adapter = new SqlDataAdapter();
-                sqlCmd = sqlCon.CreateCommand();
-                DataTable Table = new DataTable();
-                sqlCmd.CommandText = "Update [Build List] set Processor = '', [Case] = '', Motherboard = '', [Case Cooler] = '', " +
-                    "[CPU Cooler] = '', [Graphic Card] = '', RAM = '', Storage = '', [Power Supply] = '', Date = ''  where Name = 'temporary-cache'";
-                sqlCmd.ExecuteNonQuery();
-                getCurrentModelName(tabControl_component.SelectedIndex);
-                label_currentComponent.Text = tabControl_component.SelectedTab.Text;
+                DialogResult result = MessageBox.Show("Do you want to load the last build?", "Notification", MessageBoxButtons.YesNo);
+                if (result == DialogResult.No)
+                {
+                    sqlCon = new SqlConnection(strCon);
+                    sqlCon.Open();
+                    SqlCommand sqlCmd;
+                    SqlDataAdapter Adapter = new SqlDataAdapter();
+                    sqlCmd = sqlCon.CreateCommand();
+                    DataTable Table = new DataTable();
+                    sqlCmd.CommandText = "Update [Build List] set Processor = '', [Case] = '', Motherboard = '', [Case Cooler] = '', " +
+                        "[CPU Cooler] = '', [Graphic Card] = '', RAM = '', Storage = '', [Power Supply] = '', Date = ''  where Name = 'temporary-cache'";
+                    sqlCmd.ExecuteNonQuery();
+                    getCurrentModelName(tabControl_component.SelectedIndex);
+                    label_currentComponent.Text = tabControl_component.SelectedTab.Text;
+                }
+                else
+                    formRefresh();
             }
             else
                 formRefresh();
         }
         public void formRefresh(string A = "temporary-cache")
         {
-            richTextBox_BuildDetail.Text = "";
+            listView1.Items.Clear();
             richTextBox_log.Text = "";
             resetComponent();
             sqlCon = new SqlConnection(strCon);
@@ -58,64 +64,74 @@ namespace PC_Building
                 Build.addMotherboard(Table.Rows[0][3].ToString());
                 label_motherboardName.Text = Build.motherboard.Model;
                 pictureBox_motherboard.Image = Image.FromFile(@"PC_Builder_Image\Motherboard\" + label_motherboardName.Text + ".jpg");
-                richTextBox_BuildDetail.Text += "Motherboard(mainboard): " + Build.motherboard.Model + "\n\n";
+                listView1.Items.Add("Motherboard(mainboard): " + Build.motherboard.Model, Build.motherboard.Model + ".jpg");
+                listView1.Items[listView1.FindItemWithText("Motherboard(mainboard): " + Build.motherboard.Model).Index].Group = listView1.Groups[1];
             }
             if (!string.IsNullOrEmpty(Table.Rows[0][1].ToString()))
             {
                 Build.addProcessor(Table.Rows[0][1].ToString());
                 label_cpuName.Text = Build.processor.Model;
                 pictureBox_cpu.Image = Image.FromFile(@"PC_Builder_Image\Processor\" + label_cpuName.Text + ".jpg");
-                richTextBox_BuildDetail.Text += "Processor: " + Build.processor.Model + " @ " + Build.processor.BaseSpeed + " GHz (" + Build.processor.Core + " cores, "
-                    + Build.processor.Thread + " threads)\n\n";
+                listView1.Items.Add("Processor: " + Build.processor.Model + " @ " + Build.processor.BaseSpeed + " GHz (" + Build.processor.Core + " cores, "
+                    + Build.processor.Thread + " threads)", Build.processor.Model + ".jpg");
+                listView1.Items[listView1.FindItemWithText("Processor: " + Build.processor.Model + " @ " + Build.processor.BaseSpeed + " GHz (" + Build.processor.Core + " cores, "
+                    + Build.processor.Thread + " threads)").Index].Group = listView1.Groups[0];
             }
             if (!string.IsNullOrEmpty(Table.Rows[0][7].ToString()))
             {
                 Build.addRAM(Table.Rows[0][7].ToString());
                 label_ramName.Text = Build.ram.Model;
                 pictureBox_ram.Image = Image.FromFile(@"PC_Builder_Image\RAM\" + label_ramName.Text + ".jpg");
-                richTextBox_BuildDetail.Text += "RAM: " + Build.ram.Model + " " + Build.ram.Quantity + "\n\n";
+                listView1.Items.Add("RAM: " + Build.ram.Model + " " + Build.ram.Quantity, Build.ram.Model + ".jpg");
+                listView1.Items[listView1.FindItemWithText("RAM: " + Build.ram.Model + " " + Build.ram.Quantity).Index].Group = listView1.Groups[2];
             }
             if (!string.IsNullOrEmpty(Table.Rows[0][6].ToString()))
             {
                 Build.addGraphicCard(Table.Rows[0][6].ToString());
                 label_gpuName.Text = Build.graphicCard.Model;
                 pictureBox_gpu.Image = Image.FromFile(@"PC_Builder_Image\Graphic Card\" + label_gpuName.Text + ".jpg");
-                richTextBox_BuildDetail.Text += "VGA: " + Build.graphicCard.Model + "\n\n";
+                listView1.Items.Add("VGA: " + Build.graphicCard.Model, Build.graphicCard.Model + ".jpg");
+                listView1.Items[listView1.FindItemWithText("VGA: " + Build.graphicCard.Model).Index].Group = listView1.Groups[4];
             }
             if (!string.IsNullOrEmpty(Table.Rows[0][2].ToString()))
             {
                 Build.addCase(Table.Rows[0][2].ToString());
                 label_caseName.Text = Build.cpuCase.Model;
                 pictureBox_case.Image = Image.FromFile(@"PC_Builder_Image\Case\" + label_caseName.Text + ".jpg");
-                richTextBox_BuildDetail.Text += "Case: " + Build.cpuCase.Model + "\n\n";
+                listView1.Items.Add("Case: " + Build.cpuCase.Model, Build.cpuCase.Model + ".jpg");
+                listView1.Items[listView1.FindItemWithText("Case: " + Build.cpuCase.Model).Index].Group = listView1.Groups[3];
             }
             if (!string.IsNullOrEmpty(Table.Rows[0][4].ToString()))
             {
                 Build.addCaseCooler(Table.Rows[0][4].ToString());
                 label_caseCoolerName.Text = Build.caseCooler.Model;
                 pictureBox_caseCooler.Image = Image.FromFile(@"PC_Builder_Image\Case Cooler\" + label_caseCoolerName.Text + ".jpg");
-                richTextBox_BuildDetail.Text += "Case Cooler: " + Build.caseCooler.Model + "\n\n";
+                listView1.Items.Add("Case Cooler: " + Build.caseCooler.Model, Build.caseCooler.Model + ".jpg");
+                listView1.Items[listView1.FindItemWithText("Case Cooler: " + Build.caseCooler.Model).Index].Group = listView1.Groups[8];
             }
             if (!string.IsNullOrEmpty(Table.Rows[0][5].ToString()))
             {
                 Build.addCPUCooler(Table.Rows[0][5].ToString());
                 label_cpuCoolerName.Text = Build.cpuCooler.Model;
                 pictureBox_cpuCooler.Image = Image.FromFile(@"PC_Builder_Image\CPU Cooler\" + label_cpuCoolerName.Text + ".jpg");
-                richTextBox_BuildDetail.Text += "CPU Cooler: " + Build.cpuCooler.Model + "\n\n";
+                listView1.Items.Add("CPU Cooler: " + Build.cpuCooler.Model, Build.cpuCooler.Model + ".jpg");
+                listView1.Items[listView1.FindItemWithText("CPU Cooler: " + Build.cpuCooler.Model).Index].Group = listView1.Groups[7];
             }
             if (!string.IsNullOrEmpty(Table.Rows[0][8].ToString()))
             {
                 Build.addStorage(Table.Rows[0][8].ToString());
                 label_storageName.Text = Build.storage.Model;
                 pictureBox_storage.Image = Image.FromFile(@"PC_Builder_Image\Storage\" + label_storageName.Text + ".jpg");
-                richTextBox_BuildDetail.Text += "Storage: " + Build.storage.Model + " " + Build.storage.Capacity + " " + Build.storage.Type + "\n\n";
+                listView1.Items.Add("Storage: " + Build.storage.Model + " " + Build.storage.Capacity + " " + Build.storage.Type, Build.storage.Model + ".jpg");
+                listView1.Items[listView1.FindItemWithText("Storage: " + Build.storage.Model + " " + Build.storage.Capacity + " " + Build.storage.Type).Index].Group = listView1.Groups[5];
             }
             if (!string.IsNullOrEmpty(Table.Rows[0][9].ToString()))
             {
                 Build.addPSU(Table.Rows[0][9].ToString());
                 label_psuName.Text = Build.powerSupply.Model;
                 pictureBox_psu.Image = Image.FromFile(@"PC_Builder_Image\Power Supply\" + label_psuName.Text + ".jpg");
-                richTextBox_BuildDetail.Text += "PSU: " + Build.powerSupply.Model + "\n\n";
+                listView1.Items.Add("PSU: " + Build.powerSupply.Model, Build.powerSupply.Model + ".jpg");
+                listView1.Items[listView1.FindItemWithText("PSU: " + Build.powerSupply.Model).Index].Group = listView1.Groups[6];
             }
             getCurrentModelName(tabControl_component.SelectedIndex);
             label_currentComponent.Text = tabControl_component.SelectedTab.Text;
@@ -142,7 +158,7 @@ namespace PC_Building
             pictureBox_cpuCooler.Image = null;
             pictureBox_gpu.Image = null;
             pictureBox_motherboard.Image = null;
-            pictureBox_psu.Image= null;
+            pictureBox_psu.Image = null;
             pictureBox_ram.Image = null;
             pictureBox_storage.Image = null;
             label_caseCoolerName.Text = "";
@@ -154,6 +170,25 @@ namespace PC_Building
             label_caseName.Text = "";
             label_ramName.Text = "";
             label_psuName.Text = "";
+            Build.processor = null;
+            Build.processor = new Processor();
+            Build.motherboard = null;
+            Build.motherboard = new Motherboard();
+            Build.ram = null;
+            Build.ram = new RAM();
+            Build.cpuCase = null;
+            Build.cpuCase = new Case();
+            Build.storage = null;
+            Build.storage = new Storage();
+            Build.powerSupply = null;
+            Build.powerSupply = new Power_Supply();
+            Build.cpuCooler = null;
+            Build.cpuCooler = new CPU_Cooler();
+            Build.caseCooler = null;
+            Build.caseCooler = new Case_Cooler();
+            Build.graphicCard = null;
+            Build.graphicCard = new Graphic_Card();
+
         }
         public void getCurrentModelName(int i)
         {
@@ -161,7 +196,7 @@ namespace PC_Building
             {
                 case 0:
                     label_modelName.Text = label_motherboardName.Text;
-                break;
+                    break;
                 case 1:
                     label_modelName.Text = label_cpuName.Text;
                     break;
@@ -318,13 +353,44 @@ namespace PC_Building
             FormA.returnLoader += ReloadForm;
             FormA.Show();
         }
+        public void ReloadLog()
+        {
+            richTextBox_log.Text = "";
+            Build.CompatibilityCheck();
+            if (Build.Incompatibilities.Count > 0)
+            {
+                string DetailLog = "";
+                for (int i = 0; i < Build.Incompatibilities.Count; i++)
+                {
+                    DetailLog = "--------------------------------------------------------\n";
+                    DetailLog += "Incompatibility: " + Build.Incompatibilities[i].CompatibilityName + "\n\n"
+                        + "Serious Level: " + Build.Incompatibilities[i].SeriousityLevel + "\n\n "
+                        + "Detail: " + Build.Incompatibilities[i].Detail + "\n "
+                        + "--------------------------------------------------------";
+                    if (DetailLog != "")
+                    {
+                        if (Build.Incompatibilities[i].SeriousityLevel == "Serious")
+                            richTextBox_log.AppendText(DetailLog, Color.Red);
+                        else
+                            if (Build.Incompatibilities[i].SeriousityLevel == "Unrecommended")
+                            richTextBox_log.AppendText(DetailLog, Color.Orange);
+                        else
+                            if (Build.Incompatibilities[i].SeriousityLevel == "Normal")
+                            richTextBox_log.AppendText(DetailLog, Color.Green);
+                    }
+                }
 
+            }
+            else
+                richTextBox_log.AppendText("Your build is perfect!", Color.Black);
+
+        }
         private void label_caseCoolerName_TextChanged(object sender, EventArgs e)
         {
             if (!string.IsNullOrEmpty(label_caseCoolerName.Text))
             {
-                richTextBox_log.Text = Build.CompatibilityLog();
                 LoadCaseCooler();
+                ReloadLog();
             }
         }
 
@@ -333,8 +399,8 @@ namespace PC_Building
         {
             if (!string.IsNullOrEmpty(label_cpuName.Text))
             {
-                richTextBox_log.Text = Build.CompatibilityLog();
                 LoadProcessor();
+                ReloadLog();
             }
         }
 
@@ -342,8 +408,8 @@ namespace PC_Building
         {
             if (!string.IsNullOrEmpty(label_cpuCoolerName.Text))
             {
-                richTextBox_log.Text = Build.CompatibilityLog();
                 LoadcpuCooler();
+                ReloadLog();
             }
         }
 
@@ -351,8 +417,8 @@ namespace PC_Building
         {
             if (!string.IsNullOrEmpty(label_psuName.Text))
             {
-                richTextBox_log.Text = Build.CompatibilityLog();
                 LoadPSU();
+                ReloadLog();
             }
         }
 
@@ -361,8 +427,8 @@ namespace PC_Building
         {
             if (!string.IsNullOrEmpty(label_motherboardName.Text))
             {
-                richTextBox_log.Text = Build.CompatibilityLog();
                 LoadMotherboard();
+                ReloadLog();
             }
         }
 
@@ -371,8 +437,8 @@ namespace PC_Building
         {
             if (!string.IsNullOrEmpty(label_storageName.Text))
             {
-                richTextBox_log.Text = Build.CompatibilityLog();
                 LoadStorage();
+                ReloadLog();
             }
         }
 
@@ -380,8 +446,8 @@ namespace PC_Building
         {
             if (!string.IsNullOrEmpty(label_ramName.Text))
             {
-                richTextBox_log.Text = Build.CompatibilityLog();
                 LoadMemory();
+                ReloadLog();
             }
         }
 
@@ -390,8 +456,8 @@ namespace PC_Building
         {
             if (!string.IsNullOrEmpty(label_gpuName.Text))
             {
-                richTextBox_log.Text = Build.CompatibilityLog();
                 LoadGPU();
+                ReloadLog();
             }
         }
 
@@ -400,8 +466,8 @@ namespace PC_Building
         {
             if (!string.IsNullOrEmpty(label_caseName.Text))
             {
-                richTextBox_log.Text = Build.CompatibilityLog();
                 LoadCase();
+                ReloadLog();
             }
         }
 
@@ -438,8 +504,8 @@ namespace PC_Building
             label_motherboardBrand.Text = Table.Rows[0][1].ToString();
             label_motherboardChipset.Text = Table.Rows[0][2].ToString();
             label_motherboardSize.Text = Table.Rows[0][3].ToString();
-            label_motherboardSocket.Text=Table.Rows[0][4].ToString();
-            label_motherboardRAM.Text="Slot quantity: "+Table.Rows[0][5].ToString()+"\nType: " + Table.Rows[0][6].ToString()+"\nSpeed: " + Table.Rows[0][7].ToString();
+            label_motherboardSocket.Text = Table.Rows[0][4].ToString();
+            label_motherboardRAM.Text = "Slot quantity: " + Table.Rows[0][5].ToString() + "\nType: " + Table.Rows[0][6].ToString() + "\nSpeed: " + Table.Rows[0][7].ToString();
             label_motherboardStorage.Text = Table.Rows[0][8].ToString();
         }
         public void LoadProcessor()
@@ -463,7 +529,7 @@ namespace PC_Building
             Adapter.Fill(Table);
             label_processorBrand.Text = Table.Rows[0][1].ToString();
             label_processorPower.Text = Table.Rows[0][9].ToString();
-            label_processorSpeed.Text = "Base Speed: "+Table.Rows[0][7].ToString()+"\nTurbo Speed: " + Table.Rows[0][8].ToString();
+            label_processorSpeed.Text = "Base Speed: " + Table.Rows[0][7].ToString() + "\nTurbo Speed: " + Table.Rows[0][8].ToString();
             label_processorSocket.Text = Table.Rows[0][4].ToString();
             label_processorRAM.Text = "Type: " + Table.Rows[0][5].ToString() + "\nSpeed: " + Table.Rows[0][6].ToString();
             label_processorInfo.Text = "Core: " + Table.Rows[0][3].ToString() + "\nThread: " + Table.Rows[0][4].ToString();
@@ -515,7 +581,7 @@ namespace PC_Building
             label_ramType.Text = Table.Rows[0][4].ToString();
             label_ramSpeed.Text = Table.Rows[0][5].ToString();
             label_ramCapacity.Text = Table.Rows[0][2].ToString();
-            
+
         }
         public void LoadPSU()
         {
@@ -711,6 +777,46 @@ namespace PC_Building
         {
             button_addCase_Click(this, new EventArgs());
         }
+
+        private void listView1_DoubleClick(object sender, EventArgs e)
+        {
+            if (listView1.SelectedItems.Count > 0)
+            {
+                switch (listView1.SelectedItems[0].Group.Name)
+                {
+                    case "Motherboard":
+                        tabControl_component.SelectedIndex = 0;
+                        break;
+                    case "Processor":
+                        tabControl_component.SelectedIndex = 1;
+                        break;
+                    case "RAM":
+                        tabControl_component.SelectedIndex = 2;
+                        break;
+                    case "Power Supply":
+                        tabControl_component.SelectedIndex = 3;
+                        break;
+                    case "Case":
+                        tabControl_component.SelectedIndex = 4;
+                        break;
+                    case "Graphic Card":
+                        tabControl_component.SelectedIndex = 5;
+                        break;
+                    case "Case Cooler":
+                        tabControl_component.SelectedIndex = 6;
+                        break;
+                    case "Storage":
+                        tabControl_component.SelectedIndex = 7;
+                        break;
+                    case "CPU Cooler":
+                        tabControl_component.SelectedIndex = 8;
+                        break;
+
+
+                }
+            }
+        }
     }
 }
+
 

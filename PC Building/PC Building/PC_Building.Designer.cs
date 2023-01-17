@@ -30,6 +30,16 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PC_Building));
+            System.Windows.Forms.ListViewGroup listViewGroup1 = new System.Windows.Forms.ListViewGroup("ListViewGroup", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup2 = new System.Windows.Forms.ListViewGroup("ListViewGroup", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup3 = new System.Windows.Forms.ListViewGroup("ListViewGroup", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup4 = new System.Windows.Forms.ListViewGroup("ListViewGroup", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup5 = new System.Windows.Forms.ListViewGroup("ListViewGroup", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup6 = new System.Windows.Forms.ListViewGroup("ListViewGroup", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup7 = new System.Windows.Forms.ListViewGroup("ListViewGroup", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup8 = new System.Windows.Forms.ListViewGroup("ListViewGroup", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup9 = new System.Windows.Forms.ListViewGroup("ListViewGroup", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem("BarraCuda", "BarraCuda.jpg");
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.button_previousComponent = new System.Windows.Forms.Button();
             this.button_nextComponent = new System.Windows.Forms.Button();
@@ -203,7 +213,8 @@
             this.pictureBox_cpuCooler = new System.Windows.Forms.PictureBox();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.richTextBox_BuildDetail = new System.Windows.Forms.RichTextBox();
+            this.listView1 = new System.Windows.Forms.ListView();
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.richTextBox_log = new System.Windows.Forms.RichTextBox();
             this.button10 = new System.Windows.Forms.Button();
@@ -2375,7 +2386,7 @@
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.richTextBox_BuildDetail);
+            this.tabPage1.Controls.Add(this.listView1);
             this.tabPage1.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.tabPage1.Location = new System.Drawing.Point(4, 31);
             this.tabPage1.Name = "tabPage1";
@@ -2385,17 +2396,168 @@
             this.tabPage1.Text = "Build Info";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // richTextBox_BuildDetail
+            // listView1
             // 
-            this.richTextBox_BuildDetail.BackColor = System.Drawing.SystemColors.Window;
-            this.richTextBox_BuildDetail.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTextBox_BuildDetail.Font = new System.Drawing.Font("Bahnschrift", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.richTextBox_BuildDetail.Location = new System.Drawing.Point(0, 0);
-            this.richTextBox_BuildDetail.Name = "richTextBox_BuildDetail";
-            this.richTextBox_BuildDetail.ReadOnly = true;
-            this.richTextBox_BuildDetail.Size = new System.Drawing.Size(411, 390);
-            this.richTextBox_BuildDetail.TabIndex = 7;
-            this.richTextBox_BuildDetail.Text = "";
+            this.listView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.listView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            listViewGroup1.Header = "ListViewGroup";
+            listViewGroup1.Name = "Processor";
+            listViewGroup2.Header = "ListViewGroup";
+            listViewGroup2.Name = "Motherboard";
+            listViewGroup3.Header = "ListViewGroup";
+            listViewGroup3.Name = "RAM";
+            listViewGroup4.Header = "ListViewGroup";
+            listViewGroup4.Name = "Case";
+            listViewGroup5.Header = "ListViewGroup";
+            listViewGroup5.Name = "Graphic Card";
+            listViewGroup6.Header = "ListViewGroup";
+            listViewGroup6.Name = "Storage";
+            listViewGroup7.Header = "ListViewGroup";
+            listViewGroup7.Name = "Power Supply";
+            listViewGroup8.Header = "ListViewGroup";
+            listViewGroup8.Name = "CPU Cooler";
+            listViewGroup9.Header = "ListViewGroup";
+            listViewGroup9.Name = "Case Cooler";
+            this.listView1.Groups.AddRange(new System.Windows.Forms.ListViewGroup[] {
+            listViewGroup1,
+            listViewGroup2,
+            listViewGroup3,
+            listViewGroup4,
+            listViewGroup5,
+            listViewGroup6,
+            listViewGroup7,
+            listViewGroup8,
+            listViewGroup9});
+            this.listView1.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
+            listViewItem1});
+            this.listView1.LargeImageList = this.imageList1;
+            this.listView1.Location = new System.Drawing.Point(3, 3);
+            this.listView1.MultiSelect = false;
+            this.listView1.Name = "listView1";
+            this.listView1.ShowGroups = false;
+            this.listView1.Size = new System.Drawing.Size(405, 382);
+            this.listView1.TabIndex = 0;
+            this.listView1.TileSize = new System.Drawing.Size(500, 50);
+            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listView1.View = System.Windows.Forms.View.Tile;
+            this.listView1.DoubleClick += new System.EventHandler(this.listView1_DoubleClick);
+            // 
+            // imageList1
+            // 
+            this.imageList1.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
+            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
+            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageList1.Images.SetKeyName(0, "4000D Airflow.jpg");
+            this.imageList1.Images.SetKeyName(1, "CARBIDE SPEC-05.jpg");
+            this.imageList1.Images.SetKeyName(2, "Carbide SPEC-Omega.jpg");
+            this.imageList1.Images.SetKeyName(3, "CC-9011205-WW.jpg");
+            this.imageList1.Images.SetKeyName(4, "H510 Elite.jpg");
+            this.imageList1.Images.SetKeyName(5, "H510B.jpg");
+            this.imageList1.Images.SetKeyName(6, "H510B-B1.jpg");
+            this.imageList1.Images.SetKeyName(7, "H510B-W1.jpg");
+            this.imageList1.Images.SetKeyName(8, "H510i.jpg");
+            this.imageList1.Images.SetKeyName(9, "MasterBox Q500L.jpg");
+            this.imageList1.Images.SetKeyName(10, "MasterBox TD500.jpg");
+            this.imageList1.Images.SetKeyName(11, "Q300L.jpg");
+            this.imageList1.Images.SetKeyName(12, "ACFAN00118A.jpg");
+            this.imageList1.Images.SetKeyName(13, "ACFAN00170A.jpg");
+            this.imageList1.Images.SetKeyName(14, "AER RGB.jpg");
+            this.imageList1.Images.SetKeyName(15, "CO-9050015-BLED.jpg");
+            this.imageList1.Images.SetKeyName(16, "CO-9050015-RLED.jpg");
+            this.imageList1.Images.SetKeyName(17, "HD140 RGB.jpg");
+            this.imageList1.Images.SetKeyName(18, "MasterFan MF120R.jpg");
+            this.imageList1.Images.SetKeyName(19, "P12 PST RGB.jpg");
+            this.imageList1.Images.SetKeyName(20, "P12 PST.jpg");
+            this.imageList1.Images.SetKeyName(21, "P12 PWM.jpg");
+            this.imageList1.Images.SetKeyName(22, "P12 Silent.jpg");
+            this.imageList1.Images.SetKeyName(23, "SP120 RGB.jpg");
+            this.imageList1.Images.SetKeyName(24, "Hyper 212 Black Edition.jpg");
+            this.imageList1.Images.SetKeyName(25, "Hyper 212 EVO.jpg");
+            this.imageList1.Images.SetKeyName(26, "Hyper 212 RGB.jpg");
+            this.imageList1.Images.SetKeyName(27, "Hyper H412R.jpg");
+            this.imageList1.Images.SetKeyName(28, "Hyper T2.jpg");
+            this.imageList1.Images.SetKeyName(29, "Kraken M22.jpg");
+            this.imageList1.Images.SetKeyName(30, "Kraken X53 RGB 240mm.jpg");
+            this.imageList1.Images.SetKeyName(31, "Kraken X53 RGB.jpg");
+            this.imageList1.Images.SetKeyName(32, "Kraken X53.jpg");
+            this.imageList1.Images.SetKeyName(33, "Kraken X63 RGB.jpg");
+            this.imageList1.Images.SetKeyName(34, "Kraken Z73 RGB.jpg");
+            this.imageList1.Images.SetKeyName(35, "Kraken Z73.jpg");
+            this.imageList1.Images.SetKeyName(36, "Gaming GeForce RTX 4090 Trinity OC.jpg");
+            this.imageList1.Images.SetKeyName(37, "GeForce RTX 3080 Ti Gaming OC 12G.jpg");
+            this.imageList1.Images.SetKeyName(38, "GeForce RTX 3090 Ti AMP Extreme Holo.jpg");
+            this.imageList1.Images.SetKeyName(39, "GeForce RTX 3090 Ti FTW3 Ultra Gaming.jpg");
+            this.imageList1.Images.SetKeyName(40, "GeForce RTX 4090 Founders Edition.jpg");
+            this.imageList1.Images.SetKeyName(41, "GeForce RTX 4090 SUPRIM LIQUID X 24G.jpg");
+            this.imageList1.Images.SetKeyName(42, "GV-N4090WF3-24GD.jpg");
+            this.imageList1.Images.SetKeyName(43, "RTX 3080 Ti FTW3 Ultra.jpg");
+            this.imageList1.Images.SetKeyName(44, "RTX 3080 Ti Ventus 3X 12G OC.jpg");
+            this.imageList1.Images.SetKeyName(45, "RTX 3080 Ti XC3 ULTRA.jpg");
+            this.imageList1.Images.SetKeyName(46, "RTX 4090 Gaming Trio 24G.jpg");
+            this.imageList1.Images.SetKeyName(47, "TUF Gaming GeForce RTX 3080 Ti OC Edition.jpg");
+            this.imageList1.Images.SetKeyName(48, "ROG CROSSHAIR VIII HERO (WI-FI).jpg");
+            this.imageList1.Images.SetKeyName(49, "ROG ZENITH II EXTREME ALPHA.jpg");
+            this.imageList1.Images.SetKeyName(50, "TRX40 Aorus Pro WiFi.jpg");
+            this.imageList1.Images.SetKeyName(51, "TRX40 AORUS XTREME.jpg");
+            this.imageList1.Images.SetKeyName(52, "TRX40 CREATOR.jpg");
+            this.imageList1.Images.SetKeyName(53, "TRX40 DESIGNARE.jpg");
+            this.imageList1.Images.SetKeyName(54, "TRX40P.jpg");
+            this.imageList1.Images.SetKeyName(55, "TUF GAMING X570-PLUS (WI-FI).jpg");
+            this.imageList1.Images.SetKeyName(56, "X570 AORUS ELITE.jpg");
+            this.imageList1.Images.SetKeyName(57, "X570 I AORUS PRO WIFI.jpg");
+            this.imageList1.Images.SetKeyName(58, "X570 PRO WIFI.jpg");
+            this.imageList1.Images.SetKeyName(59, "X570S AORUS ELITE AX.jpg");
+            this.imageList1.Images.SetKeyName(60, "220-G6-0850-X1.jpg");
+            this.imageList1.Images.SetKeyName(61, "PS-SPD-0430NPCWUS-W.jpg");
+            this.imageList1.Images.SetKeyName(62, "PS-SPD-0500NPCWUS-W.jpg");
+            this.imageList1.Images.SetKeyName(63, "RM750.jpg");
+            this.imageList1.Images.SetKeyName(64, "RM850.jpg");
+            this.imageList1.Images.SetKeyName(65, "SMART 600.jpg");
+            this.imageList1.Images.SetKeyName(66, "SPD-0700NP.jpg");
+            this.imageList1.Images.SetKeyName(67, "SuperNOVA 750 G6.jpg");
+            this.imageList1.Images.SetKeyName(68, "SuperNOVA 1000 G6.jpg");
+            this.imageList1.Images.SetKeyName(69, "SuperNOVA.jpg");
+            this.imageList1.Images.SetKeyName(70, "Toughpower GX1.jpg");
+            this.imageList1.Images.SetKeyName(71, "Toughpower PF1.jpg");
+            this.imageList1.Images.SetKeyName(72, "i5-13600K.jpg");
+            this.imageList1.Images.SetKeyName(73, "i7-13700KF.jpg");
+            this.imageList1.Images.SetKeyName(74, "i9-12900K.jpg");
+            this.imageList1.Images.SetKeyName(75, "i9-13900K.jpg");
+            this.imageList1.Images.SetKeyName(76, "i9-13900KF.jpg");
+            this.imageList1.Images.SetKeyName(77, "Ryzen 7 7700X.jpg");
+            this.imageList1.Images.SetKeyName(78, "Ryzen 9 3950X.jpg");
+            this.imageList1.Images.SetKeyName(79, "Ryzen 9 5950X.jpg");
+            this.imageList1.Images.SetKeyName(80, "Ryzen 9 7900X.jpg");
+            this.imageList1.Images.SetKeyName(81, "Ryzen 9 7950X.jpg");
+            this.imageList1.Images.SetKeyName(82, "Ryzen Threadripper 3970X.jpg");
+            this.imageList1.Images.SetKeyName(83, "Ryzen Threadripper 3990X.jpg");
+            this.imageList1.Images.SetKeyName(84, "AX5U6000C4016G-DCLARBK.jpg");
+            this.imageList1.Images.SetKeyName(85, "CMH32GX5M2D6000C36.jpg");
+            this.imageList1.Images.SetKeyName(86, "CMK32GX5M2B5600C36.jpg");
+            this.imageList1.Images.SetKeyName(87, "DOMINATOR PLATINUM.jpg");
+            this.imageList1.Images.SetKeyName(88, "FF3D532G6000HC38ADC0.jpg");
+            this.imageList1.Images.SetKeyName(89, "Fury Renegade RGB.jpg");
+            this.imageList1.Images.SetKeyName(90, "KF556C40BBAK2-64.jpg");
+            this.imageList1.Images.SetKeyName(91, "RipJaws S5.jpg");
+            this.imageList1.Images.SetKeyName(92, "Trident Z RGB.jpg");
+            this.imageList1.Images.SetKeyName(93, "Trident Z Royal.jpg");
+            this.imageList1.Images.SetKeyName(94, "Trident Z5 RGB.jpg");
+            this.imageList1.Images.SetKeyName(95, "Trident Z5.jpg");
+            this.imageList1.Images.SetKeyName(96, "Vengeance LPX.jpg");
+            this.imageList1.Images.SetKeyName(97, "Viper Venom RGB.jpg");
+            this.imageList1.Images.SetKeyName(98, "XLR8.jpg");
+            this.imageList1.Images.SetKeyName(99, "970 EVO.jpg");
+            this.imageList1.Images.SetKeyName(100, "A400.jpg");
+            this.imageList1.Images.SetKeyName(101, "BarraCuda.jpg");
+            this.imageList1.Images.SetKeyName(102, "Blue 500.jpg");
+            this.imageList1.Images.SetKeyName(103, "Blue SN 550.jpg");
+            this.imageList1.Images.SetKeyName(104, "Blue.jpg");
+            this.imageList1.Images.SetKeyName(105, "Caviar Blue.jpg");
+            this.imageList1.Images.SetKeyName(106, "EVO 500.jpg");
+            this.imageList1.Images.SetKeyName(107, "GX2.jpg");
+            this.imageList1.Images.SetKeyName(108, "MX 500.jpg");
+            this.imageList1.Images.SetKeyName(109, "P1.jpg");
+            this.imageList1.Images.SetKeyName(110, "SN 750.jpg");
             // 
             // tabPage2
             // 
@@ -2552,7 +2714,6 @@
         private BindingSource bindingSource1;
         private TabControl tabControl1;
         private TabPage tabPage1;
-        private RichTextBox richTextBox_BuildDetail;
         private TabPage tabPage2;
         private RichTextBox richTextBox_log;
         private Button button_previousComponent;
@@ -2726,5 +2887,7 @@
         private Button button41;
         private Label label_storageName;
         private PictureBox pictureBox_storage;
+        private ListView listView1;
+        private ImageList imageList1;
     }
 }

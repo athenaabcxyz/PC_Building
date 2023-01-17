@@ -53,6 +53,7 @@
             this.richTextBox_Detail = new System.Windows.Forms.RichTextBox();
             this.button_openAmazon = new System.Windows.Forms.Button();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Illu)).BeginInit();
             this.SuspendLayout();
             // 
@@ -369,12 +370,25 @@
             this.button_openAmazon.UseVisualStyleBackColor = false;
             this.button_openAmazon.Click += new System.EventHandler(this.button1_Click);
             // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Bahnschrift", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.button1.Location = new System.Drawing.Point(658, 12);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(135, 52);
+            this.button1.TabIndex = 17;
+            this.button1.Text = "Auto Builder";
+            this.toolTip.SetToolTip(this.button1, "Auto Builder is a wizard help user to build a PC Case in a easier way.");
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
             this.ClientSize = new System.Drawing.Size(1056, 642);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.button_openAmazon);
             this.Controls.Add(this.richTextBox_Detail);
             this.Controls.Add(this.listView_Main);
@@ -409,5 +423,6 @@
         private RichTextBox richTextBox_Detail;
         private Button button_openAmazon;
         private ToolTip toolTip;
+        private Button button1;
     }
 }

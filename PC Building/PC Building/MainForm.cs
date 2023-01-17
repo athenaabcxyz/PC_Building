@@ -16,29 +16,10 @@ namespace PC_Building
         public MainForm()
         {
             InitializeComponent();
+            sqlCon = new SqlConnection(strCon);
             FillDatabase("");
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
-        }
-        public void OpenConnection()
-        {
-            try
-            {
-                sqlCon = new SqlConnection(strCon);
-                if(sqlCon.State==ConnectionState.Closed)
-                {
-                    sqlCon.Open();               
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-        }
-        public void CloseConnection()
-        {
-            if (sqlCon != null && sqlCon.State==ConnectionState.Open)
-                sqlCon.Close();
         }
         public void FillDatabase(string a)
         {
@@ -47,7 +28,7 @@ namespace PC_Building
             button_openAmazon.Visible = false;
             button_openAmazon.Enabled = false;
             int ItemNumber = 0;           
-            OpenConnection();
+            sqlCon.Open();
             SqlCommand sqlCmd;
             SqlDataAdapter Adapter = new SqlDataAdapter();
             sqlCmd = sqlCon.CreateCommand();
@@ -151,7 +132,7 @@ namespace PC_Building
                 listView_Main.Items[listView_Main.FindItemWithText(Table.Rows[i][0].ToString()).Index].Group = listView_Main.Groups[8];
             }
             Table.Clear();
-            CloseConnection();
+            sqlCon.Close();
         }
 
         private void comboBox_Category_TextChanged(object sender, EventArgs e)
@@ -184,7 +165,7 @@ namespace PC_Building
                 return;
             richTextBox_Detail.Text = "";
             pictureBox_Illu.Image = Image.FromFile(@"PC_Builder_Image\" + listView_Main.FocusedItem.Group.Header + @"\" + listView_Main.FocusedItem.Text + ".jpg");
-            OpenConnection();
+            sqlCon.Open();
             SqlCommand sqlCmd;
             SqlDataAdapter Adapter = new SqlDataAdapter();
             sqlCmd = sqlCon.CreateCommand();
@@ -203,11 +184,12 @@ namespace PC_Building
                 button_openAmazon.Visible = true;
                 button_openAmazon.Enabled = true;
             }
+            sqlCon.Close();
         }
 
         private void button_Build_Click(object sender, EventArgs e)
         {
-            PC_Building FormA = new PC_Building();
+            PC_Building FormA = new PC_Building("");
             FormA.Show();
         }
 
@@ -227,6 +209,12 @@ namespace PC_Building
         private void MainForm_Load(object sender, EventArgs e)
         {
             LiveChat A = new LiveChat();
+            A.Show();
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            AutoBuilder A = new AutoBuilder();
             A.Show();
         }
     }

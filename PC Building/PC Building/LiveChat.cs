@@ -19,32 +19,13 @@ namespace PC_Building
         {
             InitializeComponent();
             this.AcceptButton = button1;
+            sqlCon = new SqlConnection(strCon);
             LoadMessage();
-        }
-        public void OpenConnection()
-        {
-            try
-            {
-                sqlCon = new SqlConnection(strCon);
-                if (sqlCon.State == ConnectionState.Closed)
-                {
-                    sqlCon.Open();
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-        }
-        public void CloseConnection()
-        {
-            if (sqlCon != null && sqlCon.State == ConnectionState.Open)
-                sqlCon.Close();
         }
         void LoadMessage()
         {
             listView_commentlist.Items.Clear();
-            OpenConnection();
+            sqlCon.Open();
             SqlCommand sqlCmd;
             SqlDataAdapter Adapter = new SqlDataAdapter();
             sqlCmd = sqlCon.CreateCommand();
@@ -57,17 +38,18 @@ namespace PC_Building
                 k = table.Rows.Count - 40;
             for (int i = k; i < table.Rows.Count; i++)
             {
-                listView_commentlist.Items.Add("#"+table.Rows[i][0]+" "+table.Rows[i][1] + ": " + table.Rows[i][2]);
+                listView_commentlist.Items.Add(table.Rows[i][1] + ": " + table.Rows[i][2]);
             }
-            CloseConnection();
+            sqlCon.Close();
             button1.Enabled = false;
-            listView_commentlist.Items[listView_commentlist.Items.Count - 1].EnsureVisible();
+            if (listView_commentlist.Items.Count > 0)
+                listView_commentlist.Items[listView_commentlist.Items.Count - 1].EnsureVisible();
         }
         private void button1_Click(object sender, EventArgs e)
         {
             int Number = 0;
             string name = "";
-            OpenConnection();
+            sqlCon.Open();
             SqlCommand sqlCmd;
             SqlDataAdapter Adapter = new SqlDataAdapter();
             sqlCmd = sqlCon.CreateCommand();
@@ -92,7 +74,7 @@ namespace PC_Building
             }
             sqlCmd.CommandText = "Insert into LiveChat values(" + Number + ", N'" + name + "',N'" + A + "')";
             sqlCmd.ExecuteNonQuery();
-            CloseConnection();
+            sqlCon.Close();
             richTextBox1.Clear();
             LoadMessage();
         }
@@ -101,6 +83,8 @@ namespace PC_Building
         {
             if (!string.IsNullOrEmpty(richTextBox1.Text))
                 button1.Enabled = true;
+            else
+                button1.Enabled = false;
         }
 
         private void LiveChat_FormClosing(object sender, FormClosingEventArgs e)

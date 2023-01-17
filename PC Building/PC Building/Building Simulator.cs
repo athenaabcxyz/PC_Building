@@ -226,26 +226,6 @@ namespace PC_Building
             else
                 return status;
         }
-        public string CompatibilityLog()
-        {
-            CompatibilityCheck();
-            string DetailLog = "";
-            if (Incompatibilities.Count > 0)
-            {
-                for (int i = 0; i < Incompatibilities.Count; i++)
-                {
-                    DetailLog += "--------------------------------------------------------\n"
-                        + "Incompatibility name: " + Incompatibilities[i].CompatibilityName + "\n\n"
-                        + "Serious level: " + Incompatibilities[i].SeriousityLevel + "\n\n"
-                        + "Detail problem: " + Incompatibilities[i].Detail + "\n\n";
-                }
-                DetailLog += "--------------------------------------------------------\n";
-            }
-            if (DetailLog != "")
-                return DetailLog;
-            else
-                return "Your build is perfect!";
-        }
         public CompatibilityStatus SocketCheck()
         {
             CompatibilityStatus status = new CompatibilityStatus();
