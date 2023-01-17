@@ -31,3 +31,4 @@ D:\Github\PC_Building\PC Building\PC Building\obj\Debug\net6.0-windows\PC_Buildi
 D:\Github\PC_Building\PC Building\PC Building\obj\Debug\net6.0-windows\PC_Building.BuildSharing.resources
 D:\Github\PC_Building\PC Building\PC Building\obj\Debug\net6.0-windows\PC_Building.LiveChat.resources
 D:\Github\PC_Building\PC Building\PC Building\obj\Debug\net6.0-windows\PC_Building.PC_Building.resources
+D:\Github\PC_Building\PC Building\PC Building\obj\Debug\net6.0-windows\PC_Building.Share.resources

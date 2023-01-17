@@ -10,6 +10,9 @@
     <Compile Update="BuildSharing.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Share.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="LiveChat.cs">
       <SubType>Form</SubType>
     </Compile>

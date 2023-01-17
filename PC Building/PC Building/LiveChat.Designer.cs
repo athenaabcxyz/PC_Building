@@ -106,10 +106,13 @@
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.richTextBox1);
             this.Location = new System.Drawing.Point(1580, 0);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "LiveChat";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "LiveChat";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.LiveChat_FormClosing);
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.LiveChat_FormClosed);
             this.ResumeLayout(false);
             this.PerformLayout();
 

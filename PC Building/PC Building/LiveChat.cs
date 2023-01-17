@@ -20,8 +20,10 @@ namespace PC_Building
             InitializeComponent();
             this.AcceptButton = button1;
             sqlCon = new SqlConnection(strCon);
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
             LoadMessage();
         }
+        public event EventHandler ShutDownLiveChat;
         void LoadMessage()
         {
             listView_commentlist.Items.Clear();
@@ -92,6 +94,11 @@ namespace PC_Building
             DialogResult result = MessageBox.Show("Are you sure want to close the Live Chat section?", "Notice", MessageBoxButtons.YesNo);
             if (result == DialogResult.No)
                 e.Cancel = true;
+        }
+
+        private void LiveChat_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            ShutDownLiveChat(this, new EventArgs());
         }
     }
 

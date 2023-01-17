@@ -39,7 +39,6 @@ namespace PC_Building
                     getCurrentModelName(tabControl_component.SelectedIndex);
                     label_currentComponent.Text = tabControl_component.SelectedTab.Text;
                 }
-                else
                     formRefresh();
             }
             else
@@ -815,6 +814,17 @@ namespace PC_Building
 
                 }
             }
+        }
+
+        private void button_share_Click(object sender, EventArgs e)
+        {
+            Share A = new Share(Build);
+            A.Show();
+        }
+
+        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

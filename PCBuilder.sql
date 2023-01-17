@@ -153,6 +153,7 @@ create table [BuildShared]
 (
 	[ID] int primary key,
 	[Name] Nvarchar(200),
+	[Creator] Nvarchar(200),
 	[Decription] Nvarchar(3000),
 	[Like] int,
 	[Processor] varchar(200),
@@ -168,6 +169,8 @@ create table [BuildShared]
 create table [SharedBuildInfo]
 (
 	[ID] int,
+	[Sequence] int,
+	[Username] Nvarchar(200),
 	[Comment] Nvarchar(400),
 )
 create table [LiveChat]

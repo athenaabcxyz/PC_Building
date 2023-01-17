@@ -211,6 +211,7 @@
             this.label_cpuCoolerBrand = new System.Windows.Forms.Label();
             this.button35 = new System.Windows.Forms.Button();
             this.pictureBox_cpuCooler = new System.Windows.Forms.PictureBox();
+            this.button_share = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.listView1 = new System.Windows.Forms.ListView();
@@ -225,6 +226,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -252,6 +255,7 @@
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
+            this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // splitContainer1
@@ -273,6 +277,7 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.BackColor = System.Drawing.SystemColors.Window;
+            this.splitContainer1.Panel2.Controls.Add(this.button_share);
             this.splitContainer1.Panel2.Controls.Add(this.tabControl1);
             this.splitContainer1.Panel2.Controls.Add(this.button10);
             this.splitContainer1.Panel2.Controls.Add(this.button_load);
@@ -2373,6 +2378,19 @@
             this.pictureBox_cpuCooler.TabStop = false;
             this.pictureBox_cpuCooler.Click += new System.EventHandler(this.pictureBox_cpuCooler_Click_1);
             // 
+            // button_share
+            // 
+            this.button_share.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button_share.BackgroundImage")));
+            this.button_share.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button_share.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button_share.Location = new System.Drawing.Point(356, 567);
+            this.button_share.Name = "button_share";
+            this.button_share.Size = new System.Drawing.Size(55, 55);
+            this.button_share.TabIndex = 10;
+            this.toolTip.SetToolTip(this.button_share, "Share");
+            this.button_share.UseVisualStyleBackColor = true;
+            this.button_share.Click += new System.EventHandler(this.button_share_Click);
+            // 
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
@@ -2586,7 +2604,7 @@
             this.button10.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button10.BackgroundImage")));
             this.button10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button10.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button10.Location = new System.Drawing.Point(346, 567);
+            this.button10.Location = new System.Drawing.Point(249, 567);
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(55, 55);
             this.button10.TabIndex = 8;
@@ -2599,7 +2617,7 @@
             this.button_load.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button_load.BackgroundImage")));
             this.button_load.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button_load.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button_load.Location = new System.Drawing.Point(206, 567);
+            this.button_load.Location = new System.Drawing.Point(142, 567);
             this.button_load.Name = "button_load";
             this.button_load.Size = new System.Drawing.Size(55, 55);
             this.button_load.TabIndex = 4;
@@ -2612,7 +2630,7 @@
             this.button_save.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button_save.BackgroundImage")));
             this.button_save.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button_save.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button_save.Location = new System.Drawing.Point(60, 567);
+            this.button_save.Location = new System.Drawing.Point(40, 567);
             this.button_save.Name = "button_save";
             this.button_save.Size = new System.Drawing.Size(55, 55);
             this.button_save.TabIndex = 3;
@@ -2649,6 +2667,20 @@
             this.label1.Size = new System.Drawing.Size(195, 33);
             this.label1.TabIndex = 0;
             this.label1.Text = "Detail Build";
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItem1});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(181, 48);
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.toolStripMenuItem1.Text = "Open Live Chat";
+            this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
             // 
             // PC_Building
             // 
@@ -2698,6 +2730,7 @@
             this.tabPage1.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
+            this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -2889,5 +2922,8 @@
         private PictureBox pictureBox_storage;
         private ListView listView1;
         private ImageList imageList1;
+        private Button button_share;
+        private ContextMenuStrip contextMenuStrip1;
+        private ToolStripMenuItem toolStripMenuItem1;
     }
 }
