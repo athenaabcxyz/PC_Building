@@ -683,6 +683,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "AutoBuilder";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Auto Builder";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

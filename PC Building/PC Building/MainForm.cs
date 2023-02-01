@@ -1,3 +1,4 @@
+using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 using System.Data.SqlTypes;
@@ -12,7 +13,7 @@ namespace PC_Building
     public partial class MainForm : Form
     {
         public bool isLiveChatOn = true;
-        string strCon = @"Data Source=ATHENALAPTOP\SQLEXPRESS;Initial Catalog=CaseBuilder;Integrated Security=True";
+        string strCon = ConfigurationManager.ConnectionStrings["CaseBuilder"].ConnectionString;
         SqlConnection sqlCon = null;
         string currentAmazonLink="";
         bool isTheBuildLiked = false;

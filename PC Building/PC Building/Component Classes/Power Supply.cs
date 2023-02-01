@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Globalization;
-
+using System.Configuration;
 namespace PC_Building
 {
     public class Power_Supply
@@ -21,7 +21,7 @@ namespace PC_Building
         public void LoadProduct(string ModelName)
         {
             Model = ModelName;
-            string strCon = @"Data Source=ATHENALAPTOP\SQLEXPRESS;Initial Catalog=CaseBuilder;Integrated Security=True";
+            string strCon = ConfigurationManager.ConnectionStrings["CaseBuilder"].ConnectionString;
             SqlConnection sqlCon = new SqlConnection(strCon);
             sqlCon.Open();
             SqlCommand sqlCmd;
