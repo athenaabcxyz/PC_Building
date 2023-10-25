@@ -15,7 +15,8 @@ namespace PC_Building
         public bool isLiveChatOn = true;
         string strCon = ConfigurationManager.ConnectionStrings["CaseBuilder"].ConnectionString;
         SqlConnection sqlCon = null;
-        string currentAmazonLink="";
+        string currentUser = "";
+        string currentAmazonLink = "";
         bool isTheBuildLiked = false;
         public MainForm()
         {
@@ -36,7 +37,7 @@ namespace PC_Building
             currentAmazonLink = "";
             button_openAmazon.Visible = false;
             button_openAmazon.Enabled = false;
-            int ItemNumber = 0;           
+            int ItemNumber = 0;
             sqlCon.Open();
             SqlCommand sqlCmd;
             SqlDataAdapter Adapter = new SqlDataAdapter();
@@ -44,7 +45,7 @@ namespace PC_Building
             DataTable Table = new DataTable();
             //Update Processor           
             sqlCmd.CommandText = "Select Model from Processor where Model like '%" + a + "%'";
-            Adapter.SelectCommand = sqlCmd;          
+            Adapter.SelectCommand = sqlCmd;
             Adapter.Fill(Table);
             for (int i = 0; i < Table.Rows.Count; i++)
             {
@@ -165,7 +166,7 @@ namespace PC_Building
 
         private void textBox_Search_TextChanged(object sender, EventArgs e)
         {
-            FillDatabase(textBox_Search.Text);                
+            FillDatabase(textBox_Search.Text);
         }
 
         private void listView_Main_ItemSelectionChanged(object sender, ListViewItemSelectionChangedEventArgs e)
@@ -182,7 +183,7 @@ namespace PC_Building
             sqlCmd.CommandText = "Select * from [" + listView_Main.FocusedItem.Group.Header + "] where Model = '" + listView_Main.FocusedItem.Text + "'";
             Adapter.SelectCommand = sqlCmd;
             Adapter.Fill(Table);
-            for (int i = 0; i < Table.Columns.Count-1; i++)
+            for (int i = 0; i < Table.Columns.Count - 1; i++)
             {
                 richTextBox_Detail.Text += Table.Columns[i].ColumnName + ": " + Table.Rows[0][i].ToString() + "\n";
 
@@ -198,13 +199,13 @@ namespace PC_Building
 
         private void button_Build_Click(object sender, EventArgs e)
         {
-            PC_Building FormA = new PC_Building("");
+            PC_Building FormA = new PC_Building("", currentUser);
             FormA.Show();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if(listView_Main.SelectedItems.Count > 0)
+            if (listView_Main.SelectedItems.Count > 0)
             {
                 var ps = new ProcessStartInfo(currentAmazonLink)
                 {
@@ -217,14 +218,15 @@ namespace PC_Building
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-            LiveChat A = new LiveChat();
+            LiveChat A = new LiveChat(currentUser);
+            OnUpdateUser += A.UpdateUserInfo;
             A.ShutDownLiveChat += ShutDownLiveChat;
             A.Show();
         }
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            AutoBuilder A = new AutoBuilder();
+            AutoBuilder A = new AutoBuilder(currentUser);
             A.Show();
         }
 
@@ -303,14 +305,14 @@ namespace PC_Building
                 Adapter.Fill(table);
                 for (int i = 0; i < table.Rows.Count; i++)
                 {
-                        if (table.Rows[i][2].ToString() != "Anonymous" && textBox_sender.Text != table.Rows[i][2].ToString())
-                            richTextBox_comments.AppendText(table.Rows[i][2].ToString() + ":\n", Color.Green);
-                        else
-                        if (table.Rows[i][2].ToString() == "Anonymous")
-                            richTextBox_comments.AppendText(table.Rows[i][2].ToString() + ":\n", Color.Gray);
-                        else
-                            if (textBox_sender.Text == table.Rows[i][2].ToString())
-                            richTextBox_comments.AppendText(table.Rows[i][2].ToString() + ":\n", Color.Cyan);
+                    if (table.Rows[i][2].ToString() != "Anonymous" && textBox_sender.Text != table.Rows[i][2].ToString())
+                        richTextBox_comments.AppendText(table.Rows[i][2].ToString() + ":\n", Color.Green);
+                    else
+                    if (table.Rows[i][2].ToString() == "Anonymous")
+                        richTextBox_comments.AppendText(table.Rows[i][2].ToString() + ":\n", Color.Gray);
+                    else
+                        if (textBox_sender.Text == table.Rows[i][2].ToString())
+                        richTextBox_comments.AppendText(table.Rows[i][2].ToString() + ":\n", Color.Cyan);
                     richTextBox_comments.AppendText(table.Rows[i][3].ToString() + "\n\n", Color.Black);
                 }
                 sqlCon.Close();
@@ -345,42 +347,42 @@ namespace PC_Building
                 sqlCon.Close();
                 LoadComments();
                 if (!string.IsNullOrEmpty(label_case.Text))
-                pictureBox_case.Image = Image.FromFile(@"PC_Builder_Image\Case\" + label_case.Text + ".jpg");
+                    pictureBox_case.Image = Image.FromFile(@"PC_Builder_Image\Case\" + label_case.Text + ".jpg");
                 else
                     pictureBox_case.Image = null;
                 if (!string.IsNullOrEmpty(label_processor.Text))
-                pictureBox_processor.Image = Image.FromFile(@"PC_Builder_Image\Processor\" + label_processor.Text + ".jpg");
+                    pictureBox_processor.Image = Image.FromFile(@"PC_Builder_Image\Processor\" + label_processor.Text + ".jpg");
                 else
                     pictureBox_processor.Image = null;
                 if (!string.IsNullOrEmpty(label_motherboard.Text))
-                pictureBox_motherboard.Image = Image.FromFile(@"PC_Builder_Image\Motherboard\" + label_motherboard.Text + ".jpg");
+                    pictureBox_motherboard.Image = Image.FromFile(@"PC_Builder_Image\Motherboard\" + label_motherboard.Text + ".jpg");
                 else
                     pictureBox_motherboard.Image = null;
                 if (!string.IsNullOrEmpty(label_graphicCard.Text))
-                pictureBox_graphicCard.Image = Image.FromFile(@"PC_Builder_Image\Graphic Card\" + label_graphicCard.Text + ".jpg");
+                    pictureBox_graphicCard.Image = Image.FromFile(@"PC_Builder_Image\Graphic Card\" + label_graphicCard.Text + ".jpg");
                 else
                     pictureBox_graphicCard.Image = null;
                 if (!string.IsNullOrEmpty(label_ram.Text))
-                pictureBox_ram.Image = Image.FromFile(@"PC_Builder_Image\RAM\" + label_ram.Text + ".jpg");
+                    pictureBox_ram.Image = Image.FromFile(@"PC_Builder_Image\RAM\" + label_ram.Text + ".jpg");
                 else
                     pictureBox_ram.Image = null;
                 if (!string.IsNullOrEmpty(label_storage.Text))
-                pictureBox_storage.Image = Image.FromFile(@"PC_Builder_Image\Storage\" + label_storage.Text + ".jpg");
+                    pictureBox_storage.Image = Image.FromFile(@"PC_Builder_Image\Storage\" + label_storage.Text + ".jpg");
                 else
                     pictureBox_storage.Image = null;
                 if (!string.IsNullOrEmpty(label_psu.Text))
-                pictureBox_psu.Image = Image.FromFile(@"PC_Builder_Image\Power Supply\" + label_psu.Text + ".jpg");
+                    pictureBox_psu.Image = Image.FromFile(@"PC_Builder_Image\Power Supply\" + label_psu.Text + ".jpg");
                 else
                     pictureBox_psu.Image = null;
                 if (!string.IsNullOrEmpty(label_caseCooler.Text))
-                pictureBox_caseCooler.Image = Image.FromFile(@"PC_Builder_Image\Case Cooler\" + label_caseCooler.Text + ".jpg");
+                    pictureBox_caseCooler.Image = Image.FromFile(@"PC_Builder_Image\Case Cooler\" + label_caseCooler.Text + ".jpg");
                 else
                     pictureBox_caseCooler.Image = null;
                 if (!string.IsNullOrEmpty(label_cpuCooler.Text))
-                pictureBox_cpuCooler.Image = Image.FromFile(@"PC_Builder_Image\CPU Cooler\" + label_cpuCooler.Text + ".jpg");
+                    pictureBox_cpuCooler.Image = Image.FromFile(@"PC_Builder_Image\CPU Cooler\" + label_cpuCooler.Text + ".jpg");
                 else
                     pictureBox_cpuCooler.Image = null;
-                if(SavedCheck())
+                if (SavedCheck())
                     button_save.BackgroundImage = Image.FromFile(@"PC_Builder_Image\Buttons\Favorite.png");
                 else
                     button_save.BackgroundImage = Image.FromFile(@"PC_Builder_Image\Buttons\Unfavorite.png");
@@ -398,7 +400,7 @@ namespace PC_Building
             {
                 isTheBuildLiked = true;
                 textBox_like.Text = Convert.ToString(Convert.ToInt32(textBox_like.Text) + 1);
-                button_like.BackgroundImage=Image.FromFile(@"PC_Builder_Image\Buttons\Like.png");
+                button_like.BackgroundImage = Image.FromFile(@"PC_Builder_Image\Buttons\Like.png");
             }
             else
             {
@@ -421,7 +423,7 @@ namespace PC_Building
             sqlCmd.CommandText = "Select * from [Build List] where ([Name]='" + label_buildName.Text + "' and [Processor]='" + label_processor.Text +
                 "' and [Motherboard]='" + label_motherboard.Text + "' and [Case]='" + label_case.Text + "' and [RAM]='" + label_ram.Text + "' and [Storage]='"
                 + label_storage.Text + "' and [Graphic Card]='" + label_graphicCard.Text + "' and [Case Cooler]='" + label_caseCooler.Text + "' and [CPU Cooler]='"
-                + label_cpuCooler.Text + "' and [Power Supply]='"+label_psu.Text+"')";
+                + label_cpuCooler.Text + "' and [Power Supply]='" + label_psu.Text + "')";
             Adapter.SelectCommand = sqlCmd;
             Adapter.Fill(table);
             sqlCon.Close();
@@ -429,12 +431,12 @@ namespace PC_Building
                 return true;
             else
                 return false;
-            
+
         }
 
         private void button_save_Click(object sender, EventArgs e)
         {
-            if(SavedCheck())
+            if (SavedCheck())
             {
                 sqlCon.Open();
                 SqlCommand sqlCmd;
@@ -470,13 +472,13 @@ namespace PC_Building
             sqlCmd.CommandText = "Update [Build List] set Processor = '', [Case] = '', Motherboard = '', [Case Cooler] = '', " +
                        "[CPU Cooler] = '', [Graphic Card] = '', RAM = '', Storage = '', [Power Supply] = '', Date = ''  where Name = 'temporary-cache'";
             sqlCmd.ExecuteNonQuery();
-            sqlCmd.CommandText= "update [Build List] set [Processor]='" + label_processor.Text +
+            sqlCmd.CommandText = "update [Build List] set [Processor]='" + label_processor.Text +
                 "' , [Motherboard]='" + label_motherboard.Text + "' , [Case]='" + label_case.Text + "' , [RAM]='" + label_ram.Text + "' , [Storage]='"
                 + label_storage.Text + "' , [Graphic Card]='" + label_graphicCard.Text + "' , [Case Cooler]='" + label_caseCooler.Text + "' , [CPU Cooler]='"
                 + label_cpuCooler.Text + "' , [Power Supply]='" + label_psu.Text + "' where [Name]='temporary-cache'";
             sqlCmd.ExecuteNonQuery();
             sqlCon.Close();
-            PC_Building A = new PC_Building("Yes");
+            PC_Building A = new PC_Building("Yes", currentUser);
             A.Show();
         }
 
@@ -509,21 +511,75 @@ namespace PC_Building
         private void button_reload_Click(object sender, EventArgs e)
         {
             LoadSharedBuild();
+            FillDatabase("");
         }
 
         private void openLiveChatToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if(isLiveChatOn)
+            if (isLiveChatOn)
             {
                 return;
             }
             else
             {
-                LiveChat A = new LiveChat();
+                LiveChat A = new LiveChat(currentUser);
                 A.ShutDownLiveChat += ShutDownLiveChat;
+                OnUpdateUser += A.UpdateUserInfo;
                 A.Show();
                 isLiveChatOn = true;
             }
+        }
+        private void ReloadForm(object sender, EventArgs e)
+        {
+            FillDatabase("");
+        }
+
+        private void button_edit_Click(object sender, EventArgs e)
+        {
+            ProductEditor A = new ProductEditor();
+            A.returnLoader += ReloadForm;
+            A.Show();
+        }
+
+        public event Action<string> OnUpdateUser;
+
+        public void Login(string username)
+        {
+            currentUser = username;
+            button_login.BackgroundImage = Image.FromFile(@"PC_Builder_Image\Buttons\Logout.png");
+            sqlCon.Open();
+            SqlCommand sqlCmd;
+            SqlDataAdapter Adapter = new SqlDataAdapter();
+            sqlCmd = sqlCon.CreateCommand();
+            DataTable table = new DataTable();
+            sqlCmd.CommandText = "Select CustomName from UserInfo where UserName='" + currentUser+"'";
+            Adapter.SelectCommand = sqlCmd;
+            Adapter.Fill(table);
+            label_user.Text = table.Rows[0][0].ToString();
+            label_state.Text = "Logged in. Account active.";
+            textBox_sender.Enabled = false;
+            textBox_sender.Text = table.Rows[0][0].ToString();
+            OnUpdateUser?.Invoke(currentUser);
+        }
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (String.IsNullOrEmpty(currentUser))
+            {
+                LoginForm a = new LoginForm();
+                a.OnLogin += Login;
+                a.Show();
+            }
+            else
+            {
+                currentUser = "";
+                OnUpdateUser?.Invoke(currentUser);
+                button_login.BackgroundImage = Image.FromFile(@"PC_Builder_Image\Buttons\User.png");
+                label_state.Text = "Logged out. Continued as Guest.";
+                label_user.Text = "Guest";
+                textBox_sender.Enabled = true;
+                textBox_sender.Clear();
+            }
+
         }
     }
 }

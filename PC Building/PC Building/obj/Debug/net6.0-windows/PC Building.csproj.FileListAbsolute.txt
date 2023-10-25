@@ -31,3 +31,40 @@ D:\Github\PC_Building\PC Building\PC Building\obj\Debug\net6.0-windows\PC_Buildi
 D:\Github\PC_Building\PC Building\PC Building\obj\Debug\net6.0-windows\PC_Building.LiveChat.resources
 D:\Github\PC_Building\PC Building\PC Building\obj\Debug\net6.0-windows\PC_Building.PC_Building.resources
 D:\Github\PC_Building\PC Building\PC Building\obj\Debug\net6.0-windows\PC_Building.Share.resources
+D:\Work\GitHub\PC_Building\PC Building\PC Building\bin\Debug\net6.0-windows\PC Building.exe
+D:\Work\GitHub\PC_Building\PC Building\PC Building\bin\Debug\net6.0-windows\PC Building.dll.config
+D:\Work\GitHub\PC_Building\PC Building\PC Building\bin\Debug\net6.0-windows\PC Building.deps.json
+D:\Work\GitHub\PC_Building\PC Building\PC Building\bin\Debug\net6.0-windows\PC Building.runtimeconfig.json
+D:\Work\GitHub\PC_Building\PC Building\PC Building\bin\Debug\net6.0-windows\PC Building.dll
+D:\Work\GitHub\PC_Building\PC Building\PC Building\bin\Debug\net6.0-windows\PC Building.pdb
+D:\Work\GitHub\PC_Building\PC Building\PC Building\bin\Debug\net6.0-windows\System.Data.SqlClient.dll
+D:\Work\GitHub\PC_Building\PC Building\PC Building\bin\Debug\net6.0-windows\runtimes\win-arm64\native\sni.dll
+D:\Work\GitHub\PC_Building\PC Building\PC Building\bin\Debug\net6.0-windows\runtimes\win-x64\native\sni.dll
+D:\Work\GitHub\PC_Building\PC Building\PC Building\bin\Debug\net6.0-windows\runtimes\win-x86\native\sni.dll
+D:\Work\GitHub\PC_Building\PC Building\PC Building\bin\Debug\net6.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+D:\Work\GitHub\PC_Building\PC Building\PC Building\bin\Debug\net6.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+D:\Work\GitHub\PC_Building\PC Building\PC Building\obj\Debug\net6.0-windows\PC Building.csproj.AssemblyReference.cache
+D:\Work\GitHub\PC_Building\PC Building\PC Building\obj\Debug\net6.0-windows\PC_Building.AddComponentForm.resources
+D:\Work\GitHub\PC_Building\PC Building\PC Building\obj\Debug\net6.0-windows\PC_Building.AutoBuilder.resources
+D:\Work\GitHub\PC_Building\PC Building\PC Building\obj\Debug\net6.0-windows\PC_Building.LiveChat.resources
+D:\Work\GitHub\PC_Building\PC Building\PC Building\obj\Debug\net6.0-windows\PC_Building.LoadBuild.resources
+D:\Work\GitHub\PC_Building\PC Building\PC Building\obj\Debug\net6.0-windows\PC_Building.MainForm.resources
+D:\Work\GitHub\PC_Building\PC Building\PC Building\obj\Debug\net6.0-windows\PC_Building.PC_Building.resources
+D:\Work\GitHub\PC_Building\PC Building\PC Building\obj\Debug\net6.0-windows\PC_Building.PriceCalculator.resources
+D:\Work\GitHub\PC_Building\PC Building\PC Building\obj\Debug\net6.0-windows\PC_Building.Properties.Resources.resources
+D:\Work\GitHub\PC_Building\PC Building\PC Building\obj\Debug\net6.0-windows\PC_Building.Share.resources
+D:\Work\GitHub\PC_Building\PC Building\PC Building\obj\Debug\net6.0-windows\PC Building.csproj.GenerateResource.cache
+D:\Work\GitHub\PC_Building\PC Building\PC Building\obj\Debug\net6.0-windows\PC Building.GeneratedMSBuildEditorConfig.editorconfig
+D:\Work\GitHub\PC_Building\PC Building\PC Building\obj\Debug\net6.0-windows\PC Building.AssemblyInfoInputs.cache
+D:\Work\GitHub\PC_Building\PC Building\PC Building\obj\Debug\net6.0-windows\PC Building.AssemblyInfo.cs
+D:\Work\GitHub\PC_Building\PC Building\PC Building\obj\Debug\net6.0-windows\PC Building.csproj.CoreCompileInputs.cache
+D:\Work\GitHub\PC_Building\PC Building\PC Building\obj\Debug\net6.0-windows\PC Building.csproj.CopyComplete
+D:\Work\GitHub\PC_Building\PC Building\PC Building\obj\Debug\net6.0-windows\PC Building.dll
+D:\Work\GitHub\PC_Building\PC Building\PC Building\obj\Debug\net6.0-windows\refint\PC Building.dll
+D:\Work\GitHub\PC_Building\PC Building\PC Building\obj\Debug\net6.0-windows\PC Building.pdb
+D:\Work\GitHub\PC_Building\PC Building\PC Building\obj\Debug\net6.0-windows\PC Building.genruntimeconfig.cache
+D:\Work\GitHub\PC_Building\PC Building\PC Building\obj\Debug\net6.0-windows\ref\PC Building.dll
+D:\Work\GitHub\PC_Building\PC Building\PC Building\obj\Debug\net6.0-windows\PC_Building.ProductEditor.resources
+D:\Work\GitHub\PC_Building\PC Building\PC Building\obj\Debug\net6.0-windows\PC_Building.AddProduct.resources
+D:\Work\GitHub\PC_Building\PC Building\PC Building\obj\Debug\net6.0-windows\PC_Building.LoginForm.resources
+D:\Work\GitHub\PC_Building\PC Building\PC Building\obj\Debug\net6.0-windows\PC_Building.Bots.PCBuildingBot.resources

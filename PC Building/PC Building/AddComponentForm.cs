@@ -56,7 +56,6 @@ namespace PC_Building
                 sqlCmd.ExecuteNonQuery();
                 ReturnData(this, new EventArgs());
                 this.Close();
-
         }
 
         private void comboBox_component_KeyPress(object sender, KeyPressEventArgs e)

@@ -13,13 +13,15 @@ namespace PC_Building
 {
     public partial class AutoBuilder : Form
     {
+        string currentUser = "";
         string strCon = ConfigurationManager.ConnectionStrings["CaseBuilder"].ConnectionString;
         SqlConnection sqlCon = null;
         Building_Simulator Build = new Building_Simulator();
         bool isTheBuildCompleted = false;
-        public AutoBuilder()
+        public AutoBuilder(string user)
         {
             InitializeComponent();
+            currentUser = user;
             sqlCon = new SqlConnection(strCon);
             form_reset();
         }
@@ -368,7 +370,7 @@ namespace PC_Building
                         "[CPU Cooler] = '', [Graphic Card] = '', RAM = '', Storage = '', [Power Supply] = '', Date = ''  where Name = 'temporary-cache'");
             SqlCommandExecuter("update [Build List] set Processor='"+label_processor.Text+"', Motherboard='"+label_motherboard.Text
                 +"', RAM='"+label_ram.Text+"', [Case]='"+label_case.Text+"', Storage='"+label_storage.Text+"', [Power Supply]='"+label_psu.Text+"' where [Name]='temporary-cache'");
-            PC_Building A = new PC_Building("Yes");
+            PC_Building A = new PC_Building("Yes", currentUser);
             A.Show();
             this.Close();
         }

@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Github\\PC_Building\\PC Building\\PC Building\\PC Building.csproj": {}
+    "D:\\Work\\GitHub\\PC_Building\\PC Building\\PC Building\\PC Building.csproj": {}
   },
   "projects": {
-    "D:\\Github\\PC_Building\\PC Building\\PC Building\\PC Building.csproj": {
+    "D:\\Work\\GitHub\\PC_Building\\PC Building\\PC Building\\PC Building.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Github\\PC_Building\\PC Building\\PC Building\\PC Building.csproj",
+        "projectUniqueName": "D:\\Work\\GitHub\\PC_Building\\PC Building\\PC Building\\PC Building.csproj",
         "projectName": "PC Building",
-        "projectPath": "D:\\Github\\PC_Building\\PC Building\\PC Building\\PC Building.csproj",
+        "projectPath": "D:\\Work\\GitHub\\PC_Building\\PC Building\\PC Building\\PC Building.csproj",
         "packagesPath": "C:\\Users\\athen\\.nuget\\packages\\",
-        "outputPath": "D:\\Github\\PC_Building\\PC Building\\PC Building\\obj\\",
+        "outputPath": "D:\\Work\\GitHub\\PC_Building\\PC Building\\PC Building\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "D:\\Programs\\Visual Studio\\Shared\\NuGetPackages"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
           "C:\\Users\\athen\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -69,7 +69,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     }

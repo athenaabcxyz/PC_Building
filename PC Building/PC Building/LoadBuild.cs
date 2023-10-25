@@ -13,11 +13,13 @@ namespace PC_Building
 {
     public partial class LoadBuild : Form
     {
+        string currentUser = "";
         string strCon = ConfigurationManager.ConnectionStrings["CaseBuilder"].ConnectionString;
         SqlConnection sqlCon = null;
-        public LoadBuild()
+        public LoadBuild(string user)
         {
             InitializeComponent();
+            currentUser = user;
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             button_delete.Enabled = false;
@@ -26,6 +28,11 @@ namespace PC_Building
         }
         private void LoadAvailableBuild()
         {
+            string username = "Guest";
+            if(!String.IsNullOrEmpty(currentUser))
+            {
+                username = currentUser;
+            }
             listView1.Items.Clear();
             sqlCon = new SqlConnection(strCon);
             sqlCon.Open();
@@ -33,7 +40,7 @@ namespace PC_Building
             SqlDataAdapter Adapter = new SqlDataAdapter();
             sqlCmd = sqlCon.CreateCommand();
             DataTable Table = new DataTable();
-            sqlCmd.CommandText = "Select Name, Date from [Build List] where Name <> 'temporary-cache'";
+            sqlCmd.CommandText = "Select Name, Date from [Build List] where Name <> 'temporary-cache' and Owner ='"+username+"'";
             Adapter.SelectCommand = sqlCmd;
             Adapter.Fill(Table);
             for (int i=0; i < Table.Rows.Count; i++)

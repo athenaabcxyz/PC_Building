@@ -28,94 +28,98 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem(new string[] {
-            "",
-            ""}, -1);
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.listView_commentlist = new System.Windows.Forms.ListView();
-            this.button1 = new System.Windows.Forms.Button();
-            this.SuspendLayout();
+            richTextBox1 = new RichTextBox();
+            textBox1 = new TextBox();
+            label1 = new Label();
+            button1 = new Button();
+            panel1 = new Panel();
+            richTextBox_chatlist = new RichTextBox();
+            panel1.SuspendLayout();
+            SuspendLayout();
             // 
             // richTextBox1
             // 
-            this.richTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTextBox1.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.richTextBox1.Location = new System.Drawing.Point(12, 866);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(310, 103);
-            this.richTextBox1.TabIndex = 0;
-            this.richTextBox1.Text = "";
-            this.richTextBox1.TextChanged += new System.EventHandler(this.richTextBox1_TextChanged);
+            richTextBox1.BorderStyle = BorderStyle.None;
+            richTextBox1.Font = new Font("Bahnschrift Condensed", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            richTextBox1.Location = new Point(12, 866);
+            richTextBox1.Name = "richTextBox1";
+            richTextBox1.Size = new Size(310, 103);
+            richTextBox1.TabIndex = 0;
+            richTextBox1.Text = "";
+            richTextBox1.TextChanged += richTextBox1_TextChanged;
             // 
             // textBox1
             // 
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("Bahnschrift Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBox1.Location = new System.Drawing.Point(66, 830);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(140, 23);
-            this.textBox1.TabIndex = 1;
+            textBox1.BorderStyle = BorderStyle.None;
+            textBox1.Font = new Font("Bahnschrift Condensed", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            textBox1.Location = new Point(66, 830);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(140, 23);
+            textBox1.TabIndex = 1;
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Bahnschrift Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(12, 830);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(48, 23);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Name:";
-            // 
-            // listView_commentlist
-            // 
-            this.listView_commentlist.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.listView_commentlist.FullRowSelect = true;
-            this.listView_commentlist.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.None;
-            listViewItem1.UseItemStyleForSubItems = false;
-            this.listView_commentlist.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem1});
-            this.listView_commentlist.Location = new System.Drawing.Point(-1, 1);
-            this.listView_commentlist.Name = "listView_commentlist";
-            this.listView_commentlist.Size = new System.Drawing.Size(335, 809);
-            this.listView_commentlist.TabIndex = 3;
-            this.listView_commentlist.TileSize = new System.Drawing.Size(330, 40);
-            this.listView_commentlist.UseCompatibleStateImageBehavior = false;
-            this.listView_commentlist.View = System.Windows.Forms.View.Tile;
+            label1.AutoSize = true;
+            label1.Font = new Font("Bahnschrift Condensed", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            label1.Location = new Point(12, 830);
+            label1.Name = "label1";
+            label1.Size = new Size(48, 23);
+            label1.TabIndex = 2;
+            label1.Text = "Name:";
             // 
             // button1
             // 
-            this.button1.Font = new System.Drawing.Font("Bahnschrift Condensed", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button1.Location = new System.Drawing.Point(223, 830);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(87, 23);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Send";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            button1.Font = new Font("Bahnschrift Condensed", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            button1.Location = new Point(223, 830);
+            button1.Name = "button1";
+            button1.Size = new Size(87, 23);
+            button1.TabIndex = 4;
+            button1.Text = "Send";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
+            // 
+            // panel1
+            // 
+            panel1.BackColor = SystemColors.Window;
+            panel1.Controls.Add(richTextBox_chatlist);
+            panel1.Location = new Point(0, -1);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(335, 809);
+            panel1.TabIndex = 5;
+            // 
+            // richTextBox_chatlist
+            // 
+            richTextBox_chatlist.BackColor = SystemColors.Window;
+            richTextBox_chatlist.BorderStyle = BorderStyle.None;
+            richTextBox_chatlist.Location = new Point(12, 10);
+            richTextBox_chatlist.Name = "richTextBox_chatlist";
+            richTextBox_chatlist.ReadOnly = true;
+            richTextBox_chatlist.Size = new Size(310, 789);
+            richTextBox_chatlist.TabIndex = 6;
+            richTextBox_chatlist.Text = "";
+            richTextBox_chatlist.TextChanged += richTextBox_chatlist_TextChanged;
             // 
             // LiveChat
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(334, 981);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.listView_commentlist);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.richTextBox1);
-            this.Location = new System.Drawing.Point(1580, 0);
-            this.MaximizeBox = false;
-            this.MinimizeBox = false;
-            this.Name = "LiveChat";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
-            this.Text = "LiveChat";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.LiveChat_FormClosing);
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.LiveChat_FormClosed);
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(334, 981);
+            Controls.Add(panel1);
+            Controls.Add(button1);
+            Controls.Add(label1);
+            Controls.Add(textBox1);
+            Controls.Add(richTextBox1);
+            Location = new Point(1580, 0);
+            MaximizeBox = false;
+            MinimizeBox = false;
+            Name = "LiveChat";
+            StartPosition = FormStartPosition.Manual;
+            Text = "LiveChat";
+            FormClosing += LiveChat_FormClosing;
+            FormClosed += LiveChat_FormClosed;
+            panel1.ResumeLayout(false);
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -123,7 +127,8 @@
         private RichTextBox richTextBox1;
         private TextBox textBox1;
         private Label label1;
-        private ListView listView_commentlist;
         private Button button1;
+        private Panel panel1;
+        private RichTextBox richTextBox_chatlist;
     }
 }

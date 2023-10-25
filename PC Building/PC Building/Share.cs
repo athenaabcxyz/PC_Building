@@ -13,23 +13,33 @@ namespace PC_Building
 {
     public partial class Share : Form
     {
+        string currentUser = "";
         Building_Simulator Build;
         string strCon = ConfigurationManager.ConnectionStrings["CaseBuilder"].ConnectionString;
         SqlConnection sqlCon = null;
-        public Share(Building_Simulator A)
+        public Share(Building_Simulator A, string user)
         {
             InitializeComponent();
+            currentUser = user;
             sqlCon = new SqlConnection(strCon);
             Build = A;
         }
 
         private void button1_Click(object sender, EventArgs e)
-        {
+        {           
             sqlCon.Open();
             SqlCommand sqlCmd;
             SqlDataAdapter Adapter = new SqlDataAdapter();
             sqlCmd = sqlCon.CreateCommand();
-            DataTable table = new DataTable();
+            DataTable table = new DataTable();          
+            if (!String.IsNullOrEmpty(currentUser))
+            {
+                textBox2.ReadOnly= true;
+                sqlCmd.CommandText = "Select CustomeName from UserInfo where UserName ='" + currentUser + "'";
+                Adapter.SelectCommand = sqlCmd;
+                Adapter.Fill(table);
+                textBox2.Text = table.Rows[0][0].ToString();
+            }
             sqlCmd.CommandText = "Select * from BuildShared";
             Adapter.SelectCommand = sqlCmd;
             Adapter.Fill(table);

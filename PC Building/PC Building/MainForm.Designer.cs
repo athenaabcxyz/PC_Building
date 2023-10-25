@@ -28,1095 +28,1123 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.ListViewGroup listViewGroup1 = new System.Windows.Forms.ListViewGroup("Processor", System.Windows.Forms.HorizontalAlignment.Left);
-            System.Windows.Forms.ListViewGroup listViewGroup2 = new System.Windows.Forms.ListViewGroup("Motherboard", System.Windows.Forms.HorizontalAlignment.Left);
-            System.Windows.Forms.ListViewGroup listViewGroup3 = new System.Windows.Forms.ListViewGroup("CPU Cooler", System.Windows.Forms.HorizontalAlignment.Left);
-            System.Windows.Forms.ListViewGroup listViewGroup4 = new System.Windows.Forms.ListViewGroup("Case", System.Windows.Forms.HorizontalAlignment.Left);
-            System.Windows.Forms.ListViewGroup listViewGroup5 = new System.Windows.Forms.ListViewGroup("Graphic Card", System.Windows.Forms.HorizontalAlignment.Left);
-            System.Windows.Forms.ListViewGroup listViewGroup6 = new System.Windows.Forms.ListViewGroup("RAM", System.Windows.Forms.HorizontalAlignment.Left);
-            System.Windows.Forms.ListViewGroup listViewGroup7 = new System.Windows.Forms.ListViewGroup("Storage", System.Windows.Forms.HorizontalAlignment.Left);
-            System.Windows.Forms.ListViewGroup listViewGroup8 = new System.Windows.Forms.ListViewGroup("Case Cooler", System.Windows.Forms.HorizontalAlignment.Left);
-            System.Windows.Forms.ListViewGroup listViewGroup9 = new System.Windows.Forms.ListViewGroup("Power Supply", System.Windows.Forms.HorizontalAlignment.Left);
-            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem("970 EVO", "970 EVO.jpg");
+            components = new System.ComponentModel.Container();
+            ListViewGroup listViewGroup10 = new ListViewGroup("Processor", HorizontalAlignment.Left);
+            ListViewGroup listViewGroup11 = new ListViewGroup("Motherboard", HorizontalAlignment.Left);
+            ListViewGroup listViewGroup12 = new ListViewGroup("CPU Cooler", HorizontalAlignment.Left);
+            ListViewGroup listViewGroup13 = new ListViewGroup("Case", HorizontalAlignment.Left);
+            ListViewGroup listViewGroup14 = new ListViewGroup("Graphic Card", HorizontalAlignment.Left);
+            ListViewGroup listViewGroup15 = new ListViewGroup("RAM", HorizontalAlignment.Left);
+            ListViewGroup listViewGroup16 = new ListViewGroup("Storage", HorizontalAlignment.Left);
+            ListViewGroup listViewGroup17 = new ListViewGroup("Case Cooler", HorizontalAlignment.Left);
+            ListViewGroup listViewGroup18 = new ListViewGroup("Power Supply", HorizontalAlignment.Left);
+            ListViewItem listViewItem3 = new ListViewItem("970 EVO", "970 EVO.jpg");
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
-            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem("Bài 1");
-            this.pictureBox_Illu = new System.Windows.Forms.PictureBox();
-            this.textBox_Search = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.button_Build = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
-            this.listView_Main = new System.Windows.Forms.ListView();
-            this.imageList_Group = new System.Windows.Forms.ImageList(this.components);
-            this.imageList_MainListView = new System.Windows.Forms.ImageList(this.components);
-            this.label4 = new System.Windows.Forms.Label();
-            this.comboBox_Category = new System.Windows.Forms.ComboBox();
-            this.richTextBox_Detail = new System.Windows.Forms.RichTextBox();
-            this.button_openAmazon = new System.Windows.Forms.Button();
-            this.toolTip = new System.Windows.Forms.ToolTip(this.components);
-            this.button1 = new System.Windows.Forms.Button();
-            this.button_rebuild = new System.Windows.Forms.Button();
-            this.button_save = new System.Windows.Forms.Button();
-            this.button_like = new System.Windows.Forms.Button();
-            this.button_reload = new System.Windows.Forms.Button();
-            this.tabControl_main = new System.Windows.Forms.TabControl();
-            this.tabPage_products = new System.Windows.Forms.TabPage();
-            this.tabPage_forum = new System.Windows.Forms.TabPage();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPage_decription = new System.Windows.Forms.TabPage();
-            this.richTextBox_decription = new System.Windows.Forms.RichTextBox();
-            this.tabPage_comment = new System.Windows.Forms.TabPage();
-            this.richTextBox_comments = new System.Windows.Forms.RichTextBox();
-            this.label_creator = new System.Windows.Forms.Label();
-            this.label_buildName = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.button_send = new System.Windows.Forms.Button();
-            this.textBox_comments = new System.Windows.Forms.TextBox();
-            this.textBox_sender = new System.Windows.Forms.TextBox();
-            this.label_cpuCooler = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
-            this.label_psu = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.label_storage = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label_graphicCard = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label_case = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label_ram = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label_motherboard = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label_processor = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.pictureBox_psu = new System.Windows.Forms.PictureBox();
-            this.pictureBox_storage = new System.Windows.Forms.PictureBox();
-            this.pictureBox_caseCooler = new System.Windows.Forms.PictureBox();
-            this.pictureBox_cpuCooler = new System.Windows.Forms.PictureBox();
-            this.pictureBox_graphicCard = new System.Windows.Forms.PictureBox();
-            this.pictureBox_case = new System.Windows.Forms.PictureBox();
-            this.pictureBox_ram = new System.Windows.Forms.PictureBox();
-            this.pictureBox_motherboard = new System.Windows.Forms.PictureBox();
-            this.label_caseCooler = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.textBox_like = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox_processor = new System.Windows.Forms.PictureBox();
-            this.listView_buildList = new System.Windows.Forms.ListView();
-            this.columnHeader_name = new System.Windows.Forms.ColumnHeader();
-            this.columnHeader_author = new System.Windows.Forms.ColumnHeader();
-            this.columnHeader_like = new System.Windows.Forms.ColumnHeader();
-            this.ColumnHeader_ID = new System.Windows.Forms.ColumnHeader();
-            this.button_products = new System.Windows.Forms.Button();
-            this.button_forum = new System.Windows.Forms.Button();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.openLiveChatToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Illu)).BeginInit();
-            this.tabControl_main.SuspendLayout();
-            this.tabPage_products.SuspendLayout();
-            this.tabPage_forum.SuspendLayout();
-            this.tabControl1.SuspendLayout();
-            this.tabPage_decription.SuspendLayout();
-            this.tabPage_comment.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_psu)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_storage)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_caseCooler)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_cpuCooler)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_graphicCard)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_case)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_ram)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_motherboard)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_processor)).BeginInit();
-            this.contextMenuStrip1.SuspendLayout();
-            this.SuspendLayout();
+            ListViewItem listViewItem1 = new ListViewItem("Bài 1");
+            pictureBox_Illu = new PictureBox();
+            textBox_Search = new TextBox();
+            label2 = new Label();
+            button_Build = new Button();
+            label3 = new Label();
+            listView_Main = new ListView();
+            imageList_Group = new ImageList(components);
+            imageList_MainListView = new ImageList(components);
+            label4 = new Label();
+            comboBox_Category = new ComboBox();
+            richTextBox_Detail = new RichTextBox();
+            button_openAmazon = new Button();
+            toolTip = new ToolTip(components);
+            button1 = new Button();
+            button_rebuild = new Button();
+            button_save = new Button();
+            button_like = new Button();
+            button_reload = new Button();
+            button_edit = new Button();
+            button_login = new Button();
+            tabControl_main = new TabControl();
+            tabPage_products = new TabPage();
+            tabPage_forum = new TabPage();
+            tabControl1 = new TabControl();
+            tabPage_decription = new TabPage();
+            richTextBox_decription = new RichTextBox();
+            tabPage_comment = new TabPage();
+            richTextBox_comments = new RichTextBox();
+            label_creator = new Label();
+            label_buildName = new Label();
+            label7 = new Label();
+            label5 = new Label();
+            button_send = new Button();
+            textBox_comments = new TextBox();
+            textBox_sender = new TextBox();
+            label_cpuCooler = new Label();
+            label21 = new Label();
+            label_psu = new Label();
+            label19 = new Label();
+            label_storage = new Label();
+            label17 = new Label();
+            label_graphicCard = new Label();
+            label15 = new Label();
+            label_case = new Label();
+            label13 = new Label();
+            label_ram = new Label();
+            label10 = new Label();
+            label_motherboard = new Label();
+            label8 = new Label();
+            label_processor = new Label();
+            label6 = new Label();
+            pictureBox_psu = new PictureBox();
+            pictureBox_storage = new PictureBox();
+            pictureBox_caseCooler = new PictureBox();
+            pictureBox_cpuCooler = new PictureBox();
+            pictureBox_graphicCard = new PictureBox();
+            pictureBox_case = new PictureBox();
+            pictureBox_ram = new PictureBox();
+            pictureBox_motherboard = new PictureBox();
+            label_caseCooler = new Label();
+            label12 = new Label();
+            textBox_like = new TextBox();
+            label1 = new Label();
+            pictureBox_processor = new PictureBox();
+            listView_buildList = new ListView();
+            columnHeader_name = new ColumnHeader();
+            columnHeader_author = new ColumnHeader();
+            columnHeader_like = new ColumnHeader();
+            ColumnHeader_ID = new ColumnHeader();
+            button_products = new Button();
+            button_forum = new Button();
+            contextMenuStrip1 = new ContextMenuStrip(components);
+            openLiveChatToolStripMenuItem = new ToolStripMenuItem();
+            label_state = new Label();
+            label_user = new Label();
+            ((System.ComponentModel.ISupportInitialize)pictureBox_Illu).BeginInit();
+            tabControl_main.SuspendLayout();
+            tabPage_products.SuspendLayout();
+            tabPage_forum.SuspendLayout();
+            tabControl1.SuspendLayout();
+            tabPage_decription.SuspendLayout();
+            tabPage_comment.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox_psu).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox_storage).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox_caseCooler).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox_cpuCooler).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox_graphicCard).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox_case).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox_ram).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox_motherboard).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox_processor).BeginInit();
+            contextMenuStrip1.SuspendLayout();
+            SuspendLayout();
             // 
             // pictureBox_Illu
             // 
-            this.pictureBox_Illu.Location = new System.Drawing.Point(706, 68);
-            this.pictureBox_Illu.Name = "pictureBox_Illu";
-            this.pictureBox_Illu.Size = new System.Drawing.Size(178, 176);
-            this.pictureBox_Illu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox_Illu.TabIndex = 1;
-            this.pictureBox_Illu.TabStop = false;
+            pictureBox_Illu.Location = new Point(706, 68);
+            pictureBox_Illu.Name = "pictureBox_Illu";
+            pictureBox_Illu.Size = new Size(178, 176);
+            pictureBox_Illu.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox_Illu.TabIndex = 1;
+            pictureBox_Illu.TabStop = false;
             // 
             // textBox_Search
             // 
-            this.textBox_Search.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_Search.Font = new System.Drawing.Font("Bahnschrift Condensed", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBox_Search.Location = new System.Drawing.Point(36, 39);
-            this.textBox_Search.Name = "textBox_Search";
-            this.textBox_Search.Size = new System.Drawing.Size(185, 28);
-            this.textBox_Search.TabIndex = 6;
-            this.textBox_Search.TextChanged += new System.EventHandler(this.textBox_Search_TextChanged);
+            textBox_Search.BorderStyle = BorderStyle.FixedSingle;
+            textBox_Search.Font = new Font("Bahnschrift Condensed", 13F, FontStyle.Regular, GraphicsUnit.Point);
+            textBox_Search.Location = new Point(36, 39);
+            textBox_Search.Name = "textBox_Search";
+            textBox_Search.Size = new Size(185, 28);
+            textBox_Search.TabIndex = 6;
+            textBox_Search.TextChanged += textBox_Search_TextChanged;
             // 
             // label2
             // 
-            this.label2.Font = new System.Drawing.Font("Showcard Gothic", 35F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(12, 12);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(621, 82);
-            this.label2.TabIndex = 9;
-            this.label2.Text = "Welcome to PC Builder";
+            label2.Font = new Font("Showcard Gothic", 35F, FontStyle.Bold, GraphicsUnit.Point);
+            label2.Location = new Point(12, 12);
+            label2.Name = "label2";
+            label2.Size = new Size(621, 82);
+            label2.TabIndex = 9;
+            label2.Text = "Welcome to PC Builder";
             // 
             // button_Build
             // 
-            this.button_Build.Font = new System.Drawing.Font("Bahnschrift", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button_Build.Location = new System.Drawing.Point(799, 12);
-            this.button_Build.Name = "button_Build";
-            this.button_Build.Size = new System.Drawing.Size(245, 52);
-            this.button_Build.TabIndex = 10;
-            this.button_Build.Text = "Start building you own PC";
-            this.button_Build.UseVisualStyleBackColor = true;
-            this.button_Build.Click += new System.EventHandler(this.button_Build_Click);
+            button_Build.Font = new Font("Bahnschrift", 12.75F, FontStyle.Regular, GraphicsUnit.Point);
+            button_Build.Location = new Point(799, 12);
+            button_Build.Name = "button_Build";
+            button_Build.Size = new Size(245, 52);
+            button_Build.TabIndex = 10;
+            button_Build.Text = "Start building you own PC";
+            button_Build.UseVisualStyleBackColor = true;
+            button_Build.Click += button_Build_Click;
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Bahnschrift Condensed", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(36, 14);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(151, 22);
-            this.label3.TabIndex = 11;
-            this.label3.Text = "Search by model name:";
+            label3.AutoSize = true;
+            label3.Font = new Font("Bahnschrift Condensed", 13F, FontStyle.Regular, GraphicsUnit.Point);
+            label3.Location = new Point(36, 14);
+            label3.Name = "label3";
+            label3.Size = new Size(151, 22);
+            label3.TabIndex = 11;
+            label3.Text = "Search by model name:";
             // 
             // listView_Main
             // 
-            this.listView_Main.Activation = System.Windows.Forms.ItemActivation.OneClick;
-            this.listView_Main.BackColor = System.Drawing.SystemColors.Window;
-            this.listView_Main.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.listView_Main.Font = new System.Drawing.Font("Bahnschrift", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.listView_Main.GroupImageList = this.imageList_Group;
-            listViewGroup1.CollapsedState = System.Windows.Forms.ListViewGroupCollapsedState.Expanded;
-            listViewGroup1.Header = "Processor";
-            listViewGroup1.Name = "listViewGroup_Processor";
-            listViewGroup2.CollapsedState = System.Windows.Forms.ListViewGroupCollapsedState.Expanded;
-            listViewGroup2.Header = "Motherboard";
-            listViewGroup2.Name = "listViewGroup_Motherboard";
-            listViewGroup3.CollapsedState = System.Windows.Forms.ListViewGroupCollapsedState.Expanded;
-            listViewGroup3.Header = "CPU Cooler";
-            listViewGroup3.Name = "listViewGroup_CPUCooler";
-            listViewGroup4.CollapsedState = System.Windows.Forms.ListViewGroupCollapsedState.Expanded;
-            listViewGroup4.Header = "Case";
-            listViewGroup4.Name = "listViewGroup_Case";
-            listViewGroup5.CollapsedState = System.Windows.Forms.ListViewGroupCollapsedState.Expanded;
-            listViewGroup5.Header = "Graphic Card";
-            listViewGroup5.Name = "listViewGroup_GPU";
-            listViewGroup6.CollapsedState = System.Windows.Forms.ListViewGroupCollapsedState.Expanded;
-            listViewGroup6.Header = "RAM";
-            listViewGroup6.Name = "listViewGroup_RAM";
-            listViewGroup7.CollapsedState = System.Windows.Forms.ListViewGroupCollapsedState.Expanded;
-            listViewGroup7.Header = "Storage";
-            listViewGroup7.Name = "listViewGroup_Disk";
-            listViewGroup8.CollapsedState = System.Windows.Forms.ListViewGroupCollapsedState.Expanded;
-            listViewGroup8.Header = "Case Cooler";
-            listViewGroup8.Name = "listViewGroup_CaseCooler";
-            listViewGroup9.CollapsedState = System.Windows.Forms.ListViewGroupCollapsedState.Expanded;
-            listViewGroup9.Header = "Power Supply";
-            listViewGroup9.Name = "listViewGroup_PSU";
-            this.listView_Main.Groups.AddRange(new System.Windows.Forms.ListViewGroup[] {
-            listViewGroup1,
-            listViewGroup2,
-            listViewGroup3,
-            listViewGroup4,
-            listViewGroup5,
-            listViewGroup6,
-            listViewGroup7,
-            listViewGroup8,
-            listViewGroup9});
-            this.listView_Main.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
-            this.listView_Main.HideSelection = true;
-            listViewItem1.Group = listViewGroup7;
-            this.listView_Main.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem1});
-            this.listView_Main.LargeImageList = this.imageList_MainListView;
-            this.listView_Main.Location = new System.Drawing.Point(22, 84);
-            this.listView_Main.MultiSelect = false;
-            this.listView_Main.Name = "listView_Main";
-            this.listView_Main.Size = new System.Drawing.Size(522, 495);
-            this.listView_Main.Sorting = System.Windows.Forms.SortOrder.Ascending;
-            this.listView_Main.TabIndex = 13;
-            this.listView_Main.TileSize = new System.Drawing.Size(500, 30);
-            this.listView_Main.UseCompatibleStateImageBehavior = false;
-            this.listView_Main.View = System.Windows.Forms.View.Tile;
-            this.listView_Main.ItemSelectionChanged += new System.Windows.Forms.ListViewItemSelectionChangedEventHandler(this.listView_Main_ItemSelectionChanged);
+            listView_Main.Activation = ItemActivation.OneClick;
+            listView_Main.BackColor = SystemColors.Window;
+            listView_Main.BorderStyle = BorderStyle.FixedSingle;
+            listView_Main.Font = new Font("Bahnschrift", 12.75F, FontStyle.Regular, GraphicsUnit.Point);
+            listView_Main.GroupImageList = imageList_Group;
+            listViewGroup10.CollapsedState = ListViewGroupCollapsedState.Expanded;
+            listViewGroup10.Header = "Processor";
+            listViewGroup10.Name = "listViewGroup_Processor";
+            listViewGroup11.CollapsedState = ListViewGroupCollapsedState.Expanded;
+            listViewGroup11.Header = "Motherboard";
+            listViewGroup11.Name = "listViewGroup_Motherboard";
+            listViewGroup12.CollapsedState = ListViewGroupCollapsedState.Expanded;
+            listViewGroup12.Header = "CPU Cooler";
+            listViewGroup12.Name = "listViewGroup_CPUCooler";
+            listViewGroup13.CollapsedState = ListViewGroupCollapsedState.Expanded;
+            listViewGroup13.Header = "Case";
+            listViewGroup13.Name = "listViewGroup_Case";
+            listViewGroup14.CollapsedState = ListViewGroupCollapsedState.Expanded;
+            listViewGroup14.Header = "Graphic Card";
+            listViewGroup14.Name = "listViewGroup_GPU";
+            listViewGroup15.CollapsedState = ListViewGroupCollapsedState.Expanded;
+            listViewGroup15.Header = "RAM";
+            listViewGroup15.Name = "listViewGroup_RAM";
+            listViewGroup16.CollapsedState = ListViewGroupCollapsedState.Expanded;
+            listViewGroup16.Header = "Storage";
+            listViewGroup16.Name = "listViewGroup_Disk";
+            listViewGroup17.CollapsedState = ListViewGroupCollapsedState.Expanded;
+            listViewGroup17.Header = "Case Cooler";
+            listViewGroup17.Name = "listViewGroup_CaseCooler";
+            listViewGroup18.CollapsedState = ListViewGroupCollapsedState.Expanded;
+            listViewGroup18.Header = "Power Supply";
+            listViewGroup18.Name = "listViewGroup_PSU";
+            listView_Main.Groups.AddRange(new ListViewGroup[] { listViewGroup10, listViewGroup11, listViewGroup12, listViewGroup13, listViewGroup14, listViewGroup15, listViewGroup16, listViewGroup17, listViewGroup18 });
+            listView_Main.HeaderStyle = ColumnHeaderStyle.Nonclickable;
+            listView_Main.HideSelection = true;
+            listViewItem3.Group = listViewGroup16;
+            listView_Main.Items.AddRange(new ListViewItem[] { listViewItem3 });
+            listView_Main.LargeImageList = imageList_MainListView;
+            listView_Main.Location = new Point(22, 84);
+            listView_Main.MultiSelect = false;
+            listView_Main.Name = "listView_Main";
+            listView_Main.Size = new Size(522, 495);
+            listView_Main.Sorting = SortOrder.Ascending;
+            listView_Main.TabIndex = 13;
+            listView_Main.TileSize = new Size(500, 30);
+            listView_Main.UseCompatibleStateImageBehavior = false;
+            listView_Main.View = View.Tile;
+            listView_Main.ItemSelectionChanged += listView_Main_ItemSelectionChanged;
             // 
             // imageList_Group
             // 
-            this.imageList_Group.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
-            this.imageList_Group.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList_Group.ImageStream")));
-            this.imageList_Group.TransparentColor = System.Drawing.Color.Transparent;
-            this.imageList_Group.Images.SetKeyName(0, "Case Cooler.jpg");
-            this.imageList_Group.Images.SetKeyName(1, "Case.jpg");
-            this.imageList_Group.Images.SetKeyName(2, "CPU Cooler.jpg");
-            this.imageList_Group.Images.SetKeyName(3, "GPU.jpg");
-            this.imageList_Group.Images.SetKeyName(4, "Motherboard.jpg");
-            this.imageList_Group.Images.SetKeyName(5, "PSU.jpg");
-            this.imageList_Group.Images.SetKeyName(6, "RAM.jpg");
-            this.imageList_Group.Images.SetKeyName(7, "Storage.jpg");
-            this.imageList_Group.Images.SetKeyName(8, "CPU.jpg");
+            imageList_Group.ColorDepth = ColorDepth.Depth8Bit;
+            imageList_Group.ImageStream = (ImageListStreamer)resources.GetObject("imageList_Group.ImageStream");
+            imageList_Group.TransparentColor = Color.Transparent;
+            imageList_Group.Images.SetKeyName(0, "Case Cooler.jpg");
+            imageList_Group.Images.SetKeyName(1, "Case.jpg");
+            imageList_Group.Images.SetKeyName(2, "CPU Cooler.jpg");
+            imageList_Group.Images.SetKeyName(3, "GPU.jpg");
+            imageList_Group.Images.SetKeyName(4, "Motherboard.jpg");
+            imageList_Group.Images.SetKeyName(5, "PSU.jpg");
+            imageList_Group.Images.SetKeyName(6, "RAM.jpg");
+            imageList_Group.Images.SetKeyName(7, "Storage.jpg");
+            imageList_Group.Images.SetKeyName(8, "CPU.jpg");
             // 
             // imageList_MainListView
             // 
-            this.imageList_MainListView.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
-            this.imageList_MainListView.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList_MainListView.ImageStream")));
-            this.imageList_MainListView.TransparentColor = System.Drawing.Color.Transparent;
-            this.imageList_MainListView.Images.SetKeyName(0, "RM850.jpg");
-            this.imageList_MainListView.Images.SetKeyName(1, "RM750.jpg");
-            this.imageList_MainListView.Images.SetKeyName(2, "MasterFan MF120R.jpg");
-            this.imageList_MainListView.Images.SetKeyName(3, "AER RGB.jpg");
-            this.imageList_MainListView.Images.SetKeyName(4, "BarraCuda.jpg");
-            this.imageList_MainListView.Images.SetKeyName(5, "970 EVO.jpg");
-            this.imageList_MainListView.Images.SetKeyName(6, "Trident Z5 RGB.jpg");
-            this.imageList_MainListView.Images.SetKeyName(7, "Fury Renegade RGB.jpg");
-            this.imageList_MainListView.Images.SetKeyName(8, "TUF Gaming GeForce RTX 3080 Ti OC Edition.jpg");
-            this.imageList_MainListView.Images.SetKeyName(9, "GeForce RTX 3080 Ti Gaming OC 12G.jpg");
-            this.imageList_MainListView.Images.SetKeyName(10, "H510B-B1.jpg");
-            this.imageList_MainListView.Images.SetKeyName(11, "H510B-W1.jpg");
-            this.imageList_MainListView.Images.SetKeyName(12, "Hyper 212 RGB.jpg");
-            this.imageList_MainListView.Images.SetKeyName(13, "Hyper 212 EVO.jpg");
-            this.imageList_MainListView.Images.SetKeyName(14, "TRX40 Aorus Pro WiFi.jpg");
-            this.imageList_MainListView.Images.SetKeyName(15, "TRX40 CREATOR.jpg");
-            this.imageList_MainListView.Images.SetKeyName(16, "Ryzen 9 7950X.jpg");
-            this.imageList_MainListView.Images.SetKeyName(17, "Ryzen Threadripper 3990X.jpg");
-            this.imageList_MainListView.Images.SetKeyName(18, "RM850.jpg");
-            this.imageList_MainListView.Images.SetKeyName(19, "RM750.jpg");
-            this.imageList_MainListView.Images.SetKeyName(20, "MasterFan MF120R.jpg");
-            this.imageList_MainListView.Images.SetKeyName(21, "AER RGB.jpg");
-            this.imageList_MainListView.Images.SetKeyName(22, "BarraCuda.jpg");
-            this.imageList_MainListView.Images.SetKeyName(23, "970 EVO.jpg");
-            this.imageList_MainListView.Images.SetKeyName(24, "Trident Z5 RGB.jpg");
-            this.imageList_MainListView.Images.SetKeyName(25, "Fury Renegade RGB.jpg");
-            this.imageList_MainListView.Images.SetKeyName(26, "TUF Gaming GeForce RTX 3080 Ti OC Edition.jpg");
-            this.imageList_MainListView.Images.SetKeyName(27, "GeForce RTX 3080 Ti Gaming OC 12G.jpg");
-            this.imageList_MainListView.Images.SetKeyName(28, "H510B-B1.jpg");
-            this.imageList_MainListView.Images.SetKeyName(29, "H510B-W1.jpg");
-            this.imageList_MainListView.Images.SetKeyName(30, "Hyper 212 RGB.jpg");
-            this.imageList_MainListView.Images.SetKeyName(31, "Hyper 212 EVO.jpg");
-            this.imageList_MainListView.Images.SetKeyName(32, "TRX40 Aorus Pro WiFi.jpg");
-            this.imageList_MainListView.Images.SetKeyName(33, "TRX40 CREATOR.jpg");
-            this.imageList_MainListView.Images.SetKeyName(34, "Ryzen 9 7950X.jpg");
-            this.imageList_MainListView.Images.SetKeyName(35, "Ryzen Threadripper 3990X.jpg");
-            this.imageList_MainListView.Images.SetKeyName(36, "i5-13600K.jpg");
-            this.imageList_MainListView.Images.SetKeyName(37, "i7-13700KF.jpg");
-            this.imageList_MainListView.Images.SetKeyName(38, "i9-12900K.jpg");
-            this.imageList_MainListView.Images.SetKeyName(39, "i9-13900K.jpg");
-            this.imageList_MainListView.Images.SetKeyName(40, "i9-13900KF.jpg");
-            this.imageList_MainListView.Images.SetKeyName(41, "Ryzen 9 3950X.jpg");
-            this.imageList_MainListView.Images.SetKeyName(42, "Ryzen 9 5950X.jpg");
-            this.imageList_MainListView.Images.SetKeyName(43, "Ryzen 9 7900X.jpg");
-            this.imageList_MainListView.Images.SetKeyName(44, "Ryzen Threadripper 3970X.jpg");
-            this.imageList_MainListView.Images.SetKeyName(45, "4000D Airflow.jpg");
-            this.imageList_MainListView.Images.SetKeyName(46, "CARBIDE SPEC-05.jpg");
-            this.imageList_MainListView.Images.SetKeyName(47, "Carbide SPEC-Omega.jpg");
-            this.imageList_MainListView.Images.SetKeyName(48, "CC-9011205-WW.jpg");
-            this.imageList_MainListView.Images.SetKeyName(49, "H510B.jpg");
-            this.imageList_MainListView.Images.SetKeyName(50, "H510i.jpg");
-            this.imageList_MainListView.Images.SetKeyName(51, "MasterBox Q500L.jpg");
-            this.imageList_MainListView.Images.SetKeyName(52, "MasterBox TD500.jpg");
-            this.imageList_MainListView.Images.SetKeyName(53, "Q300L.jpg");
-            this.imageList_MainListView.Images.SetKeyName(54, "ACFAN00118A.jpg");
-            this.imageList_MainListView.Images.SetKeyName(55, "ACFAN00170A.jpg");
-            this.imageList_MainListView.Images.SetKeyName(56, "CO-9050015-BLED.jpg");
-            this.imageList_MainListView.Images.SetKeyName(57, "CO-9050015-RLED.jpg");
-            this.imageList_MainListView.Images.SetKeyName(58, "HD140 RGB.jpg");
-            this.imageList_MainListView.Images.SetKeyName(59, "P12 PST RGB.jpg");
-            this.imageList_MainListView.Images.SetKeyName(60, "P12 PST.jpg");
-            this.imageList_MainListView.Images.SetKeyName(61, "P12 PWM.jpg");
-            this.imageList_MainListView.Images.SetKeyName(62, "P12 Silent.jpg");
-            this.imageList_MainListView.Images.SetKeyName(63, "SP120 RGB.jpg");
-            this.imageList_MainListView.Images.SetKeyName(64, "Hyper 212 Black Edition.jpg");
-            this.imageList_MainListView.Images.SetKeyName(65, "Hyper H412R.jpg");
-            this.imageList_MainListView.Images.SetKeyName(66, "Hyper T2.jpg");
-            this.imageList_MainListView.Images.SetKeyName(67, "Kraken M22.jpg");
-            this.imageList_MainListView.Images.SetKeyName(68, "Kraken X53 RGB 240mm.jpg");
-            this.imageList_MainListView.Images.SetKeyName(69, "Kraken X53 RGB.jpg");
-            this.imageList_MainListView.Images.SetKeyName(70, "Kraken X53.jpg");
-            this.imageList_MainListView.Images.SetKeyName(71, "Kraken X63 RGB.jpg");
-            this.imageList_MainListView.Images.SetKeyName(72, "Kraken Z73 RGB.jpg");
-            this.imageList_MainListView.Images.SetKeyName(73, "Kraken Z73.jpg");
-            this.imageList_MainListView.Images.SetKeyName(74, "Gaming GeForce RTX 4090 Trinity OC.jpg");
-            this.imageList_MainListView.Images.SetKeyName(75, "GeForce RTX 3090 Ti AMP Extreme Holo.jpg");
-            this.imageList_MainListView.Images.SetKeyName(76, "GeForce RTX 3090 Ti FTW3 Ultra Gaming.jpg");
-            this.imageList_MainListView.Images.SetKeyName(77, "GeForce RTX 4090 Founders Edition.jpg");
-            this.imageList_MainListView.Images.SetKeyName(78, "GeForce RTX 4090 SUPRIM LIQUID X 24G.jpg");
-            this.imageList_MainListView.Images.SetKeyName(79, "GV-N4090WF3-24GD.jpg");
-            this.imageList_MainListView.Images.SetKeyName(80, "RTX 3080 Ti FTW3 Ultra.jpg");
-            this.imageList_MainListView.Images.SetKeyName(81, "RTX 3080 Ti Ventus 3X 12G OC.jpg");
-            this.imageList_MainListView.Images.SetKeyName(82, "RTX 3080 Ti XC3 ULTRA.jpg");
-            this.imageList_MainListView.Images.SetKeyName(83, "RTX 4090 Gaming Trio 24G.jpg");
-            this.imageList_MainListView.Images.SetKeyName(84, "ROG CROSSHAIR VIII HERO (WI-FI).jpg");
-            this.imageList_MainListView.Images.SetKeyName(85, "ROG ZENITH II EXTREME ALPHA.jpg");
-            this.imageList_MainListView.Images.SetKeyName(86, "TUF GAMING X570-PLUS (WI-FI).jpg");
-            this.imageList_MainListView.Images.SetKeyName(87, "TRX40 AORUS XTREME.jpg");
-            this.imageList_MainListView.Images.SetKeyName(88, "TRX40 DESIGNARE.jpg");
-            this.imageList_MainListView.Images.SetKeyName(89, "TRX40P.jpg");
-            this.imageList_MainListView.Images.SetKeyName(90, "X570 AORUS ELITE.jpg");
-            this.imageList_MainListView.Images.SetKeyName(91, "X570 I AORUS PRO WIFI.jpg");
-            this.imageList_MainListView.Images.SetKeyName(92, "X570 PRO WIFI.jpg");
-            this.imageList_MainListView.Images.SetKeyName(93, "X570S AORUS ELITE AX.jpg");
-            this.imageList_MainListView.Images.SetKeyName(94, "220-G6-0850-X1.jpg");
-            this.imageList_MainListView.Images.SetKeyName(95, "PS-SPD-0430NPCWUS-W.jpg");
-            this.imageList_MainListView.Images.SetKeyName(96, "PS-SPD-0500NPCWUS-W.jpg");
-            this.imageList_MainListView.Images.SetKeyName(97, "SMART 600.jpg");
-            this.imageList_MainListView.Images.SetKeyName(98, "SPD-0700NP.jpg");
-            this.imageList_MainListView.Images.SetKeyName(99, "SuperNOVA 750 G6.jpg");
-            this.imageList_MainListView.Images.SetKeyName(100, "SuperNOVA 1000 G6.jpg");
-            this.imageList_MainListView.Images.SetKeyName(101, "SuperNOVA.jpg");
-            this.imageList_MainListView.Images.SetKeyName(102, "Toughpower GX1.jpg");
-            this.imageList_MainListView.Images.SetKeyName(103, "Toughpower PF1.jpg");
-            this.imageList_MainListView.Images.SetKeyName(104, "AX5U6000C4016G-DCLARBK.jpg");
-            this.imageList_MainListView.Images.SetKeyName(105, "CMH32GX5M2D6000C36.jpg");
-            this.imageList_MainListView.Images.SetKeyName(106, "CMK32GX5M2B5600C36.jpg");
-            this.imageList_MainListView.Images.SetKeyName(107, "DOMINATOR PLATINUM.jpg");
-            this.imageList_MainListView.Images.SetKeyName(108, "FF3D532G6000HC38ADC0.jpg");
-            this.imageList_MainListView.Images.SetKeyName(109, "KF556C40BBAK2-64.jpg");
-            this.imageList_MainListView.Images.SetKeyName(110, "RipJaws S5.jpg");
-            this.imageList_MainListView.Images.SetKeyName(111, "Trident Z5.jpg");
-            this.imageList_MainListView.Images.SetKeyName(112, "Viper Venom RGB.jpg");
-            this.imageList_MainListView.Images.SetKeyName(113, "XLR8.jpg");
-            this.imageList_MainListView.Images.SetKeyName(114, "A400.jpg");
-            this.imageList_MainListView.Images.SetKeyName(115, "Blue 500.jpg");
-            this.imageList_MainListView.Images.SetKeyName(116, "Blue SN 550.jpg");
-            this.imageList_MainListView.Images.SetKeyName(117, "Blue.jpg");
-            this.imageList_MainListView.Images.SetKeyName(118, "Caviar Blue.jpg");
-            this.imageList_MainListView.Images.SetKeyName(119, "EVO 500.jpg");
-            this.imageList_MainListView.Images.SetKeyName(120, "GX2.jpg");
-            this.imageList_MainListView.Images.SetKeyName(121, "MX 500.jpg");
-            this.imageList_MainListView.Images.SetKeyName(122, "P1.jpg");
-            this.imageList_MainListView.Images.SetKeyName(123, "SN 750.jpg");
-            this.imageList_MainListView.Images.SetKeyName(124, "H510 Elite.jpg");
-            this.imageList_MainListView.Images.SetKeyName(125, "Ryzen 7 7700X.jpg");
+            imageList_MainListView.ColorDepth = ColorDepth.Depth8Bit;
+            imageList_MainListView.ImageStream = (ImageListStreamer)resources.GetObject("imageList_MainListView.ImageStream");
+            imageList_MainListView.TransparentColor = Color.Transparent;
+            imageList_MainListView.Images.SetKeyName(0, "RM850.jpg");
+            imageList_MainListView.Images.SetKeyName(1, "RM750.jpg");
+            imageList_MainListView.Images.SetKeyName(2, "MasterFan MF120R.jpg");
+            imageList_MainListView.Images.SetKeyName(3, "AER RGB.jpg");
+            imageList_MainListView.Images.SetKeyName(4, "BarraCuda.jpg");
+            imageList_MainListView.Images.SetKeyName(5, "970 EVO.jpg");
+            imageList_MainListView.Images.SetKeyName(6, "Trident Z5 RGB.jpg");
+            imageList_MainListView.Images.SetKeyName(7, "Fury Renegade RGB.jpg");
+            imageList_MainListView.Images.SetKeyName(8, "TUF Gaming GeForce RTX 3080 Ti OC Edition.jpg");
+            imageList_MainListView.Images.SetKeyName(9, "GeForce RTX 3080 Ti Gaming OC 12G.jpg");
+            imageList_MainListView.Images.SetKeyName(10, "H510B-B1.jpg");
+            imageList_MainListView.Images.SetKeyName(11, "H510B-W1.jpg");
+            imageList_MainListView.Images.SetKeyName(12, "Hyper 212 RGB.jpg");
+            imageList_MainListView.Images.SetKeyName(13, "Hyper 212 EVO.jpg");
+            imageList_MainListView.Images.SetKeyName(14, "TRX40 Aorus Pro WiFi.jpg");
+            imageList_MainListView.Images.SetKeyName(15, "TRX40 CREATOR.jpg");
+            imageList_MainListView.Images.SetKeyName(16, "Ryzen 9 7950X.jpg");
+            imageList_MainListView.Images.SetKeyName(17, "Ryzen Threadripper 3990X.jpg");
+            imageList_MainListView.Images.SetKeyName(18, "RM850.jpg");
+            imageList_MainListView.Images.SetKeyName(19, "RM750.jpg");
+            imageList_MainListView.Images.SetKeyName(20, "MasterFan MF120R.jpg");
+            imageList_MainListView.Images.SetKeyName(21, "AER RGB.jpg");
+            imageList_MainListView.Images.SetKeyName(22, "BarraCuda.jpg");
+            imageList_MainListView.Images.SetKeyName(23, "970 EVO.jpg");
+            imageList_MainListView.Images.SetKeyName(24, "Trident Z5 RGB.jpg");
+            imageList_MainListView.Images.SetKeyName(25, "Fury Renegade RGB.jpg");
+            imageList_MainListView.Images.SetKeyName(26, "TUF Gaming GeForce RTX 3080 Ti OC Edition.jpg");
+            imageList_MainListView.Images.SetKeyName(27, "GeForce RTX 3080 Ti Gaming OC 12G.jpg");
+            imageList_MainListView.Images.SetKeyName(28, "H510B-B1.jpg");
+            imageList_MainListView.Images.SetKeyName(29, "H510B-W1.jpg");
+            imageList_MainListView.Images.SetKeyName(30, "Hyper 212 RGB.jpg");
+            imageList_MainListView.Images.SetKeyName(31, "Hyper 212 EVO.jpg");
+            imageList_MainListView.Images.SetKeyName(32, "TRX40 Aorus Pro WiFi.jpg");
+            imageList_MainListView.Images.SetKeyName(33, "TRX40 CREATOR.jpg");
+            imageList_MainListView.Images.SetKeyName(34, "Ryzen 9 7950X.jpg");
+            imageList_MainListView.Images.SetKeyName(35, "Ryzen Threadripper 3990X.jpg");
+            imageList_MainListView.Images.SetKeyName(36, "i5-13600K.jpg");
+            imageList_MainListView.Images.SetKeyName(37, "i7-13700KF.jpg");
+            imageList_MainListView.Images.SetKeyName(38, "i9-12900K.jpg");
+            imageList_MainListView.Images.SetKeyName(39, "i9-13900K.jpg");
+            imageList_MainListView.Images.SetKeyName(40, "i9-13900KF.jpg");
+            imageList_MainListView.Images.SetKeyName(41, "Ryzen 9 3950X.jpg");
+            imageList_MainListView.Images.SetKeyName(42, "Ryzen 9 5950X.jpg");
+            imageList_MainListView.Images.SetKeyName(43, "Ryzen 9 7900X.jpg");
+            imageList_MainListView.Images.SetKeyName(44, "Ryzen Threadripper 3970X.jpg");
+            imageList_MainListView.Images.SetKeyName(45, "4000D Airflow.jpg");
+            imageList_MainListView.Images.SetKeyName(46, "CARBIDE SPEC-05.jpg");
+            imageList_MainListView.Images.SetKeyName(47, "Carbide SPEC-Omega.jpg");
+            imageList_MainListView.Images.SetKeyName(48, "CC-9011205-WW.jpg");
+            imageList_MainListView.Images.SetKeyName(49, "H510B.jpg");
+            imageList_MainListView.Images.SetKeyName(50, "H510i.jpg");
+            imageList_MainListView.Images.SetKeyName(51, "MasterBox Q500L.jpg");
+            imageList_MainListView.Images.SetKeyName(52, "MasterBox TD500.jpg");
+            imageList_MainListView.Images.SetKeyName(53, "Q300L.jpg");
+            imageList_MainListView.Images.SetKeyName(54, "ACFAN00118A.jpg");
+            imageList_MainListView.Images.SetKeyName(55, "ACFAN00170A.jpg");
+            imageList_MainListView.Images.SetKeyName(56, "CO-9050015-BLED.jpg");
+            imageList_MainListView.Images.SetKeyName(57, "CO-9050015-RLED.jpg");
+            imageList_MainListView.Images.SetKeyName(58, "HD140 RGB.jpg");
+            imageList_MainListView.Images.SetKeyName(59, "P12 PST RGB.jpg");
+            imageList_MainListView.Images.SetKeyName(60, "P12 PST.jpg");
+            imageList_MainListView.Images.SetKeyName(61, "P12 PWM.jpg");
+            imageList_MainListView.Images.SetKeyName(62, "P12 Silent.jpg");
+            imageList_MainListView.Images.SetKeyName(63, "SP120 RGB.jpg");
+            imageList_MainListView.Images.SetKeyName(64, "Hyper 212 Black Edition.jpg");
+            imageList_MainListView.Images.SetKeyName(65, "Hyper H412R.jpg");
+            imageList_MainListView.Images.SetKeyName(66, "Hyper T2.jpg");
+            imageList_MainListView.Images.SetKeyName(67, "Kraken M22.jpg");
+            imageList_MainListView.Images.SetKeyName(68, "Kraken X53 RGB 240mm.jpg");
+            imageList_MainListView.Images.SetKeyName(69, "Kraken X53 RGB.jpg");
+            imageList_MainListView.Images.SetKeyName(70, "Kraken X53.jpg");
+            imageList_MainListView.Images.SetKeyName(71, "Kraken X63 RGB.jpg");
+            imageList_MainListView.Images.SetKeyName(72, "Kraken Z73 RGB.jpg");
+            imageList_MainListView.Images.SetKeyName(73, "Kraken Z73.jpg");
+            imageList_MainListView.Images.SetKeyName(74, "Gaming GeForce RTX 4090 Trinity OC.jpg");
+            imageList_MainListView.Images.SetKeyName(75, "GeForce RTX 3090 Ti AMP Extreme Holo.jpg");
+            imageList_MainListView.Images.SetKeyName(76, "GeForce RTX 3090 Ti FTW3 Ultra Gaming.jpg");
+            imageList_MainListView.Images.SetKeyName(77, "GeForce RTX 4090 Founders Edition.jpg");
+            imageList_MainListView.Images.SetKeyName(78, "GeForce RTX 4090 SUPRIM LIQUID X 24G.jpg");
+            imageList_MainListView.Images.SetKeyName(79, "GV-N4090WF3-24GD.jpg");
+            imageList_MainListView.Images.SetKeyName(80, "RTX 3080 Ti FTW3 Ultra.jpg");
+            imageList_MainListView.Images.SetKeyName(81, "RTX 3080 Ti Ventus 3X 12G OC.jpg");
+            imageList_MainListView.Images.SetKeyName(82, "RTX 3080 Ti XC3 ULTRA.jpg");
+            imageList_MainListView.Images.SetKeyName(83, "RTX 4090 Gaming Trio 24G.jpg");
+            imageList_MainListView.Images.SetKeyName(84, "ROG CROSSHAIR VIII HERO (WI-FI).jpg");
+            imageList_MainListView.Images.SetKeyName(85, "ROG ZENITH II EXTREME ALPHA.jpg");
+            imageList_MainListView.Images.SetKeyName(86, "TUF GAMING X570-PLUS (WI-FI).jpg");
+            imageList_MainListView.Images.SetKeyName(87, "TRX40 AORUS XTREME.jpg");
+            imageList_MainListView.Images.SetKeyName(88, "TRX40 DESIGNARE.jpg");
+            imageList_MainListView.Images.SetKeyName(89, "TRX40P.jpg");
+            imageList_MainListView.Images.SetKeyName(90, "X570 AORUS ELITE.jpg");
+            imageList_MainListView.Images.SetKeyName(91, "X570 I AORUS PRO WIFI.jpg");
+            imageList_MainListView.Images.SetKeyName(92, "X570 PRO WIFI.jpg");
+            imageList_MainListView.Images.SetKeyName(93, "X570S AORUS ELITE AX.jpg");
+            imageList_MainListView.Images.SetKeyName(94, "220-G6-0850-X1.jpg");
+            imageList_MainListView.Images.SetKeyName(95, "PS-SPD-0430NPCWUS-W.jpg");
+            imageList_MainListView.Images.SetKeyName(96, "PS-SPD-0500NPCWUS-W.jpg");
+            imageList_MainListView.Images.SetKeyName(97, "SMART 600.jpg");
+            imageList_MainListView.Images.SetKeyName(98, "SPD-0700NP.jpg");
+            imageList_MainListView.Images.SetKeyName(99, "SuperNOVA 750 G6.jpg");
+            imageList_MainListView.Images.SetKeyName(100, "SuperNOVA 1000 G6.jpg");
+            imageList_MainListView.Images.SetKeyName(101, "SuperNOVA.jpg");
+            imageList_MainListView.Images.SetKeyName(102, "Toughpower GX1.jpg");
+            imageList_MainListView.Images.SetKeyName(103, "Toughpower PF1.jpg");
+            imageList_MainListView.Images.SetKeyName(104, "AX5U6000C4016G-DCLARBK.jpg");
+            imageList_MainListView.Images.SetKeyName(105, "CMH32GX5M2D6000C36.jpg");
+            imageList_MainListView.Images.SetKeyName(106, "CMK32GX5M2B5600C36.jpg");
+            imageList_MainListView.Images.SetKeyName(107, "DOMINATOR PLATINUM.jpg");
+            imageList_MainListView.Images.SetKeyName(108, "FF3D532G6000HC38ADC0.jpg");
+            imageList_MainListView.Images.SetKeyName(109, "KF556C40BBAK2-64.jpg");
+            imageList_MainListView.Images.SetKeyName(110, "RipJaws S5.jpg");
+            imageList_MainListView.Images.SetKeyName(111, "Trident Z5.jpg");
+            imageList_MainListView.Images.SetKeyName(112, "Viper Venom RGB.jpg");
+            imageList_MainListView.Images.SetKeyName(113, "XLR8.jpg");
+            imageList_MainListView.Images.SetKeyName(114, "A400.jpg");
+            imageList_MainListView.Images.SetKeyName(115, "Blue 500.jpg");
+            imageList_MainListView.Images.SetKeyName(116, "Blue SN 550.jpg");
+            imageList_MainListView.Images.SetKeyName(117, "Blue.jpg");
+            imageList_MainListView.Images.SetKeyName(118, "Caviar Blue.jpg");
+            imageList_MainListView.Images.SetKeyName(119, "EVO 500.jpg");
+            imageList_MainListView.Images.SetKeyName(120, "GX2.jpg");
+            imageList_MainListView.Images.SetKeyName(121, "MX 500.jpg");
+            imageList_MainListView.Images.SetKeyName(122, "P1.jpg");
+            imageList_MainListView.Images.SetKeyName(123, "SN 750.jpg");
+            imageList_MainListView.Images.SetKeyName(124, "H510 Elite.jpg");
+            imageList_MainListView.Images.SetKeyName(125, "Ryzen 7 7700X.jpg");
             // 
             // label4
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Bahnschrift Condensed", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label4.Location = new System.Drawing.Point(255, 13);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(66, 22);
-            this.label4.TabIndex = 12;
-            this.label4.Text = "Category:";
+            label4.AutoSize = true;
+            label4.Font = new Font("Bahnschrift Condensed", 13F, FontStyle.Regular, GraphicsUnit.Point);
+            label4.Location = new Point(255, 13);
+            label4.Name = "label4";
+            label4.Size = new Size(66, 22);
+            label4.TabIndex = 12;
+            label4.Text = "Category:";
             // 
             // comboBox_Category
             // 
-            this.comboBox_Category.Font = new System.Drawing.Font("Bahnschrift Condensed", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.comboBox_Category.FormattingEnabled = true;
-            this.comboBox_Category.Items.AddRange(new object[] {
-            "Processor",
-            "Motherboard",
-            "CPU Cooler",
-            "Case",
-            "Graphic Card",
-            "RAM",
-            "Storage",
-            "Case Cooler",
-            "Power Supply",
-            "All"});
-            this.comboBox_Category.Location = new System.Drawing.Point(255, 39);
-            this.comboBox_Category.Name = "comboBox_Category";
-            this.comboBox_Category.Size = new System.Drawing.Size(152, 29);
-            this.comboBox_Category.TabIndex = 7;
-            this.comboBox_Category.TextChanged += new System.EventHandler(this.comboBox_Category_TextChanged);
+            comboBox_Category.Font = new Font("Bahnschrift Condensed", 13F, FontStyle.Regular, GraphicsUnit.Point);
+            comboBox_Category.FormattingEnabled = true;
+            comboBox_Category.Items.AddRange(new object[] { "Processor", "Motherboard", "CPU Cooler", "Case", "Graphic Card", "RAM", "Storage", "Case Cooler", "Power Supply", "All" });
+            comboBox_Category.Location = new Point(255, 39);
+            comboBox_Category.Name = "comboBox_Category";
+            comboBox_Category.Size = new Size(152, 29);
+            comboBox_Category.TabIndex = 7;
+            comboBox_Category.TextChanged += comboBox_Category_TextChanged;
             // 
             // richTextBox_Detail
             // 
-            this.richTextBox_Detail.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTextBox_Detail.Font = new System.Drawing.Font("Bahnschrift", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.richTextBox_Detail.Location = new System.Drawing.Point(604, 265);
-            this.richTextBox_Detail.Name = "richTextBox_Detail";
-            this.richTextBox_Detail.Size = new System.Drawing.Size(382, 233);
-            this.richTextBox_Detail.TabIndex = 15;
-            this.richTextBox_Detail.Text = "";
+            richTextBox_Detail.BorderStyle = BorderStyle.None;
+            richTextBox_Detail.Font = new Font("Bahnschrift", 12.75F, FontStyle.Regular, GraphicsUnit.Point);
+            richTextBox_Detail.Location = new Point(604, 265);
+            richTextBox_Detail.Name = "richTextBox_Detail";
+            richTextBox_Detail.Size = new Size(382, 233);
+            richTextBox_Detail.TabIndex = 15;
+            richTextBox_Detail.Text = "";
             // 
             // button_openAmazon
             // 
-            this.button_openAmazon.BackColor = System.Drawing.Color.Transparent;
-            this.button_openAmazon.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button_openAmazon.BackgroundImage")));
-            this.button_openAmazon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button_openAmazon.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button_openAmazon.ForeColor = System.Drawing.SystemColors.Window;
-            this.button_openAmazon.Location = new System.Drawing.Point(722, 525);
-            this.button_openAmazon.Name = "button_openAmazon";
-            this.button_openAmazon.Size = new System.Drawing.Size(148, 49);
-            this.button_openAmazon.TabIndex = 16;
-            this.toolTip.SetToolTip(this.button_openAmazon, "View on Amazon");
-            this.button_openAmazon.UseVisualStyleBackColor = false;
-            this.button_openAmazon.Click += new System.EventHandler(this.button1_Click);
+            button_openAmazon.BackColor = Color.Transparent;
+            button_openAmazon.BackgroundImage = (Image)resources.GetObject("button_openAmazon.BackgroundImage");
+            button_openAmazon.BackgroundImageLayout = ImageLayout.Stretch;
+            button_openAmazon.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            button_openAmazon.ForeColor = SystemColors.Window;
+            button_openAmazon.Location = new Point(722, 525);
+            button_openAmazon.Name = "button_openAmazon";
+            button_openAmazon.Size = new Size(148, 49);
+            button_openAmazon.TabIndex = 16;
+            toolTip.SetToolTip(button_openAmazon, "View on Amazon");
+            button_openAmazon.UseVisualStyleBackColor = false;
+            button_openAmazon.Click += button1_Click;
             // 
             // button1
             // 
-            this.button1.Font = new System.Drawing.Font("Bahnschrift", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button1.Location = new System.Drawing.Point(658, 12);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(135, 52);
-            this.button1.TabIndex = 17;
-            this.button1.Text = "Auto Builder";
-            this.toolTip.SetToolTip(this.button1, "Auto Builder is a wizard help user to build a PC Case in a easier way.");
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            button1.Font = new Font("Bahnschrift", 12.75F, FontStyle.Regular, GraphicsUnit.Point);
+            button1.Location = new Point(658, 12);
+            button1.Name = "button1";
+            button1.Size = new Size(135, 52);
+            button1.TabIndex = 17;
+            button1.Text = "Auto Builder";
+            toolTip.SetToolTip(button1, "Auto Builder is a wizard help user to build a PC Case in a easier way.");
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click_1;
             // 
             // button_rebuild
             // 
-            this.button_rebuild.BackColor = System.Drawing.SystemColors.Window;
-            this.button_rebuild.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button_rebuild.BackgroundImage")));
-            this.button_rebuild.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button_rebuild.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.button_rebuild.FlatAppearance.BorderSize = 0;
-            this.button_rebuild.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.Control;
-            this.button_rebuild.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_rebuild.Location = new System.Drawing.Point(864, 263);
-            this.button_rebuild.Name = "button_rebuild";
-            this.button_rebuild.Size = new System.Drawing.Size(20, 20);
-            this.button_rebuild.TabIndex = 49;
-            this.toolTip.SetToolTip(this.button_rebuild, "Rebuild");
-            this.button_rebuild.UseVisualStyleBackColor = false;
-            this.button_rebuild.Click += new System.EventHandler(this.button_rebuild_Click);
+            button_rebuild.BackColor = SystemColors.Window;
+            button_rebuild.BackgroundImage = (Image)resources.GetObject("button_rebuild.BackgroundImage");
+            button_rebuild.BackgroundImageLayout = ImageLayout.Stretch;
+            button_rebuild.FlatAppearance.BorderColor = Color.Black;
+            button_rebuild.FlatAppearance.BorderSize = 0;
+            button_rebuild.FlatAppearance.MouseOverBackColor = SystemColors.Control;
+            button_rebuild.FlatStyle = FlatStyle.Flat;
+            button_rebuild.Location = new Point(864, 263);
+            button_rebuild.Name = "button_rebuild";
+            button_rebuild.Size = new Size(20, 20);
+            button_rebuild.TabIndex = 49;
+            toolTip.SetToolTip(button_rebuild, "Rebuild");
+            button_rebuild.UseVisualStyleBackColor = false;
+            button_rebuild.Click += button_rebuild_Click;
             // 
             // button_save
             // 
-            this.button_save.BackColor = System.Drawing.SystemColors.Window;
-            this.button_save.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button_save.BackgroundImage")));
-            this.button_save.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button_save.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.button_save.FlatAppearance.BorderSize = 0;
-            this.button_save.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.Control;
-            this.button_save.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_save.Location = new System.Drawing.Point(828, 264);
-            this.button_save.Name = "button_save";
-            this.button_save.Size = new System.Drawing.Size(20, 20);
-            this.button_save.TabIndex = 43;
-            this.toolTip.SetToolTip(this.button_save, "Save");
-            this.button_save.UseVisualStyleBackColor = false;
-            this.button_save.Click += new System.EventHandler(this.button_save_Click);
+            button_save.BackColor = SystemColors.Window;
+            button_save.BackgroundImage = (Image)resources.GetObject("button_save.BackgroundImage");
+            button_save.BackgroundImageLayout = ImageLayout.Stretch;
+            button_save.FlatAppearance.BorderColor = Color.Black;
+            button_save.FlatAppearance.BorderSize = 0;
+            button_save.FlatAppearance.MouseOverBackColor = SystemColors.Control;
+            button_save.FlatStyle = FlatStyle.Flat;
+            button_save.Location = new Point(828, 264);
+            button_save.Name = "button_save";
+            button_save.Size = new Size(20, 20);
+            button_save.TabIndex = 43;
+            toolTip.SetToolTip(button_save, "Save");
+            button_save.UseVisualStyleBackColor = false;
+            button_save.Click += button_save_Click;
             // 
             // button_like
             // 
-            this.button_like.BackColor = System.Drawing.SystemColors.Window;
-            this.button_like.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button_like.BackgroundImage")));
-            this.button_like.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button_like.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.button_like.FlatAppearance.BorderSize = 0;
-            this.button_like.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.Control;
-            this.button_like.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_like.Location = new System.Drawing.Point(791, 263);
-            this.button_like.Name = "button_like";
-            this.button_like.Size = new System.Drawing.Size(20, 20);
-            this.button_like.TabIndex = 33;
-            this.toolTip.SetToolTip(this.button_like, "Like");
-            this.button_like.UseVisualStyleBackColor = false;
-            this.button_like.Click += new System.EventHandler(this.button_like_Click);
+            button_like.BackColor = SystemColors.Window;
+            button_like.BackgroundImage = (Image)resources.GetObject("button_like.BackgroundImage");
+            button_like.BackgroundImageLayout = ImageLayout.Stretch;
+            button_like.FlatAppearance.BorderColor = Color.Black;
+            button_like.FlatAppearance.BorderSize = 0;
+            button_like.FlatAppearance.MouseOverBackColor = SystemColors.Control;
+            button_like.FlatStyle = FlatStyle.Flat;
+            button_like.Location = new Point(791, 263);
+            button_like.Name = "button_like";
+            button_like.Size = new Size(20, 20);
+            button_like.TabIndex = 33;
+            toolTip.SetToolTip(button_like, "Like");
+            button_like.UseVisualStyleBackColor = false;
+            button_like.Click += button_like_Click;
             // 
             // button_reload
             // 
-            this.button_reload.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button_reload.BackgroundImage")));
-            this.button_reload.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button_reload.Font = new System.Drawing.Font("Bahnschrift", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button_reload.Location = new System.Drawing.Point(728, 92);
-            this.button_reload.Name = "button_reload";
-            this.button_reload.Size = new System.Drawing.Size(52, 52);
-            this.button_reload.TabIndex = 21;
-            this.toolTip.SetToolTip(this.button_reload, "Reload");
-            this.button_reload.UseVisualStyleBackColor = true;
-            this.button_reload.Click += new System.EventHandler(this.button_reload_Click);
+            button_reload.BackgroundImage = (Image)resources.GetObject("button_reload.BackgroundImage");
+            button_reload.BackgroundImageLayout = ImageLayout.Stretch;
+            button_reload.Font = new Font("Bahnschrift", 12.75F, FontStyle.Regular, GraphicsUnit.Point);
+            button_reload.Location = new Point(728, 92);
+            button_reload.Name = "button_reload";
+            button_reload.Size = new Size(52, 52);
+            button_reload.TabIndex = 21;
+            toolTip.SetToolTip(button_reload, "Reload");
+            button_reload.UseVisualStyleBackColor = true;
+            button_reload.Click += button_reload_Click;
+            // 
+            // button_edit
+            // 
+            button_edit.BackgroundImage = (Image)resources.GetObject("button_edit.BackgroundImage");
+            button_edit.BackgroundImageLayout = ImageLayout.Stretch;
+            button_edit.Font = new Font("Bahnschrift", 12.75F, FontStyle.Regular, GraphicsUnit.Point);
+            button_edit.Location = new Point(274, 97);
+            button_edit.Name = "button_edit";
+            button_edit.Size = new Size(52, 52);
+            button_edit.TabIndex = 22;
+            toolTip.SetToolTip(button_edit, "Reload");
+            button_edit.UseVisualStyleBackColor = true;
+            button_edit.Click += button_edit_Click;
+            // 
+            // button_login
+            // 
+            button_login.BackgroundImage = (Image)resources.GetObject("button_login.BackgroundImage");
+            button_login.BackgroundImageLayout = ImageLayout.Stretch;
+            button_login.Font = new Font("Bahnschrift", 12.75F, FontStyle.Regular, GraphicsUnit.Point);
+            button_login.Location = new Point(332, 97);
+            button_login.Name = "button_login";
+            button_login.Size = new Size(52, 52);
+            button_login.TabIndex = 23;
+            toolTip.SetToolTip(button_login, "Reload");
+            button_login.UseVisualStyleBackColor = true;
+            button_login.Click += button2_Click;
             // 
             // tabControl_main
             // 
-            this.tabControl_main.Controls.Add(this.tabPage_products);
-            this.tabControl_main.Controls.Add(this.tabPage_forum);
-            this.tabControl_main.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.tabControl_main.ItemSize = new System.Drawing.Size(0, 1);
-            this.tabControl_main.Location = new System.Drawing.Point(-3, 150);
-            this.tabControl_main.Name = "tabControl_main";
-            this.tabControl_main.SelectedIndex = 0;
-            this.tabControl_main.Size = new System.Drawing.Size(1064, 630);
-            this.tabControl_main.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
-            this.tabControl_main.TabIndex = 18;
+            tabControl_main.Controls.Add(tabPage_products);
+            tabControl_main.Controls.Add(tabPage_forum);
+            tabControl_main.Font = new Font("Bahnschrift", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            tabControl_main.ItemSize = new Size(0, 1);
+            tabControl_main.Location = new Point(-3, 150);
+            tabControl_main.Name = "tabControl_main";
+            tabControl_main.SelectedIndex = 0;
+            tabControl_main.Size = new Size(1064, 630);
+            tabControl_main.SizeMode = TabSizeMode.Fixed;
+            tabControl_main.TabIndex = 18;
             // 
             // tabPage_products
             // 
-            this.tabPage_products.BackColor = System.Drawing.Color.White;
-            this.tabPage_products.Controls.Add(this.richTextBox_Detail);
-            this.tabPage_products.Controls.Add(this.pictureBox_Illu);
-            this.tabPage_products.Controls.Add(this.label4);
-            this.tabPage_products.Controls.Add(this.listView_Main);
-            this.tabPage_products.Controls.Add(this.label3);
-            this.tabPage_products.Controls.Add(this.button_openAmazon);
-            this.tabPage_products.Controls.Add(this.textBox_Search);
-            this.tabPage_products.Controls.Add(this.comboBox_Category);
-            this.tabPage_products.Location = new System.Drawing.Point(4, 5);
-            this.tabPage_products.Name = "tabPage_products";
-            this.tabPage_products.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage_products.Size = new System.Drawing.Size(1056, 621);
-            this.tabPage_products.TabIndex = 0;
-            this.tabPage_products.Text = "Products";
+            tabPage_products.BackColor = Color.White;
+            tabPage_products.Controls.Add(richTextBox_Detail);
+            tabPage_products.Controls.Add(pictureBox_Illu);
+            tabPage_products.Controls.Add(label4);
+            tabPage_products.Controls.Add(listView_Main);
+            tabPage_products.Controls.Add(label3);
+            tabPage_products.Controls.Add(button_openAmazon);
+            tabPage_products.Controls.Add(textBox_Search);
+            tabPage_products.Controls.Add(comboBox_Category);
+            tabPage_products.Location = new Point(4, 5);
+            tabPage_products.Name = "tabPage_products";
+            tabPage_products.Padding = new Padding(3);
+            tabPage_products.Size = new Size(1056, 621);
+            tabPage_products.TabIndex = 0;
+            tabPage_products.Text = "Products";
             // 
             // tabPage_forum
             // 
-            this.tabPage_forum.BackColor = System.Drawing.Color.White;
-            this.tabPage_forum.Controls.Add(this.tabControl1);
-            this.tabPage_forum.Controls.Add(this.label_creator);
-            this.tabPage_forum.Controls.Add(this.label_buildName);
-            this.tabPage_forum.Controls.Add(this.label7);
-            this.tabPage_forum.Controls.Add(this.label5);
-            this.tabPage_forum.Controls.Add(this.button_send);
-            this.tabPage_forum.Controls.Add(this.textBox_comments);
-            this.tabPage_forum.Controls.Add(this.textBox_sender);
-            this.tabPage_forum.Controls.Add(this.label_cpuCooler);
-            this.tabPage_forum.Controls.Add(this.label21);
-            this.tabPage_forum.Controls.Add(this.label_psu);
-            this.tabPage_forum.Controls.Add(this.label19);
-            this.tabPage_forum.Controls.Add(this.label_storage);
-            this.tabPage_forum.Controls.Add(this.label17);
-            this.tabPage_forum.Controls.Add(this.label_graphicCard);
-            this.tabPage_forum.Controls.Add(this.label15);
-            this.tabPage_forum.Controls.Add(this.label_case);
-            this.tabPage_forum.Controls.Add(this.label13);
-            this.tabPage_forum.Controls.Add(this.label_ram);
-            this.tabPage_forum.Controls.Add(this.label10);
-            this.tabPage_forum.Controls.Add(this.label_motherboard);
-            this.tabPage_forum.Controls.Add(this.label8);
-            this.tabPage_forum.Controls.Add(this.label_processor);
-            this.tabPage_forum.Controls.Add(this.label6);
-            this.tabPage_forum.Controls.Add(this.pictureBox_psu);
-            this.tabPage_forum.Controls.Add(this.pictureBox_storage);
-            this.tabPage_forum.Controls.Add(this.pictureBox_caseCooler);
-            this.tabPage_forum.Controls.Add(this.pictureBox_cpuCooler);
-            this.tabPage_forum.Controls.Add(this.pictureBox_graphicCard);
-            this.tabPage_forum.Controls.Add(this.pictureBox_case);
-            this.tabPage_forum.Controls.Add(this.pictureBox_ram);
-            this.tabPage_forum.Controls.Add(this.pictureBox_motherboard);
-            this.tabPage_forum.Controls.Add(this.label_caseCooler);
-            this.tabPage_forum.Controls.Add(this.label12);
-            this.tabPage_forum.Controls.Add(this.button_rebuild);
-            this.tabPage_forum.Controls.Add(this.button_save);
-            this.tabPage_forum.Controls.Add(this.textBox_like);
-            this.tabPage_forum.Controls.Add(this.label1);
-            this.tabPage_forum.Controls.Add(this.button_like);
-            this.tabPage_forum.Controls.Add(this.pictureBox_processor);
-            this.tabPage_forum.Controls.Add(this.listView_buildList);
-            this.tabPage_forum.Location = new System.Drawing.Point(4, 5);
-            this.tabPage_forum.Name = "tabPage_forum";
-            this.tabPage_forum.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage_forum.Size = new System.Drawing.Size(1056, 621);
-            this.tabPage_forum.TabIndex = 1;
-            this.tabPage_forum.Text = "Forum";
+            tabPage_forum.BackColor = Color.White;
+            tabPage_forum.Controls.Add(tabControl1);
+            tabPage_forum.Controls.Add(label_creator);
+            tabPage_forum.Controls.Add(label_buildName);
+            tabPage_forum.Controls.Add(label7);
+            tabPage_forum.Controls.Add(label5);
+            tabPage_forum.Controls.Add(button_send);
+            tabPage_forum.Controls.Add(textBox_comments);
+            tabPage_forum.Controls.Add(textBox_sender);
+            tabPage_forum.Controls.Add(label_cpuCooler);
+            tabPage_forum.Controls.Add(label21);
+            tabPage_forum.Controls.Add(label_psu);
+            tabPage_forum.Controls.Add(label19);
+            tabPage_forum.Controls.Add(label_storage);
+            tabPage_forum.Controls.Add(label17);
+            tabPage_forum.Controls.Add(label_graphicCard);
+            tabPage_forum.Controls.Add(label15);
+            tabPage_forum.Controls.Add(label_case);
+            tabPage_forum.Controls.Add(label13);
+            tabPage_forum.Controls.Add(label_ram);
+            tabPage_forum.Controls.Add(label10);
+            tabPage_forum.Controls.Add(label_motherboard);
+            tabPage_forum.Controls.Add(label8);
+            tabPage_forum.Controls.Add(label_processor);
+            tabPage_forum.Controls.Add(label6);
+            tabPage_forum.Controls.Add(pictureBox_psu);
+            tabPage_forum.Controls.Add(pictureBox_storage);
+            tabPage_forum.Controls.Add(pictureBox_caseCooler);
+            tabPage_forum.Controls.Add(pictureBox_cpuCooler);
+            tabPage_forum.Controls.Add(pictureBox_graphicCard);
+            tabPage_forum.Controls.Add(pictureBox_case);
+            tabPage_forum.Controls.Add(pictureBox_ram);
+            tabPage_forum.Controls.Add(pictureBox_motherboard);
+            tabPage_forum.Controls.Add(label_caseCooler);
+            tabPage_forum.Controls.Add(label12);
+            tabPage_forum.Controls.Add(button_rebuild);
+            tabPage_forum.Controls.Add(button_save);
+            tabPage_forum.Controls.Add(textBox_like);
+            tabPage_forum.Controls.Add(label1);
+            tabPage_forum.Controls.Add(button_like);
+            tabPage_forum.Controls.Add(pictureBox_processor);
+            tabPage_forum.Controls.Add(listView_buildList);
+            tabPage_forum.Location = new Point(4, 5);
+            tabPage_forum.Name = "tabPage_forum";
+            tabPage_forum.Padding = new Padding(3);
+            tabPage_forum.Size = new Size(1056, 621);
+            tabPage_forum.TabIndex = 1;
+            tabPage_forum.Text = "Forum";
             // 
             // tabControl1
             // 
-            this.tabControl1.Controls.Add(this.tabPage_decription);
-            this.tabControl1.Controls.Add(this.tabPage_comment);
-            this.tabControl1.Location = new System.Drawing.Point(18, 302);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1016, 238);
-            this.tabControl1.TabIndex = 88;
+            tabControl1.Controls.Add(tabPage_decription);
+            tabControl1.Controls.Add(tabPage_comment);
+            tabControl1.Location = new Point(18, 302);
+            tabControl1.Name = "tabControl1";
+            tabControl1.SelectedIndex = 0;
+            tabControl1.Size = new Size(1016, 238);
+            tabControl1.TabIndex = 88;
             // 
             // tabPage_decription
             // 
-            this.tabPage_decription.Controls.Add(this.richTextBox_decription);
-            this.tabPage_decription.Location = new System.Drawing.Point(4, 28);
-            this.tabPage_decription.Name = "tabPage_decription";
-            this.tabPage_decription.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage_decription.Size = new System.Drawing.Size(1008, 206);
-            this.tabPage_decription.TabIndex = 0;
-            this.tabPage_decription.Text = "Decription";
-            this.tabPage_decription.UseVisualStyleBackColor = true;
+            tabPage_decription.Controls.Add(richTextBox_decription);
+            tabPage_decription.Location = new Point(4, 28);
+            tabPage_decription.Name = "tabPage_decription";
+            tabPage_decription.Padding = new Padding(3);
+            tabPage_decription.Size = new Size(1008, 206);
+            tabPage_decription.TabIndex = 0;
+            tabPage_decription.Text = "Decription";
+            tabPage_decription.UseVisualStyleBackColor = true;
             // 
             // richTextBox_decription
             // 
-            this.richTextBox_decription.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTextBox_decription.Location = new System.Drawing.Point(6, 6);
-            this.richTextBox_decription.Name = "richTextBox_decription";
-            this.richTextBox_decription.Size = new System.Drawing.Size(996, 194);
-            this.richTextBox_decription.TabIndex = 80;
-            this.richTextBox_decription.Text = "";
+            richTextBox_decription.BorderStyle = BorderStyle.None;
+            richTextBox_decription.Location = new Point(6, 6);
+            richTextBox_decription.Name = "richTextBox_decription";
+            richTextBox_decription.Size = new Size(996, 194);
+            richTextBox_decription.TabIndex = 80;
+            richTextBox_decription.Text = "";
             // 
             // tabPage_comment
             // 
-            this.tabPage_comment.BackColor = System.Drawing.Color.White;
-            this.tabPage_comment.Controls.Add(this.richTextBox_comments);
-            this.tabPage_comment.Location = new System.Drawing.Point(4, 24);
-            this.tabPage_comment.Name = "tabPage_comment";
-            this.tabPage_comment.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage_comment.Size = new System.Drawing.Size(1008, 210);
-            this.tabPage_comment.TabIndex = 1;
-            this.tabPage_comment.Text = "Comments";
+            tabPage_comment.BackColor = Color.White;
+            tabPage_comment.Controls.Add(richTextBox_comments);
+            tabPage_comment.Location = new Point(4, 24);
+            tabPage_comment.Name = "tabPage_comment";
+            tabPage_comment.Padding = new Padding(3);
+            tabPage_comment.Size = new Size(1008, 210);
+            tabPage_comment.TabIndex = 1;
+            tabPage_comment.Text = "Comments";
             // 
             // richTextBox_comments
             // 
-            this.richTextBox_comments.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTextBox_comments.Location = new System.Drawing.Point(21, 6);
-            this.richTextBox_comments.Name = "richTextBox_comments";
-            this.richTextBox_comments.Size = new System.Drawing.Size(981, 194);
-            this.richTextBox_comments.TabIndex = 79;
-            this.richTextBox_comments.Text = "";
+            richTextBox_comments.BorderStyle = BorderStyle.None;
+            richTextBox_comments.Location = new Point(21, 6);
+            richTextBox_comments.Name = "richTextBox_comments";
+            richTextBox_comments.Size = new Size(981, 194);
+            richTextBox_comments.TabIndex = 79;
+            richTextBox_comments.Text = "";
             // 
             // label_creator
             // 
-            this.label_creator.AutoSize = true;
-            this.label_creator.Font = new System.Drawing.Font("Bahnschrift SemiBold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label_creator.Location = new System.Drawing.Point(953, 19);
-            this.label_creator.Name = "label_creator";
-            this.label_creator.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label_creator.Size = new System.Drawing.Size(0, 18);
-            this.label_creator.TabIndex = 87;
-            this.label_creator.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            label_creator.AutoSize = true;
+            label_creator.Font = new Font("Bahnschrift SemiBold", 11F, FontStyle.Bold, GraphicsUnit.Point);
+            label_creator.Location = new Point(953, 19);
+            label_creator.Name = "label_creator";
+            label_creator.RightToLeft = RightToLeft.Yes;
+            label_creator.Size = new Size(0, 18);
+            label_creator.TabIndex = 87;
+            label_creator.TextAlign = ContentAlignment.TopRight;
             // 
             // label_buildName
             // 
-            this.label_buildName.AutoSize = true;
-            this.label_buildName.Font = new System.Drawing.Font("Bahnschrift SemiBold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label_buildName.Location = new System.Drawing.Point(596, 19);
-            this.label_buildName.Name = "label_buildName";
-            this.label_buildName.Size = new System.Drawing.Size(0, 18);
-            this.label_buildName.TabIndex = 85;
+            label_buildName.AutoSize = true;
+            label_buildName.Font = new Font("Bahnschrift SemiBold", 11F, FontStyle.Bold, GraphicsUnit.Point);
+            label_buildName.Location = new Point(596, 19);
+            label_buildName.Name = "label_buildName";
+            label_buildName.Size = new Size(0, 18);
+            label_buildName.TabIndex = 85;
             // 
             // label7
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(135, 543);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(83, 19);
-            this.label7.TabIndex = 84;
-            this.label7.Text = "Comment:";
+            label7.AutoSize = true;
+            label7.Location = new Point(135, 543);
+            label7.Name = "label7";
+            label7.Size = new Size(83, 19);
+            label7.TabIndex = 84;
+            label7.Text = "Comment:";
             // 
             // label5
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(29, 543);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(56, 19);
-            this.label5.TabIndex = 83;
-            this.label5.Text = "Name:";
+            label5.AutoSize = true;
+            label5.Location = new Point(29, 543);
+            label5.Name = "label5";
+            label5.Size = new Size(56, 19);
+            label5.TabIndex = 83;
+            label5.Text = "Name:";
             // 
             // button_send
             // 
-            this.button_send.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button_send.Location = new System.Drawing.Point(953, 574);
-            this.button_send.Name = "button_send";
-            this.button_send.Size = new System.Drawing.Size(75, 27);
-            this.button_send.TabIndex = 82;
-            this.button_send.Text = "Send";
-            this.button_send.UseVisualStyleBackColor = true;
-            this.button_send.Click += new System.EventHandler(this.button_send_Click);
+            button_send.Font = new Font("Bahnschrift Condensed", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            button_send.Location = new Point(953, 574);
+            button_send.Name = "button_send";
+            button_send.Size = new Size(75, 27);
+            button_send.TabIndex = 82;
+            button_send.Text = "Send";
+            button_send.UseVisualStyleBackColor = true;
+            button_send.Click += button_send_Click;
             // 
             // textBox_comments
             // 
-            this.textBox_comments.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_comments.Location = new System.Drawing.Point(135, 574);
-            this.textBox_comments.Name = "textBox_comments";
-            this.textBox_comments.Size = new System.Drawing.Size(812, 27);
-            this.textBox_comments.TabIndex = 81;
+            textBox_comments.BorderStyle = BorderStyle.FixedSingle;
+            textBox_comments.Location = new Point(135, 574);
+            textBox_comments.Name = "textBox_comments";
+            textBox_comments.Size = new Size(812, 27);
+            textBox_comments.TabIndex = 81;
             // 
             // textBox_sender
             // 
-            this.textBox_sender.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_sender.Location = new System.Drawing.Point(29, 574);
-            this.textBox_sender.Name = "textBox_sender";
-            this.textBox_sender.Size = new System.Drawing.Size(100, 27);
-            this.textBox_sender.TabIndex = 80;
+            textBox_sender.BorderStyle = BorderStyle.FixedSingle;
+            textBox_sender.Location = new Point(29, 574);
+            textBox_sender.Name = "textBox_sender";
+            textBox_sender.Size = new Size(100, 27);
+            textBox_sender.TabIndex = 80;
             // 
             // label_cpuCooler
             // 
-            this.label_cpuCooler.AutoSize = true;
-            this.label_cpuCooler.Font = new System.Drawing.Font("Bahnschrift", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label_cpuCooler.Location = new System.Drawing.Point(839, 234);
-            this.label_cpuCooler.Name = "label_cpuCooler";
-            this.label_cpuCooler.Size = new System.Drawing.Size(0, 18);
-            this.label_cpuCooler.TabIndex = 78;
+            label_cpuCooler.AutoSize = true;
+            label_cpuCooler.Font = new Font("Bahnschrift", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label_cpuCooler.Location = new Point(839, 234);
+            label_cpuCooler.Name = "label_cpuCooler";
+            label_cpuCooler.Size = new Size(0, 18);
+            label_cpuCooler.TabIndex = 78;
             // 
             // label21
             // 
-            this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("Bahnschrift", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label21.Location = new System.Drawing.Point(739, 234);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(85, 18);
-            this.label21.TabIndex = 77;
-            this.label21.Text = "CPU Cooler:";
+            label21.AutoSize = true;
+            label21.Font = new Font("Bahnschrift", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label21.Location = new Point(739, 234);
+            label21.Name = "label21";
+            label21.Size = new Size(85, 18);
+            label21.TabIndex = 77;
+            label21.Text = "CPU Cooler:";
             // 
             // label_psu
             // 
-            this.label_psu.AutoSize = true;
-            this.label_psu.Font = new System.Drawing.Font("Bahnschrift", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label_psu.Location = new System.Drawing.Point(839, 188);
-            this.label_psu.Name = "label_psu";
-            this.label_psu.Size = new System.Drawing.Size(0, 18);
-            this.label_psu.TabIndex = 76;
+            label_psu.AutoSize = true;
+            label_psu.Font = new Font("Bahnschrift", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label_psu.Location = new Point(839, 188);
+            label_psu.Name = "label_psu";
+            label_psu.Size = new Size(0, 18);
+            label_psu.TabIndex = 76;
             // 
             // label19
             // 
-            this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Bahnschrift", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label19.Location = new System.Drawing.Point(739, 188);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(100, 18);
-            this.label19.TabIndex = 75;
-            this.label19.Text = "Power Supply:";
+            label19.AutoSize = true;
+            label19.Font = new Font("Bahnschrift", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label19.Location = new Point(739, 188);
+            label19.Name = "label19";
+            label19.Size = new Size(100, 18);
+            label19.TabIndex = 75;
+            label19.Text = "Power Supply:";
             // 
             // label_storage
             // 
-            this.label_storage.AutoSize = true;
-            this.label_storage.Font = new System.Drawing.Font("Bahnschrift", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label_storage.Location = new System.Drawing.Point(839, 165);
-            this.label_storage.Name = "label_storage";
-            this.label_storage.Size = new System.Drawing.Size(0, 18);
-            this.label_storage.TabIndex = 74;
+            label_storage.AutoSize = true;
+            label_storage.Font = new Font("Bahnschrift", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label_storage.Location = new Point(839, 165);
+            label_storage.Name = "label_storage";
+            label_storage.Size = new Size(0, 18);
+            label_storage.TabIndex = 74;
             // 
             // label17
             // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Bahnschrift", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label17.Location = new System.Drawing.Point(739, 165);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(63, 18);
-            this.label17.TabIndex = 73;
-            this.label17.Text = "Storage:";
+            label17.AutoSize = true;
+            label17.Font = new Font("Bahnschrift", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label17.Location = new Point(739, 165);
+            label17.Name = "label17";
+            label17.Size = new Size(63, 18);
+            label17.TabIndex = 73;
+            label17.Text = "Storage:";
             // 
             // label_graphicCard
             // 
-            this.label_graphicCard.AutoSize = true;
-            this.label_graphicCard.Font = new System.Drawing.Font("Bahnschrift", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label_graphicCard.Location = new System.Drawing.Point(839, 142);
-            this.label_graphicCard.Name = "label_graphicCard";
-            this.label_graphicCard.Size = new System.Drawing.Size(0, 18);
-            this.label_graphicCard.TabIndex = 72;
+            label_graphicCard.AutoSize = true;
+            label_graphicCard.Font = new Font("Bahnschrift", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label_graphicCard.Location = new Point(839, 142);
+            label_graphicCard.Name = "label_graphicCard";
+            label_graphicCard.Size = new Size(0, 18);
+            label_graphicCard.TabIndex = 72;
             // 
             // label15
             // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Bahnschrift", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label15.Location = new System.Drawing.Point(739, 142);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(97, 18);
-            this.label15.TabIndex = 71;
-            this.label15.Text = "Graphic Card:";
+            label15.AutoSize = true;
+            label15.Font = new Font("Bahnschrift", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label15.Location = new Point(739, 142);
+            label15.Name = "label15";
+            label15.Size = new Size(97, 18);
+            label15.TabIndex = 71;
+            label15.Text = "Graphic Card:";
             // 
             // label_case
             // 
-            this.label_case.AutoSize = true;
-            this.label_case.Font = new System.Drawing.Font("Bahnschrift", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label_case.Location = new System.Drawing.Point(839, 119);
-            this.label_case.Name = "label_case";
-            this.label_case.Size = new System.Drawing.Size(0, 18);
-            this.label_case.TabIndex = 70;
+            label_case.AutoSize = true;
+            label_case.Font = new Font("Bahnschrift", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label_case.Location = new Point(839, 119);
+            label_case.Name = "label_case";
+            label_case.Size = new Size(0, 18);
+            label_case.TabIndex = 70;
             // 
             // label13
             // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Bahnschrift", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label13.Location = new System.Drawing.Point(739, 119);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(44, 18);
-            this.label13.TabIndex = 69;
-            this.label13.Text = "Case:";
+            label13.AutoSize = true;
+            label13.Font = new Font("Bahnschrift", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label13.Location = new Point(739, 119);
+            label13.Name = "label13";
+            label13.Size = new Size(44, 18);
+            label13.TabIndex = 69;
+            label13.Text = "Case:";
             // 
             // label_ram
             // 
-            this.label_ram.AutoSize = true;
-            this.label_ram.Font = new System.Drawing.Font("Bahnschrift", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label_ram.Location = new System.Drawing.Point(839, 96);
-            this.label_ram.Name = "label_ram";
-            this.label_ram.Size = new System.Drawing.Size(0, 18);
-            this.label_ram.TabIndex = 68;
+            label_ram.AutoSize = true;
+            label_ram.Font = new Font("Bahnschrift", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label_ram.Location = new Point(839, 96);
+            label_ram.Name = "label_ram";
+            label_ram.Size = new Size(0, 18);
+            label_ram.TabIndex = 68;
             // 
             // label10
             // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Bahnschrift", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label10.Location = new System.Drawing.Point(739, 96);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(64, 18);
-            this.label10.TabIndex = 67;
-            this.label10.Text = "Memory:";
+            label10.AutoSize = true;
+            label10.Font = new Font("Bahnschrift", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label10.Location = new Point(739, 96);
+            label10.Name = "label10";
+            label10.Size = new Size(64, 18);
+            label10.TabIndex = 67;
+            label10.Text = "Memory:";
             // 
             // label_motherboard
             // 
-            this.label_motherboard.AutoSize = true;
-            this.label_motherboard.Font = new System.Drawing.Font("Bahnschrift", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label_motherboard.Location = new System.Drawing.Point(839, 73);
-            this.label_motherboard.Name = "label_motherboard";
-            this.label_motherboard.Size = new System.Drawing.Size(0, 18);
-            this.label_motherboard.TabIndex = 66;
+            label_motherboard.AutoSize = true;
+            label_motherboard.Font = new Font("Bahnschrift", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label_motherboard.Location = new Point(839, 73);
+            label_motherboard.Name = "label_motherboard";
+            label_motherboard.Size = new Size(0, 18);
+            label_motherboard.TabIndex = 66;
             // 
             // label8
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Bahnschrift", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label8.Location = new System.Drawing.Point(739, 73);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(96, 18);
-            this.label8.TabIndex = 65;
-            this.label8.Text = "Motherboard:";
+            label8.AutoSize = true;
+            label8.Font = new Font("Bahnschrift", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label8.Location = new Point(739, 73);
+            label8.Name = "label8";
+            label8.Size = new Size(96, 18);
+            label8.TabIndex = 65;
+            label8.Text = "Motherboard:";
             // 
             // label_processor
             // 
-            this.label_processor.AutoSize = true;
-            this.label_processor.Font = new System.Drawing.Font("Bahnschrift", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label_processor.Location = new System.Drawing.Point(839, 50);
-            this.label_processor.Name = "label_processor";
-            this.label_processor.Size = new System.Drawing.Size(0, 18);
-            this.label_processor.TabIndex = 64;
+            label_processor.AutoSize = true;
+            label_processor.Font = new Font("Bahnschrift", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label_processor.Location = new Point(839, 50);
+            label_processor.Name = "label_processor";
+            label_processor.Size = new Size(0, 18);
+            label_processor.TabIndex = 64;
             // 
             // label6
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Bahnschrift", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label6.Location = new System.Drawing.Point(739, 50);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(78, 18);
-            this.label6.TabIndex = 63;
-            this.label6.Text = "Processor:";
+            label6.AutoSize = true;
+            label6.Font = new Font("Bahnschrift", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label6.Location = new Point(739, 50);
+            label6.Name = "label6";
+            label6.Size = new Size(78, 18);
+            label6.TabIndex = 63;
+            label6.Text = "Processor:";
             // 
             // pictureBox_psu
             // 
-            this.pictureBox_psu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox_psu.Location = new System.Drawing.Point(650, 203);
-            this.pictureBox_psu.Name = "pictureBox_psu";
-            this.pictureBox_psu.Size = new System.Drawing.Size(60, 60);
-            this.pictureBox_psu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox_psu.TabIndex = 62;
-            this.pictureBox_psu.TabStop = false;
+            pictureBox_psu.BackgroundImageLayout = ImageLayout.Stretch;
+            pictureBox_psu.Location = new Point(650, 203);
+            pictureBox_psu.Name = "pictureBox_psu";
+            pictureBox_psu.Size = new Size(60, 60);
+            pictureBox_psu.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox_psu.TabIndex = 62;
+            pictureBox_psu.TabStop = false;
             // 
             // pictureBox_storage
             // 
-            this.pictureBox_storage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox_storage.Location = new System.Drawing.Point(590, 203);
-            this.pictureBox_storage.Name = "pictureBox_storage";
-            this.pictureBox_storage.Size = new System.Drawing.Size(60, 60);
-            this.pictureBox_storage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox_storage.TabIndex = 61;
-            this.pictureBox_storage.TabStop = false;
+            pictureBox_storage.BackgroundImageLayout = ImageLayout.Stretch;
+            pictureBox_storage.Location = new Point(590, 203);
+            pictureBox_storage.Name = "pictureBox_storage";
+            pictureBox_storage.Size = new Size(60, 60);
+            pictureBox_storage.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox_storage.TabIndex = 61;
+            pictureBox_storage.TabStop = false;
             // 
             // pictureBox_caseCooler
             // 
-            this.pictureBox_caseCooler.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox_caseCooler.Location = new System.Drawing.Point(530, 203);
-            this.pictureBox_caseCooler.Name = "pictureBox_caseCooler";
-            this.pictureBox_caseCooler.Size = new System.Drawing.Size(60, 60);
-            this.pictureBox_caseCooler.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox_caseCooler.TabIndex = 60;
-            this.pictureBox_caseCooler.TabStop = false;
+            pictureBox_caseCooler.BackgroundImageLayout = ImageLayout.Stretch;
+            pictureBox_caseCooler.Location = new Point(530, 203);
+            pictureBox_caseCooler.Name = "pictureBox_caseCooler";
+            pictureBox_caseCooler.Size = new Size(60, 60);
+            pictureBox_caseCooler.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox_caseCooler.TabIndex = 60;
+            pictureBox_caseCooler.TabStop = false;
             // 
             // pictureBox_cpuCooler
             // 
-            this.pictureBox_cpuCooler.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox_cpuCooler.Location = new System.Drawing.Point(650, 143);
-            this.pictureBox_cpuCooler.Name = "pictureBox_cpuCooler";
-            this.pictureBox_cpuCooler.Size = new System.Drawing.Size(60, 60);
-            this.pictureBox_cpuCooler.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox_cpuCooler.TabIndex = 59;
-            this.pictureBox_cpuCooler.TabStop = false;
+            pictureBox_cpuCooler.BackgroundImageLayout = ImageLayout.Stretch;
+            pictureBox_cpuCooler.Location = new Point(650, 143);
+            pictureBox_cpuCooler.Name = "pictureBox_cpuCooler";
+            pictureBox_cpuCooler.Size = new Size(60, 60);
+            pictureBox_cpuCooler.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox_cpuCooler.TabIndex = 59;
+            pictureBox_cpuCooler.TabStop = false;
             // 
             // pictureBox_graphicCard
             // 
-            this.pictureBox_graphicCard.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox_graphicCard.Location = new System.Drawing.Point(590, 143);
-            this.pictureBox_graphicCard.Name = "pictureBox_graphicCard";
-            this.pictureBox_graphicCard.Size = new System.Drawing.Size(60, 60);
-            this.pictureBox_graphicCard.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox_graphicCard.TabIndex = 58;
-            this.pictureBox_graphicCard.TabStop = false;
+            pictureBox_graphicCard.BackgroundImageLayout = ImageLayout.Stretch;
+            pictureBox_graphicCard.Location = new Point(590, 143);
+            pictureBox_graphicCard.Name = "pictureBox_graphicCard";
+            pictureBox_graphicCard.Size = new Size(60, 60);
+            pictureBox_graphicCard.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox_graphicCard.TabIndex = 58;
+            pictureBox_graphicCard.TabStop = false;
             // 
             // pictureBox_case
             // 
-            this.pictureBox_case.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox_case.Location = new System.Drawing.Point(530, 143);
-            this.pictureBox_case.Name = "pictureBox_case";
-            this.pictureBox_case.Size = new System.Drawing.Size(60, 60);
-            this.pictureBox_case.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox_case.TabIndex = 57;
-            this.pictureBox_case.TabStop = false;
+            pictureBox_case.BackgroundImageLayout = ImageLayout.Stretch;
+            pictureBox_case.Location = new Point(530, 143);
+            pictureBox_case.Name = "pictureBox_case";
+            pictureBox_case.Size = new Size(60, 60);
+            pictureBox_case.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox_case.TabIndex = 57;
+            pictureBox_case.TabStop = false;
             // 
             // pictureBox_ram
             // 
-            this.pictureBox_ram.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox_ram.Location = new System.Drawing.Point(650, 83);
-            this.pictureBox_ram.Name = "pictureBox_ram";
-            this.pictureBox_ram.Size = new System.Drawing.Size(60, 60);
-            this.pictureBox_ram.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox_ram.TabIndex = 56;
-            this.pictureBox_ram.TabStop = false;
+            pictureBox_ram.BackgroundImageLayout = ImageLayout.Stretch;
+            pictureBox_ram.Location = new Point(650, 83);
+            pictureBox_ram.Name = "pictureBox_ram";
+            pictureBox_ram.Size = new Size(60, 60);
+            pictureBox_ram.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox_ram.TabIndex = 56;
+            pictureBox_ram.TabStop = false;
             // 
             // pictureBox_motherboard
             // 
-            this.pictureBox_motherboard.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox_motherboard.Location = new System.Drawing.Point(590, 83);
-            this.pictureBox_motherboard.Name = "pictureBox_motherboard";
-            this.pictureBox_motherboard.Size = new System.Drawing.Size(60, 60);
-            this.pictureBox_motherboard.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox_motherboard.TabIndex = 55;
-            this.pictureBox_motherboard.TabStop = false;
+            pictureBox_motherboard.BackgroundImageLayout = ImageLayout.Stretch;
+            pictureBox_motherboard.Location = new Point(590, 83);
+            pictureBox_motherboard.Name = "pictureBox_motherboard";
+            pictureBox_motherboard.Size = new Size(60, 60);
+            pictureBox_motherboard.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox_motherboard.TabIndex = 55;
+            pictureBox_motherboard.TabStop = false;
             // 
             // label_caseCooler
             // 
-            this.label_caseCooler.AutoSize = true;
-            this.label_caseCooler.Font = new System.Drawing.Font("Bahnschrift", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label_caseCooler.Location = new System.Drawing.Point(839, 211);
-            this.label_caseCooler.Name = "label_caseCooler";
-            this.label_caseCooler.Size = new System.Drawing.Size(0, 18);
-            this.label_caseCooler.TabIndex = 54;
+            label_caseCooler.AutoSize = true;
+            label_caseCooler.Font = new Font("Bahnschrift", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label_caseCooler.Location = new Point(839, 211);
+            label_caseCooler.Name = "label_caseCooler";
+            label_caseCooler.Size = new Size(0, 18);
+            label_caseCooler.TabIndex = 54;
             // 
             // label12
             // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Bahnschrift", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label12.Location = new System.Drawing.Point(739, 211);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(90, 18);
-            this.label12.TabIndex = 53;
-            this.label12.Text = "Case Cooler:";
+            label12.AutoSize = true;
+            label12.Font = new Font("Bahnschrift", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label12.Location = new Point(739, 211);
+            label12.Name = "label12";
+            label12.Size = new Size(90, 18);
+            label12.TabIndex = 53;
+            label12.Text = "Case Cooler:";
             // 
             // textBox_like
             // 
-            this.textBox_like.BackColor = System.Drawing.SystemColors.Window;
-            this.textBox_like.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox_like.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBox_like.Location = new System.Drawing.Point(739, 262);
-            this.textBox_like.Multiline = true;
-            this.textBox_like.Name = "textBox_like";
-            this.textBox_like.ReadOnly = true;
-            this.textBox_like.Size = new System.Drawing.Size(43, 22);
-            this.textBox_like.TabIndex = 42;
-            this.textBox_like.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            textBox_like.BackColor = SystemColors.Window;
+            textBox_like.BorderStyle = BorderStyle.FixedSingle;
+            textBox_like.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            textBox_like.Location = new Point(739, 262);
+            textBox_like.Multiline = true;
+            textBox_like.Name = "textBox_like";
+            textBox_like.ReadOnly = true;
+            textBox_like.Size = new Size(43, 22);
+            textBox_like.TabIndex = 42;
+            textBox_like.TextAlign = HorizontalAlignment.Center;
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Bahnschrift SemiBold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(501, 19);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(89, 18);
-            this.label1.TabIndex = 34;
-            this.label1.Text = "Build Name:";
+            label1.AutoSize = true;
+            label1.Font = new Font("Bahnschrift SemiBold", 11F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.Location = new Point(501, 19);
+            label1.Name = "label1";
+            label1.Size = new Size(89, 18);
+            label1.TabIndex = 34;
+            label1.Text = "Build Name:";
             // 
             // pictureBox_processor
             // 
-            this.pictureBox_processor.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox_processor.Location = new System.Drawing.Point(530, 83);
-            this.pictureBox_processor.Name = "pictureBox_processor";
-            this.pictureBox_processor.Size = new System.Drawing.Size(60, 60);
-            this.pictureBox_processor.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox_processor.TabIndex = 32;
-            this.pictureBox_processor.TabStop = false;
+            pictureBox_processor.BackgroundImageLayout = ImageLayout.Stretch;
+            pictureBox_processor.Location = new Point(530, 83);
+            pictureBox_processor.Name = "pictureBox_processor";
+            pictureBox_processor.Size = new Size(60, 60);
+            pictureBox_processor.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox_processor.TabIndex = 32;
+            pictureBox_processor.TabStop = false;
             // 
             // listView_buildList
             // 
-            this.listView_buildList.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader_name,
-            this.columnHeader_author,
-            this.columnHeader_like,
-            this.ColumnHeader_ID});
-            this.listView_buildList.Font = new System.Drawing.Font("Bahnschrift", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.listView_buildList.FullRowSelect = true;
-            this.listView_buildList.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
-            this.listView_buildList.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem2});
-            this.listView_buildList.Location = new System.Drawing.Point(32, 19);
-            this.listView_buildList.MultiSelect = false;
-            this.listView_buildList.Name = "listView_buildList";
-            this.listView_buildList.Size = new System.Drawing.Size(453, 265);
-            this.listView_buildList.TabIndex = 31;
-            this.listView_buildList.UseCompatibleStateImageBehavior = false;
-            this.listView_buildList.View = System.Windows.Forms.View.Details;
-            this.listView_buildList.SelectedIndexChanged += new System.EventHandler(this.listView_buildList_SelectedIndexChanged);
-            this.listView_buildList.DoubleClick += new System.EventHandler(this.listView_buildList_DoubleClick);
+            listView_buildList.Columns.AddRange(new ColumnHeader[] { columnHeader_name, columnHeader_author, columnHeader_like, ColumnHeader_ID });
+            listView_buildList.Font = new Font("Bahnschrift", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            listView_buildList.FullRowSelect = true;
+            listView_buildList.HeaderStyle = ColumnHeaderStyle.Nonclickable;
+            listView_buildList.Items.AddRange(new ListViewItem[] { listViewItem1 });
+            listView_buildList.Location = new Point(32, 19);
+            listView_buildList.MultiSelect = false;
+            listView_buildList.Name = "listView_buildList";
+            listView_buildList.Size = new Size(453, 265);
+            listView_buildList.TabIndex = 31;
+            listView_buildList.UseCompatibleStateImageBehavior = false;
+            listView_buildList.View = View.Details;
+            listView_buildList.SelectedIndexChanged += listView_buildList_SelectedIndexChanged;
+            listView_buildList.DoubleClick += listView_buildList_DoubleClick;
             // 
             // columnHeader_name
             // 
-            this.columnHeader_name.Text = "ID";
-            this.columnHeader_name.Width = 50;
+            columnHeader_name.Text = "ID";
+            columnHeader_name.Width = 50;
             // 
             // columnHeader_author
             // 
-            this.columnHeader_author.Text = "Build Name";
-            this.columnHeader_author.Width = 200;
+            columnHeader_author.Text = "Build Name";
+            columnHeader_author.Width = 200;
             // 
             // columnHeader_like
             // 
-            this.columnHeader_like.Text = "Creator";
-            this.columnHeader_like.Width = 139;
+            columnHeader_like.Text = "Creator";
+            columnHeader_like.Width = 139;
             // 
             // ColumnHeader_ID
             // 
-            this.ColumnHeader_ID.Text = "Like";
+            ColumnHeader_ID.Text = "Like";
             // 
             // button_products
             // 
-            this.button_products.Font = new System.Drawing.Font("Bahnschrift", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button_products.Location = new System.Drawing.Point(23, 97);
-            this.button_products.Name = "button_products";
-            this.button_products.Size = new System.Drawing.Size(245, 52);
-            this.button_products.TabIndex = 19;
-            this.button_products.Text = "View Available Products";
-            this.button_products.UseVisualStyleBackColor = true;
-            this.button_products.Click += new System.EventHandler(this.button_products_Click);
+            button_products.Font = new Font("Bahnschrift", 12.75F, FontStyle.Regular, GraphicsUnit.Point);
+            button_products.Location = new Point(23, 97);
+            button_products.Name = "button_products";
+            button_products.Size = new Size(245, 52);
+            button_products.TabIndex = 19;
+            button_products.Text = "View Available Products";
+            button_products.UseVisualStyleBackColor = true;
+            button_products.Click += button_products_Click;
             // 
             // button_forum
             // 
-            this.button_forum.Font = new System.Drawing.Font("Bahnschrift", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button_forum.Location = new System.Drawing.Point(790, 92);
-            this.button_forum.Name = "button_forum";
-            this.button_forum.Size = new System.Drawing.Size(245, 52);
-            this.button_forum.TabIndex = 20;
-            this.button_forum.Text = "Go to Forum";
-            this.button_forum.UseVisualStyleBackColor = true;
-            this.button_forum.Click += new System.EventHandler(this.button_forum_Click);
+            button_forum.Font = new Font("Bahnschrift", 12.75F, FontStyle.Regular, GraphicsUnit.Point);
+            button_forum.Location = new Point(790, 92);
+            button_forum.Name = "button_forum";
+            button_forum.Size = new Size(245, 52);
+            button_forum.TabIndex = 20;
+            button_forum.Text = "Go to Forum";
+            button_forum.UseVisualStyleBackColor = true;
+            button_forum.Click += button_forum_Click;
             // 
             // contextMenuStrip1
             // 
-            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.openLiveChatToolStripMenuItem});
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(156, 26);
+            contextMenuStrip1.Items.AddRange(new ToolStripItem[] { openLiveChatToolStripMenuItem });
+            contextMenuStrip1.Name = "contextMenuStrip1";
+            contextMenuStrip1.Size = new Size(156, 26);
             // 
             // openLiveChatToolStripMenuItem
             // 
-            this.openLiveChatToolStripMenuItem.Name = "openLiveChatToolStripMenuItem";
-            this.openLiveChatToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
-            this.openLiveChatToolStripMenuItem.Text = "Open Live Chat";
-            this.openLiveChatToolStripMenuItem.Click += new System.EventHandler(this.openLiveChatToolStripMenuItem_Click);
+            openLiveChatToolStripMenuItem.Name = "openLiveChatToolStripMenuItem";
+            openLiveChatToolStripMenuItem.Size = new Size(155, 22);
+            openLiveChatToolStripMenuItem.Text = "Open Live Chat";
+            openLiveChatToolStripMenuItem.Click += openLiveChatToolStripMenuItem_Click;
+            // 
+            // label_state
+            // 
+            label_state.AutoSize = true;
+            label_state.Font = new Font("Bahnschrift Condensed", 13F, FontStyle.Regular, GraphicsUnit.Point);
+            label_state.Location = new Point(390, 127);
+            label_state.Name = "label_state";
+            label_state.Size = new Size(89, 22);
+            label_state.TabIndex = 17;
+            label_state.Text = "Not logged in";
+            // 
+            // label_user
+            // 
+            label_user.AutoSize = true;
+            label_user.Font = new Font("Bahnschrift Condensed", 13F, FontStyle.Regular, GraphicsUnit.Point);
+            label_user.Location = new Point(390, 105);
+            label_user.Name = "label_user";
+            label_user.Size = new Size(43, 22);
+            label_user.TabIndex = 24;
+            label_user.Text = "Guest";
             // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.Window;
-            this.ClientSize = new System.Drawing.Size(1056, 774);
-            this.ContextMenuStrip = this.contextMenuStrip1;
-            this.Controls.Add(this.button_reload);
-            this.Controls.Add(this.button_forum);
-            this.Controls.Add(this.button_products);
-            this.Controls.Add(this.tabControl_main);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.button_Build);
-            this.Controls.Add(this.label2);
-            this.Name = "MainForm";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "PC Builder";
-            this.Load += new System.EventHandler(this.MainForm_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Illu)).EndInit();
-            this.tabControl_main.ResumeLayout(false);
-            this.tabPage_products.ResumeLayout(false);
-            this.tabPage_products.PerformLayout();
-            this.tabPage_forum.ResumeLayout(false);
-            this.tabPage_forum.PerformLayout();
-            this.tabControl1.ResumeLayout(false);
-            this.tabPage_decription.ResumeLayout(false);
-            this.tabPage_comment.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_psu)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_storage)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_caseCooler)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_cpuCooler)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_graphicCard)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_case)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_ram)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_motherboard)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_processor)).EndInit();
-            this.contextMenuStrip1.ResumeLayout(false);
-            this.ResumeLayout(false);
-
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.Window;
+            ClientSize = new Size(1056, 774);
+            ContextMenuStrip = contextMenuStrip1;
+            Controls.Add(label_user);
+            Controls.Add(label_state);
+            Controls.Add(button_login);
+            Controls.Add(button_edit);
+            Controls.Add(button_reload);
+            Controls.Add(button_forum);
+            Controls.Add(button_products);
+            Controls.Add(tabControl_main);
+            Controls.Add(button1);
+            Controls.Add(button_Build);
+            Controls.Add(label2);
+            Name = "MainForm";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "PC Builder";
+            Load += MainForm_Load;
+            ((System.ComponentModel.ISupportInitialize)pictureBox_Illu).EndInit();
+            tabControl_main.ResumeLayout(false);
+            tabPage_products.ResumeLayout(false);
+            tabPage_products.PerformLayout();
+            tabPage_forum.ResumeLayout(false);
+            tabPage_forum.PerformLayout();
+            tabControl1.ResumeLayout(false);
+            tabPage_decription.ResumeLayout(false);
+            tabPage_comment.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)pictureBox_psu).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox_storage).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox_caseCooler).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox_cpuCooler).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox_graphicCard).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox_case).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox_ram).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox_motherboard).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox_processor).EndInit();
+            contextMenuStrip1.ResumeLayout(false);
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -1191,5 +1219,9 @@
         private Button button_reload;
         private ContextMenuStrip contextMenuStrip1;
         private ToolStripMenuItem openLiveChatToolStripMenuItem;
+        private Button button_edit;
+        private Button button_login;
+        private Label label_state;
+        private Label label_user;
     }
 }
